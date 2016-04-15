@@ -1,9 +1,7 @@
 # AIKit
 A splendid route-matching, block-based way to handle your deep links. http://asiainfo.com
-<p align="center"><img src="https://cloud.githubusercontent.com/assets/10621371/7642874/8c90f72a-fa62-11e4-9092-dfff96c24f01.png" width="392"/>
 
-</p>
-<h1 align="center">DeepLink Kit</h1>
+<h1 align="center">DeepLink AIKit</h1>
 
 
 <p align="center">
