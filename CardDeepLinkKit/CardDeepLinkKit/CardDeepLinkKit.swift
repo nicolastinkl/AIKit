@@ -15,4 +15,5 @@ import SwiftyJSON
 public class CardDeepLinkKit: NSObject {
     
     
+    
 }
