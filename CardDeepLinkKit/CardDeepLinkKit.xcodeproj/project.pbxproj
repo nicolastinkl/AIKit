@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		937811BC1CC61BD2001BF260 /* CardDeepLinkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */; };
-		937811C41CC61C4A001BF260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811C31CC61C4A001BF260 /* AppDelegate.swift */; };
-		937811C61CC61C4A001BF260 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811C51CC61C4A001BF260 /* ViewController.swift */; };
-		937811C91CC61C4A001BF260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937811C71CC61C4A001BF260 /* Main.storyboard */; };
-		937811CB1CC61C4A001BF260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937811CA1CC61C4A001BF260 /* Assets.xcassets */; };
-		937811CE1CC61C4A001BF260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937811CC1CC61C4A001BF260 /* LaunchScreen.storyboard */; };
-		937811EF1CC61CA2001BF260 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */; };
 		E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37930384132BCB05B94301 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,13 +18,6 @@
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeepLinkKit.swift; sourceTree = "<group>"; };
-		937811C11CC61C4A001BF260 /* CDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		937811C31CC61C4A001BF260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		937811C51CC61C4A001BF260 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		937811C81CC61C4A001BF260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		937811CA1CC61C4A001BF260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		937811CD1CC61C4A001BF260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		937811CF1CC61C4A001BF260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB37930384132BCB05B94301 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,14 +29,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		937811BE1CC61C4A001BF260 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				937811EF1CC61CA2001BF260 /* CardDeepLinkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				81EB2AC31CC5053100F4459F /* CardDeepLinkKit */,
-				937811C21CC61C4A001BF260 /* CDDemo */,
 				81EB2AC21CC5053100F4459F /* Products */,
 				3E51A8870AF2C42637A24FA2 /* Pods */,
 				AF2EC5DC4F6C3D23B7835E31 /* Frameworks */,
@@ -81,7 +59,6 @@
 			children = (
 				81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */,
 				93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */,
-				937811C11CC61C4A001BF260 /* CDDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,19 +113,6 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		937811C21CC61C4A001BF260 /* CDDemo */ = {
-			isa = PBXGroup;
-			children = (
-				937811C31CC61C4A001BF260 /* AppDelegate.swift */,
-				937811C51CC61C4A001BF260 /* ViewController.swift */,
-				937811C71CC61C4A001BF260 /* Main.storyboard */,
-				937811CA1CC61C4A001BF260 /* Assets.xcassets */,
-				937811CC1CC61C4A001BF260 /* LaunchScreen.storyboard */,
-				937811CF1CC61C4A001BF260 /* Info.plist */,
-			);
-			path = CDDemo;
-			sourceTree = "<group>";
-		};
 		AF2EC5DC4F6C3D23B7835E31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,23 +155,6 @@
 			productReference = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		937811C01CC61C4A001BF260 /* CDDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 937811E61CC61C4A001BF260 /* Build configuration list for PBXNativeTarget "CDDemo" */;
-			buildPhases = (
-				937811BD1CC61C4A001BF260 /* Sources */,
-				937811BE1CC61C4A001BF260 /* Frameworks */,
-				937811BF1CC61C4A001BF260 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CDDemo;
-			productName = CDDemo;
-			productReference = 937811C11CC61C4A001BF260 /* CDDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,9 +167,6 @@
 				TargetAttributes = {
 					81EB2AC01CC5053100F4459F = {
 						CreatedOnToolsVersion = 7.3;
-					};
-					937811C01CC61C4A001BF260 = {
-						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -240,7 +184,6 @@
 			projectRoot = "";
 			targets = (
 				81EB2AC01CC5053100F4459F /* CardDeepLinkKit */,
-				937811C01CC61C4A001BF260 /* CDDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -250,16 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		937811BF1CC61C4A001BF260 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				937811CE1CC61C4A001BF260 /* LaunchScreen.storyboard in Resources */,
-				937811CB1CC61C4A001BF260 /* Assets.xcassets in Resources */,
-				937811C91CC61C4A001BF260 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,35 +240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		937811BD1CC61C4A001BF260 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				937811C61CC61C4A001BF260 /* ViewController.swift in Sources */,
-				937811C41CC61C4A001BF260 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		937811C71CC61C4A001BF260 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				937811C81CC61C4A001BF260 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		937811CC1CC61C4A001BF260 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				937811CD1CC61C4A001BF260 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		81EB2AC71CC5053100F4459F /* Debug */ = {
@@ -470,30 +375,6 @@
 			};
 			name = Release;
 		};
-		937811E71CC61C4A001BF260 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CDDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CDDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		937811E81CC61C4A001BF260 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CDDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CDDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -514,14 +395,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		937811E61CC61C4A001BF260 /* Build configuration list for PBXNativeTarget "CDDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				937811E71CC61C4A001BF260 /* Debug */,
-				937811E81CC61C4A001BF260 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
