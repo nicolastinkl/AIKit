@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  CardDeepLinkDemo
+//  CDReceiverDemo
 //
-//  Created by 王坜 on 16/4/18.
-//  Copyright © 2016年 AsiaInfo. All rights reserved.
+//  Created by tinkl on 4/19/16.
+//  Copyright © 2016 AsiaInfo. All rights reserved.
 //
 
 import UIKit
