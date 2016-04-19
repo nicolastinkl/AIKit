@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+<<<<<<< HEAD
 		93BE5ADA1CC610D100CC2B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5AD91CC610D100CC2B5A /* AppDelegate.swift */; };
 		93BE5AE31CC610D100CC2B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE11CC610D100CC2B5A /* Main.storyboard */; };
 		93BE5AE51CC610D100CC2B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE41CC610D100CC2B5A /* Assets.xcassets */; };
@@ -31,6 +32,36 @@
 		93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeepLinkKit.swift; sourceTree = "<group>"; };
 		BB37930384132BCB05B94301 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+=======
+		81EB2AD31CC5055100F4459F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EB2AD21CC5055100F4459F /* AppDelegate.swift */; };
+		81EB2AD51CC5055100F4459F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EB2AD41CC5055100F4459F /* ViewController.swift */; };
+		81EB2AD81CC5055100F4459F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EB2AD61CC5055100F4459F /* Main.storyboard */; };
+		81EB2ADA1CC5055100F4459F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81EB2AD91CC5055100F4459F /* Assets.xcassets */; };
+		81EB2ADD1CC5055100F4459F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EB2ADB1CC5055100F4459F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81EB2B601CC610C500F4459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81EB2AC01CC5053100F4459F;
+			remoteInfo = CardDeepLinkKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		81EB2AC11CC5053100F4459F /* Card_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
+		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EB2AD01CC5055100F4459F /* CardDeepLinkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EB2AD21CC5055100F4459F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81EB2AD41CC5055100F4459F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81EB2AD71CC5055100F4459F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81EB2AD91CC5055100F4459F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81EB2ADC1CC5055100F4459F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81EB2ADE1CC5055100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,11 +73,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+<<<<<<< HEAD
 		93BE5AD41CC610D100CC2B5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				93E6FDEB1CC6122400979AF5 /* CardDeepLinkKit.framework in Frameworks */,
+=======
+		81EB2ACD1CC5055100F4459F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				81EB2AC31CC5053100F4459F /* CardDeepLinkKit */,
+<<<<<<< HEAD
 				93BE5AD81CC610D100CC2B5A /* CDSenderDemo */,
+=======
+				81EB2AD11CC5055100F4459F /* CardDeepLinkDemo */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 				81EB2AC21CC5053100F4459F /* Products */,
 				3E51A8870AF2C42637A24FA2 /* Pods */,
 				AF2EC5DC4F6C3D23B7835E31 /* Frameworks */,
@@ -76,8 +118,13 @@
 		81EB2AC21CC5053100F4459F /* Products */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */,
 				93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */,
+=======
+				81EB2AC11CC5053100F4459F /* Card_Swift.framework */,
+				81EB2AD01CC5055100F4459F /* CardDeepLinkDemo.app */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,18 +132,25 @@
 		81EB2AC31CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				937811BA1CC61601001BF260 /* Categories */,
 				937811B61CC615D4001BF260 /* DeepLink */,
 				937811B71CC615D4001BF260 /* RouteHandler */,
 				937811B81CC615D4001BF260 /* Router */,
 				937811B91CC615D4001BF260 /* RouterMatcher */,
+=======
+				81EB2B121CC605BE00F4459F /* Venders */,
+				81EB2AE41CC5D85100F4459F /* Utils */,
+				81EB2AE31CC5D83600F4459F /* Receiver */,
+				81EB2AE21CC5D82C00F4459F /* Sender */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 				81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */,
 				81EB2AC61CC5053100F4459F /* Info.plist */,
-				93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */,
 			);
 			path = CardDeepLinkKit;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		937811B61CC615D4001BF260 /* DeepLink */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +204,63 @@
 				BB37930384132BCB05B94301 /* Pods.framework */,
 			);
 			name = Frameworks;
+=======
+		81EB2AD11CC5055100F4459F /* CardDeepLinkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81EB2AD21CC5055100F4459F /* AppDelegate.swift */,
+				81EB2AD41CC5055100F4459F /* ViewController.swift */,
+				81EB2AD61CC5055100F4459F /* Main.storyboard */,
+				81EB2AD91CC5055100F4459F /* Assets.xcassets */,
+				81EB2ADB1CC5055100F4459F /* LaunchScreen.storyboard */,
+				81EB2ADE1CC5055100F4459F /* Info.plist */,
+			);
+			path = CardDeepLinkDemo;
+			sourceTree = "<group>";
+		};
+		81EB2AE21CC5D82C00F4459F /* Sender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sender;
+			sourceTree = "<group>";
+		};
+		81EB2AE31CC5D83600F4459F /* Receiver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Receiver;
+			sourceTree = "<group>";
+		};
+		81EB2AE41CC5D85100F4459F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				81EB2B0D1CC6038900F4459F /* Bridge */,
+				81EB2AE51CC5D86600F4459F /* Net */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		81EB2AE51CC5D86600F4459F /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		81EB2B0D1CC6038900F4459F /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Bridge;
+			sourceTree = "<group>";
+		};
+		81EB2B121CC605BE00F4459F /* Venders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Venders;
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,24 +294,25 @@
 			);
 			name = CardDeepLinkKit;
 			productName = CardDeepLinkKit;
-			productReference = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */;
+			productReference = 81EB2AC11CC5053100F4459F /* Card_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		93BE5AD61CC610D100CC2B5A /* CDSenderDemo */ = {
+		81EB2ACF1CC5055100F4459F /* CardDeepLinkDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93BE5B001CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemo" */;
+			buildConfigurationList = 81EB2ADF1CC5055100F4459F /* Build configuration list for PBXNativeTarget "CardDeepLinkDemo" */;
 			buildPhases = (
-				93BE5AD31CC610D100CC2B5A /* Sources */,
-				93BE5AD41CC610D100CC2B5A /* Frameworks */,
-				93BE5AD51CC610D100CC2B5A /* Resources */,
+				81EB2ACC1CC5055100F4459F /* Sources */,
+				81EB2ACD1CC5055100F4459F /* Frameworks */,
+				81EB2ACE1CC5055100F4459F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				81EB2B611CC610C500F4459F /* PBXTargetDependency */,
 			);
-			name = CDSenderDemo;
-			productName = CDSenderDemo;
-			productReference = 93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */;
+			name = CardDeepLinkDemo;
+			productName = CardDeepLinkDemo;
+			productReference = 81EB2AD01CC5055100F4459F /* CardDeepLinkDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,15 +321,20 @@
 		81EB2AB81CC5053100F4459F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = AsiaInfo;
 				TargetAttributes = {
 					81EB2AC01CC5053100F4459F = {
 						CreatedOnToolsVersion = 7.3;
 					};
+<<<<<<< HEAD
 					93BE5AD61CC610D100CC2B5A = {
 						CreatedOnToolsVersion = 7.2;
+=======
+					81EB2ACF1CC5055100F4459F = {
+						CreatedOnToolsVersion = 7.3;
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 					};
 				};
 			};
@@ -235,7 +352,11 @@
 			projectRoot = "";
 			targets = (
 				81EB2AC01CC5053100F4459F /* CardDeepLinkKit */,
+<<<<<<< HEAD
 				93BE5AD61CC610D100CC2B5A /* CDSenderDemo */,
+=======
+				81EB2ACF1CC5055100F4459F /* CardDeepLinkDemo */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+<<<<<<< HEAD
 		93BE5AD51CC610D100CC2B5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +407,15 @@
 			);
 			name = "Copy Pods Resources";
 			outputPaths = (
+=======
+		81EB2ACE1CC5055100F4459F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EB2ADD1CC5055100F4459F /* LaunchScreen.storyboard in Resources */,
+				81EB2ADA1CC5055100F4459F /* Assets.xcassets in Resources */,
+				81EB2AD81CC5055100F4459F /* Main.storyboard in Resources */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -298,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				93BE5B3C1CC611F300CC2B5A /* CardDeepLinkKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,24 +439,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				93BE5ADA1CC610D100CC2B5A /* AppDelegate.swift in Sources */,
+=======
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EB2ACC1CC5055100F4459F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EB2AD51CC5055100F4459F /* ViewController.swift in Sources */,
+				81EB2AD31CC5055100F4459F /* AppDelegate.swift in Sources */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+<<<<<<< HEAD
+=======
+/* Begin PBXTargetDependency section */
+		81EB2B611CC610C500F4459F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81EB2AC01CC5053100F4459F /* CardDeepLinkKit */;
+			targetProxy = 81EB2B601CC610C500F4459F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 /* Begin PBXVariantGroup section */
-		93BE5AE11CC610D100CC2B5A /* Main.storyboard */ = {
+		81EB2AD61CC5055100F4459F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				93BE5AE21CC610D100CC2B5A /* Base */,
+				81EB2AD71CC5055100F4459F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		93BE5AE61CC610D100CC2B5A /* LaunchScreen.storyboard */ = {
+		81EB2ADB1CC5055100F4459F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
+<<<<<<< HEAD
 				93BE5AE71CC610D100CC2B5A /* Base */,
+=======
+				81EB2ADC1CC5055100F4459F /* Base */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -429,7 +587,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -439,9 +596,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkKit;
-				PRODUCT_NAME = CardDeepLinkKit;
+				PRODUCT_NAME = Card_Swift;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -449,7 +605,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -459,23 +614,31 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkKit;
-				PRODUCT_NAME = CardDeepLinkKit;
+				PRODUCT_NAME = Card_Swift;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		93BE5B011CC610D100CC2B5A /* Debug */ = {
+		81EB2AE01CC5055100F4459F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				INFOPLIST_FILE = CDSenderDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemo;
+=======
+				INFOPLIST_FILE = CardDeepLinkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkDemo;
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
+<<<<<<< HEAD
 		93BE5B021CC610D100CC2B5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +647,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemo;
+=======
+		81EB2AE11CC5055100F4459F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CardDeepLinkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkDemo;
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -509,11 +682,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+<<<<<<< HEAD
 		93BE5B001CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93BE5B011CC610D100CC2B5A /* Debug */,
 				93BE5B021CC610D100CC2B5A /* Release */,
+=======
+		81EB2ADF1CC5055100F4459F /* Build configuration list for PBXNativeTarget "CardDeepLinkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EB2AE01CC5055100F4459F /* Debug */,
+				81EB2AE11CC5055100F4459F /* Release */,
+>>>>>>> 8b80edc197fdd65acc06e18afd3129599146cb78
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
