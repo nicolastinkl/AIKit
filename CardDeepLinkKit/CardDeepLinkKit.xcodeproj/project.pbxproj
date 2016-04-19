@@ -15,6 +15,16 @@
 		81EB2ADD1CC5055100F4459F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EB2ADB1CC5055100F4459F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		81EB2B601CC610C500F4459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81EB2AC01CC5053100F4459F;
+			remoteInfo = CardDeepLinkKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		81EB2AC11CC5053100F4459F /* Card_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
@@ -177,6 +187,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				81EB2B611CC610C500F4459F /* PBXTargetDependency */,
 			);
 			name = CardDeepLinkDemo;
 			productName = CardDeepLinkDemo;
@@ -258,6 +269,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81EB2B611CC610C500F4459F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81EB2AC01CC5053100F4459F /* CardDeepLinkKit */;
+			targetProxy = 81EB2B601CC610C500F4459F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		81EB2AD61CC5055100F4459F /* Main.storyboard */ = {
@@ -449,6 +468,7 @@
 				81EB2ACB1CC5053100F4459F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81EB2ADF1CC5055100F4459F /* Build configuration list for PBXNativeTarget "CardDeepLinkDemo" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +477,7 @@
 				81EB2AE11CC5055100F4459F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
