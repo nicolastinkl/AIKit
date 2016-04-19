@@ -17,7 +17,7 @@
 		937812001CC61F38001BF260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937811FF1CC61F38001BF260 /* Assets.xcassets */; };
 		937812031CC61F38001BF260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937812011CC61F38001BF260 /* LaunchScreen.storyboard */; };
 		93BA897B1CC6254800195C67 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897A1CC6254800195C67 /* String.swift */; };
-		93BA897E1CC628FF00195C67 /* CDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897D1CC628FF00195C67 /* CDApp.swift */; };
+		93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897D1CC628FF00195C67 /* CDApplication.swift */; };
 		93BA89801CC6308600195C67 /* CDRegularHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897F1CC6308600195C67 /* CDRegularHandler.swift */; };
 		93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */; };
 		93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */; };
@@ -50,7 +50,7 @@
 		937812021CC61F38001BF260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937812041CC61F38001BF260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93BA897A1CC6254800195C67 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		93BA897D1CC628FF00195C67 /* CDApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApp.swift; sourceTree = "<group>"; };
+		93BA897D1CC628FF00195C67 /* CDApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApplication.swift; sourceTree = "<group>"; };
 		93BA897F1CC6308600195C67 /* CDRegularHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRegularHandler.swift; sourceTree = "<group>"; };
 		93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLinkRouter.swift; sourceTree = "<group>"; };
 		93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRouteMatcher.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		93BA897C1CC628E700195C67 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				93BA897D1CC628FF00195C67 /* CDApp.swift */,
+				93BA897D1CC628FF00195C67 /* CDApplication.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -349,7 +349,7 @@
 				93BA89801CC6308600195C67 /* CDRegularHandler.swift in Sources */,
 				93BA897B1CC6254800195C67 /* String.swift in Sources */,
 				937811BC1CC61BD2001BF260 /* CardDeepLinkKit.swift in Sources */,
-				93BA897E1CC628FF00195C67 /* CDApp.swift in Sources */,
+				93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
