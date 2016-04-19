@@ -18,6 +18,9 @@
 		937812031CC61F38001BF260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937812011CC61F38001BF260 /* LaunchScreen.storyboard */; };
 		93BA897B1CC6254800195C67 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897A1CC6254800195C67 /* String.swift */; };
 		93BA897E1CC628FF00195C67 /* CDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897D1CC628FF00195C67 /* CDApp.swift */; };
+		93BA89801CC6308600195C67 /* CDRegularHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897F1CC6308600195C67 /* CDRegularHandler.swift */; };
+		93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */; };
+		93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */; };
 		E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37930384132BCB05B94301 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		937812041CC61F38001BF260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93BA897A1CC6254800195C67 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		93BA897D1CC628FF00195C67 /* CDApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApp.swift; sourceTree = "<group>"; };
+		93BA897F1CC6308600195C67 /* CDRegularHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRegularHandler.swift; sourceTree = "<group>"; };
+		93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLinkRouter.swift; sourceTree = "<group>"; };
+		93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRouteMatcher.swift; sourceTree = "<group>"; };
 		93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB37930384132BCB05B94301 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 		937811B71CC615D4001BF260 /* RouteHandler */ = {
 			isa = PBXGroup;
 			children = (
+				93BA897F1CC6308600195C67 /* CDRegularHandler.swift */,
 			);
 			path = RouteHandler;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 		937811B81CC615D4001BF260 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 		937811B91CC615D4001BF260 /* RouterMatcher */ = {
 			isa = PBXGroup;
 			children = (
+				93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */,
 			);
 			path = RouterMatcher;
 			sourceTree = "<group>";
@@ -334,7 +343,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */,
+				93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */,
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
+				93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */,
+				93BA89801CC6308600195C67 /* CDRegularHandler.swift in Sources */,
 				93BA897B1CC6254800195C67 /* String.swift in Sources */,
 				937811BC1CC61BD2001BF260 /* CardDeepLinkKit.swift in Sources */,
 				93BA897E1CC628FF00195C67 /* CDApp.swift in Sources */,
