@@ -9,89 +9,28 @@
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93BE5ADA1CC610D100CC2B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5AD91CC610D100CC2B5A /* AppDelegate.swift */; };
-		93BE5ADC1CC610D100CC2B5A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5ADB1CC610D100CC2B5A /* RootViewController.swift */; };
-		93BE5ADE1CC610D100CC2B5A /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5ADD1CC610D100CC2B5A /* DataViewController.swift */; };
-		93BE5AE01CC610D100CC2B5A /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5ADF1CC610D100CC2B5A /* ModelController.swift */; };
 		93BE5AE31CC610D100CC2B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE11CC610D100CC2B5A /* Main.storyboard */; };
 		93BE5AE51CC610D100CC2B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE41CC610D100CC2B5A /* Assets.xcassets */; };
 		93BE5AE81CC610D100CC2B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE61CC610D100CC2B5A /* LaunchScreen.storyboard */; };
-		93BE5AF31CC610D100CC2B5A /* CDSenderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5AF21CC610D100CC2B5A /* CDSenderDemoTests.swift */; };
-		93BE5AFE1CC610D100CC2B5A /* CDSenderDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5AFD1CC610D100CC2B5A /* CDSenderDemoUITests.swift */; };
-		93BE5B101CC610FD00CC2B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B0F1CC610FD00CC2B5A /* AppDelegate.swift */; };
-		93BE5B121CC610FD00CC2B5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B111CC610FD00CC2B5A /* ViewController.swift */; };
-		93BE5B151CC610FD00CC2B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5B131CC610FD00CC2B5A /* Main.storyboard */; };
-		93BE5B171CC610FD00CC2B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5B161CC610FD00CC2B5A /* Assets.xcassets */; };
-		93BE5B1A1CC610FD00CC2B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5B181CC610FD00CC2B5A /* LaunchScreen.storyboard */; };
-		93BE5B251CC610FE00CC2B5A /* CDReceiverDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B241CC610FE00CC2B5A /* CDReceiverDemoTests.swift */; };
-		93BE5B301CC610FE00CC2B5A /* CDReceiverDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B2F1CC610FE00CC2B5A /* CDReceiverDemoUITests.swift */; };
 		93BE5B3C1CC611F300CC2B5A /* CardDeepLinkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */; };
 		93E6FDEB1CC6122400979AF5 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */; };
+		E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37930384132BCB05B94301 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		93BE5AEF1CC610D100CC2B5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93BE5AD61CC610D100CC2B5A;
-			remoteInfo = CDSenderDemo;
-		};
-		93BE5AFA1CC610D100CC2B5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93BE5AD61CC610D100CC2B5A;
-			remoteInfo = CDSenderDemo;
-		};
-		93BE5B211CC610FE00CC2B5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93BE5B0C1CC610FD00CC2B5A;
-			remoteInfo = CDReceiverDemo;
-		};
-		93BE5B2C1CC610FE00CC2B5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93BE5B0C1CC610FD00CC2B5A;
-			remoteInfo = CDReceiverDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BE5AD91CC610D100CC2B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93BE5ADB1CC610D100CC2B5A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		93BE5ADD1CC610D100CC2B5A /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		93BE5ADF1CC610D100CC2B5A /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		93BE5AE21CC610D100CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93BE5AE41CC610D100CC2B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93BE5AE71CC610D100CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93BE5AE91CC610D100CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93BE5AEE1CC610D100CC2B5A /* CDSenderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDSenderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93BE5AF21CC610D100CC2B5A /* CDSenderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSenderDemoTests.swift; sourceTree = "<group>"; };
-		93BE5AF41CC610D100CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93BE5AF91CC610D100CC2B5A /* CDSenderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDSenderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93BE5AFD1CC610D100CC2B5A /* CDSenderDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSenderDemoUITests.swift; sourceTree = "<group>"; };
-		93BE5AFF1CC610D100CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93BE5B0D1CC610FD00CC2B5A /* CDReceiverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDReceiverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93BE5B0F1CC610FD00CC2B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93BE5B111CC610FD00CC2B5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93BE5B141CC610FD00CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93BE5B161CC610FD00CC2B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93BE5B191CC610FD00CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		93BE5B1B1CC610FE00CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93BE5B201CC610FE00CC2B5A /* CDReceiverDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDReceiverDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93BE5B241CC610FE00CC2B5A /* CDReceiverDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDReceiverDemoTests.swift; sourceTree = "<group>"; };
-		93BE5B261CC610FE00CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93BE5B2B1CC610FE00CC2B5A /* CDReceiverDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDReceiverDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93BE5B2F1CC610FE00CC2B5A /* CDReceiverDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDReceiverDemoUITests.swift; sourceTree = "<group>"; };
-		93BE5B311CC610FE00CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeepLinkKit.swift; sourceTree = "<group>"; };
+		BB37930384132BCB05B94301 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,55 +50,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93BE5AEB1CC610D100CC2B5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5AF61CC610D100CC2B5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B0A1CC610FD00CC2B5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B1D1CC610FE00CC2B5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B281CC610FE00CC2B5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E51A8870AF2C42637A24FA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */,
+				00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		81EB2AB71CC5053100F4459F = {
 			isa = PBXGroup;
 			children = (
 				81EB2AC31CC5053100F4459F /* CardDeepLinkKit */,
 				93BE5AD81CC610D100CC2B5A /* CDSenderDemo */,
-				93BE5AF11CC610D100CC2B5A /* CDSenderDemoTests */,
-				93BE5AFC1CC610D100CC2B5A /* CDSenderDemoUITests */,
-				93BE5B0E1CC610FD00CC2B5A /* CDReceiverDemo */,
-				93BE5B231CC610FE00CC2B5A /* CDReceiverDemoTests */,
-				93BE5B2E1CC610FE00CC2B5A /* CDReceiverDemoUITests */,
 				81EB2AC21CC5053100F4459F /* Products */,
+				3E51A8870AF2C42637A24FA2 /* Pods */,
+				AF2EC5DC4F6C3D23B7835E31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,11 +78,6 @@
 			children = (
 				81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */,
 				93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */,
-				93BE5AEE1CC610D100CC2B5A /* CDSenderDemoTests.xctest */,
-				93BE5AF91CC610D100CC2B5A /* CDSenderDemoUITests.xctest */,
-				93BE5B0D1CC610FD00CC2B5A /* CDReceiverDemo.app */,
-				93BE5B201CC610FE00CC2B5A /* CDReceiverDemoTests.xctest */,
-				93BE5B2B1CC610FE00CC2B5A /* CDReceiverDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +85,11 @@
 		81EB2AC31CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXGroup;
 			children = (
+				937811BA1CC61601001BF260 /* Categories */,
+				937811B61CC615D4001BF260 /* DeepLink */,
+				937811B71CC615D4001BF260 /* RouteHandler */,
+				937811B81CC615D4001BF260 /* Router */,
+				937811B91CC615D4001BF260 /* RouterMatcher */,
 				81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */,
 				81EB2AC61CC5053100F4459F /* Info.plist */,
 				93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */,
@@ -186,13 +97,45 @@
 			path = CardDeepLinkKit;
 			sourceTree = "<group>";
 		};
+		937811B61CC615D4001BF260 /* DeepLink */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DeepLink;
+			sourceTree = "<group>";
+		};
+		937811B71CC615D4001BF260 /* RouteHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RouteHandler;
+			sourceTree = "<group>";
+		};
+		937811B81CC615D4001BF260 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		937811B91CC615D4001BF260 /* RouterMatcher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RouterMatcher;
+			sourceTree = "<group>";
+		};
+		937811BA1CC61601001BF260 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		93BE5AD81CC610D100CC2B5A /* CDSenderDemo */ = {
 			isa = PBXGroup;
 			children = (
 				93BE5AD91CC610D100CC2B5A /* AppDelegate.swift */,
-				93BE5ADB1CC610D100CC2B5A /* RootViewController.swift */,
-				93BE5ADD1CC610D100CC2B5A /* DataViewController.swift */,
-				93BE5ADF1CC610D100CC2B5A /* ModelController.swift */,
 				93BE5AE11CC610D100CC2B5A /* Main.storyboard */,
 				93BE5AE41CC610D100CC2B5A /* Assets.xcassets */,
 				93BE5AE61CC610D100CC2B5A /* LaunchScreen.storyboard */,
@@ -201,53 +144,12 @@
 			path = CDSenderDemo;
 			sourceTree = "<group>";
 		};
-		93BE5AF11CC610D100CC2B5A /* CDSenderDemoTests */ = {
+		AF2EC5DC4F6C3D23B7835E31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				93BE5AF21CC610D100CC2B5A /* CDSenderDemoTests.swift */,
-				93BE5AF41CC610D100CC2B5A /* Info.plist */,
+				BB37930384132BCB05B94301 /* Pods.framework */,
 			);
-			path = CDSenderDemoTests;
-			sourceTree = "<group>";
-		};
-		93BE5AFC1CC610D100CC2B5A /* CDSenderDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				93BE5AFD1CC610D100CC2B5A /* CDSenderDemoUITests.swift */,
-				93BE5AFF1CC610D100CC2B5A /* Info.plist */,
-			);
-			path = CDSenderDemoUITests;
-			sourceTree = "<group>";
-		};
-		93BE5B0E1CC610FD00CC2B5A /* CDReceiverDemo */ = {
-			isa = PBXGroup;
-			children = (
-				93BE5B0F1CC610FD00CC2B5A /* AppDelegate.swift */,
-				93BE5B111CC610FD00CC2B5A /* ViewController.swift */,
-				93BE5B131CC610FD00CC2B5A /* Main.storyboard */,
-				93BE5B161CC610FD00CC2B5A /* Assets.xcassets */,
-				93BE5B181CC610FD00CC2B5A /* LaunchScreen.storyboard */,
-				93BE5B1B1CC610FE00CC2B5A /* Info.plist */,
-			);
-			path = CDReceiverDemo;
-			sourceTree = "<group>";
-		};
-		93BE5B231CC610FE00CC2B5A /* CDReceiverDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				93BE5B241CC610FE00CC2B5A /* CDReceiverDemoTests.swift */,
-				93BE5B261CC610FE00CC2B5A /* Info.plist */,
-			);
-			path = CDReceiverDemoTests;
-			sourceTree = "<group>";
-		};
-		93BE5B2E1CC610FE00CC2B5A /* CDReceiverDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				93BE5B2F1CC610FE00CC2B5A /* CDReceiverDemoUITests.swift */,
-				93BE5B311CC610FE00CC2B5A /* Info.plist */,
-			);
-			path = CDReceiverDemoUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81EB2AC91CC5053100F4459F /* Build configuration list for PBXNativeTarget "CardDeepLinkKit" */;
 			buildPhases = (
+				49A919B6311903583F355523 /* Check Pods Manifest.lock */,
 				81EB2ABC1CC5053100F4459F /* Sources */,
 				81EB2ABD1CC5053100F4459F /* Frameworks */,
 				81EB2ABE1CC5053100F4459F /* Headers */,
 				81EB2ABF1CC5053100F4459F /* Resources */,
+				84DD63AF3CBEAACFD5F7DC85 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,95 +203,6 @@
 			productReference = 93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		93BE5AED1CC610D100CC2B5A /* CDSenderDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93BE5B031CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoTests" */;
-			buildPhases = (
-				93BE5AEA1CC610D100CC2B5A /* Sources */,
-				93BE5AEB1CC610D100CC2B5A /* Frameworks */,
-				93BE5AEC1CC610D100CC2B5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				93BE5AF01CC610D100CC2B5A /* PBXTargetDependency */,
-			);
-			name = CDSenderDemoTests;
-			productName = CDSenderDemoTests;
-			productReference = 93BE5AEE1CC610D100CC2B5A /* CDSenderDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		93BE5AF81CC610D100CC2B5A /* CDSenderDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93BE5B061CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoUITests" */;
-			buildPhases = (
-				93BE5AF51CC610D100CC2B5A /* Sources */,
-				93BE5AF61CC610D100CC2B5A /* Frameworks */,
-				93BE5AF71CC610D100CC2B5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				93BE5AFB1CC610D100CC2B5A /* PBXTargetDependency */,
-			);
-			name = CDSenderDemoUITests;
-			productName = CDSenderDemoUITests;
-			productReference = 93BE5AF91CC610D100CC2B5A /* CDSenderDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93BE5B321CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemo" */;
-			buildPhases = (
-				93BE5B091CC610FD00CC2B5A /* Sources */,
-				93BE5B0A1CC610FD00CC2B5A /* Frameworks */,
-				93BE5B0B1CC610FD00CC2B5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CDReceiverDemo;
-			productName = CDReceiverDemo;
-			productReference = 93BE5B0D1CC610FD00CC2B5A /* CDReceiverDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
-		93BE5B1F1CC610FE00CC2B5A /* CDReceiverDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93BE5B351CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoTests" */;
-			buildPhases = (
-				93BE5B1C1CC610FE00CC2B5A /* Sources */,
-				93BE5B1D1CC610FE00CC2B5A /* Frameworks */,
-				93BE5B1E1CC610FE00CC2B5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				93BE5B221CC610FE00CC2B5A /* PBXTargetDependency */,
-			);
-			name = CDReceiverDemoTests;
-			productName = CDReceiverDemoTests;
-			productReference = 93BE5B201CC610FE00CC2B5A /* CDReceiverDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		93BE5B2A1CC610FE00CC2B5A /* CDReceiverDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93BE5B381CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoUITests" */;
-			buildPhases = (
-				93BE5B271CC610FE00CC2B5A /* Sources */,
-				93BE5B281CC610FE00CC2B5A /* Frameworks */,
-				93BE5B291CC610FE00CC2B5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				93BE5B2D1CC610FE00CC2B5A /* PBXTargetDependency */,
-			);
-			name = CDReceiverDemoUITests;
-			productName = CDReceiverDemoUITests;
-			productReference = 93BE5B2B1CC610FE00CC2B5A /* CDReceiverDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -403,25 +218,6 @@
 					};
 					93BE5AD61CC610D100CC2B5A = {
 						CreatedOnToolsVersion = 7.2;
-					};
-					93BE5AED1CC610D100CC2B5A = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 93BE5AD61CC610D100CC2B5A;
-					};
-					93BE5AF81CC610D100CC2B5A = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 93BE5AD61CC610D100CC2B5A;
-					};
-					93BE5B0C1CC610FD00CC2B5A = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					93BE5B1F1CC610FE00CC2B5A = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 93BE5B0C1CC610FD00CC2B5A;
-					};
-					93BE5B2A1CC610FE00CC2B5A = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 93BE5B0C1CC610FD00CC2B5A;
 					};
 				};
 			};
@@ -440,11 +236,6 @@
 			targets = (
 				81EB2AC01CC5053100F4459F /* CardDeepLinkKit */,
 				93BE5AD61CC610D100CC2B5A /* CDSenderDemo */,
-				93BE5AED1CC610D100CC2B5A /* CDSenderDemoTests */,
-				93BE5AF81CC610D100CC2B5A /* CDSenderDemoUITests */,
-				93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */,
-				93BE5B1F1CC610FE00CC2B5A /* CDReceiverDemoTests */,
-				93BE5B2A1CC610FE00CC2B5A /* CDReceiverDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -467,45 +258,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93BE5AEC1CC610D100CC2B5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5AF71CC610D100CC2B5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B0B1CC610FD00CC2B5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BE5B1A1CC610FD00CC2B5A /* LaunchScreen.storyboard in Resources */,
-				93BE5B171CC610FD00CC2B5A /* Assets.xcassets in Resources */,
-				93BE5B151CC610FD00CC2B5A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B1E1CC610FE00CC2B5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B291CC610FE00CC2B5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49A919B6311903583F355523 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84DD63AF3CBEAACFD5F7DC85 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81EB2ABC1CC5053100F4459F /* Sources */ = {
@@ -520,78 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93BE5ADC1CC610D100CC2B5A /* RootViewController.swift in Sources */,
-				93BE5AE01CC610D100CC2B5A /* ModelController.swift in Sources */,
-				93BE5ADE1CC610D100CC2B5A /* DataViewController.swift in Sources */,
 				93BE5ADA1CC610D100CC2B5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93BE5AEA1CC610D100CC2B5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BE5AF31CC610D100CC2B5A /* CDSenderDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5AF51CC610D100CC2B5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BE5AFE1CC610D100CC2B5A /* CDSenderDemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B091CC610FD00CC2B5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BE5B121CC610FD00CC2B5A /* ViewController.swift in Sources */,
-				93BE5B101CC610FD00CC2B5A /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B1C1CC610FE00CC2B5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BE5B251CC610FE00CC2B5A /* CDReceiverDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93BE5B271CC610FE00CC2B5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93BE5B301CC610FE00CC2B5A /* CDReceiverDemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		93BE5AF01CC610D100CC2B5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93BE5AD61CC610D100CC2B5A /* CDSenderDemo */;
-			targetProxy = 93BE5AEF1CC610D100CC2B5A /* PBXContainerItemProxy */;
-		};
-		93BE5AFB1CC610D100CC2B5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93BE5AD61CC610D100CC2B5A /* CDSenderDemo */;
-			targetProxy = 93BE5AFA1CC610D100CC2B5A /* PBXContainerItemProxy */;
-		};
-		93BE5B221CC610FE00CC2B5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */;
-			targetProxy = 93BE5B211CC610FE00CC2B5A /* PBXContainerItemProxy */;
-		};
-		93BE5B2D1CC610FE00CC2B5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */;
-			targetProxy = 93BE5B2C1CC610FE00CC2B5A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		93BE5AE11CC610D100CC2B5A /* Main.storyboard */ = {
@@ -606,22 +325,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				93BE5AE71CC610D100CC2B5A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		93BE5B131CC610FD00CC2B5A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93BE5B141CC610FD00CC2B5A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		93BE5B181CC610FD00CC2B5A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93BE5B191CC610FD00CC2B5A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -724,6 +427,7 @@
 		};
 		81EB2ACA1CC5053100F4459F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -743,6 +447,7 @@
 		};
 		81EB2ACB1CC5053100F4459F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -764,7 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CDSenderDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -776,138 +481,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CDSenderDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		93BE5B041CC610D100CC2B5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CDSenderDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDSenderDemo.app/CDSenderDemo";
-			};
-			name = Debug;
-		};
-		93BE5B051CC610D100CC2B5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CDSenderDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDSenderDemo.app/CDSenderDemo";
-			};
-			name = Release;
-		};
-		93BE5B071CC610D100CC2B5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CDSenderDemoUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CDSenderDemo;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		93BE5B081CC610D100CC2B5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CDSenderDemoUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CDSenderDemo;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
-		93BE5B331CC610FE00CC2B5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CDReceiverDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		93BE5B341CC610FE00CC2B5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CDReceiverDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		93BE5B361CC610FE00CC2B5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CDReceiverDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDReceiverDemo.app/CDReceiverDemo";
-			};
-			name = Debug;
-		};
-		93BE5B371CC610FE00CC2B5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CDReceiverDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDReceiverDemo.app/CDReceiverDemo";
-			};
-			name = Release;
-		};
-		93BE5B391CC610FE00CC2B5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CDReceiverDemoUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CDReceiverDemo;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		93BE5B3A1CC610FE00CC2B5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CDReceiverDemoUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CDReceiverDemo;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -937,51 +514,6 @@
 			buildConfigurations = (
 				93BE5B011CC610D100CC2B5A /* Debug */,
 				93BE5B021CC610D100CC2B5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		93BE5B031CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93BE5B041CC610D100CC2B5A /* Debug */,
-				93BE5B051CC610D100CC2B5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		93BE5B061CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93BE5B071CC610D100CC2B5A /* Debug */,
-				93BE5B081CC610D100CC2B5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		93BE5B321CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93BE5B331CC610FE00CC2B5A /* Debug */,
-				93BE5B341CC610FE00CC2B5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		93BE5B351CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93BE5B361CC610FE00CC2B5A /* Debug */,
-				93BE5B371CC610FE00CC2B5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		93BE5B381CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93BE5B391CC610FE00CC2B5A /* Debug */,
-				93BE5B3A1CC610FE00CC2B5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

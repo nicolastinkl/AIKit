@@ -2,7 +2,7 @@
 //  CardDeepLinkKit.h
 //  CardDeepLinkKit
 //
-//  Created by 王坜 on 16/4/18.
+//  Created by Asiainfo on 16/4/18.
 //  Copyright © 2016年 AsiaInfo. All rights reserved.
 //
 
