@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E13571CC6200A00BA0FD0 /* NameSpace.swift */; };
 		937811BC1CC61BD2001BF260 /* CardDeepLinkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */; };
 		937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F01CC61EE3001BF260 /* CDDeepLink.swift */; };
 		937811F91CC61F38001BF260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F81CC61F38001BF260 /* AppDelegate.swift */; };
@@ -15,6 +16,8 @@
 		937811FE1CC61F38001BF260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937811FC1CC61F38001BF260 /* Main.storyboard */; };
 		937812001CC61F38001BF260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937811FF1CC61F38001BF260 /* Assets.xcassets */; };
 		937812031CC61F38001BF260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937812011CC61F38001BF260 /* LaunchScreen.storyboard */; };
+		93BA897B1CC6254800195C67 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897A1CC6254800195C67 /* String.swift */; };
+		93BA897E1CC628FF00195C67 /* CDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897D1CC628FF00195C67 /* CDApp.swift */; };
 		E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37930384132BCB05B94301 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,7 @@
 		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeepLinkKit.swift; sourceTree = "<group>"; };
 		937811F01CC61EE3001BF260 /* CDDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLink.swift; sourceTree = "<group>"; };
 		937811F61CC61F38001BF260 /* CardDeepLinkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +46,8 @@
 		937811FF1CC61F38001BF260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937812021CC61F38001BF260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937812041CC61F38001BF260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BA897A1CC6254800195C67 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		93BA897D1CC628FF00195C67 /* CDApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApp.swift; sourceTree = "<group>"; };
 		93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB37930384132BCB05B94301 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		81EB2AC31CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXGroup;
 			children = (
+				93BA897C1CC628E700195C67 /* Application */,
 				937811BA1CC61601001BF260 /* Categories */,
 				937811B61CC615D4001BF260 /* CardDeepLink */,
 				937811B71CC615D4001BF260 /* RouteHandler */,
@@ -107,6 +114,7 @@
 				81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */,
 				937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */,
 				81EB2AC61CC5053100F4459F /* Info.plist */,
+				936E13571CC6200A00BA0FD0 /* NameSpace.swift */,
 			);
 			path = CardDeepLinkKit;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 		937811BA1CC61601001BF260 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				93BA897A1CC6254800195C67 /* String.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -159,6 +168,14 @@
 				937812041CC61F38001BF260 /* Info.plist */,
 			);
 			path = CardDeepLinkKitDemo;
+			sourceTree = "<group>";
+		};
+		93BA897C1CC628E700195C67 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				93BA897D1CC628FF00195C67 /* CDApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		AF2EC5DC4F6C3D23B7835E31 /* Frameworks */ = {
@@ -316,8 +333,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */,
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
+				93BA897B1CC6254800195C67 /* String.swift in Sources */,
 				937811BC1CC61BD2001BF260 /* CardDeepLinkKit.swift in Sources */,
+				93BA897E1CC628FF00195C67 /* CDApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +564,7 @@
 				937812071CC61F38001BF260 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
