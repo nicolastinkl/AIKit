@@ -8,24 +8,90 @@
 
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81EB2AD31CC5055100F4459F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EB2AD21CC5055100F4459F /* AppDelegate.swift */; };
-		81EB2AD51CC5055100F4459F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EB2AD41CC5055100F4459F /* ViewController.swift */; };
-		81EB2AD81CC5055100F4459F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EB2AD61CC5055100F4459F /* Main.storyboard */; };
-		81EB2ADA1CC5055100F4459F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81EB2AD91CC5055100F4459F /* Assets.xcassets */; };
-		81EB2ADD1CC5055100F4459F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EB2ADB1CC5055100F4459F /* LaunchScreen.storyboard */; };
+		93BE5ADA1CC610D100CC2B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5AD91CC610D100CC2B5A /* AppDelegate.swift */; };
+		93BE5ADC1CC610D100CC2B5A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5ADB1CC610D100CC2B5A /* RootViewController.swift */; };
+		93BE5ADE1CC610D100CC2B5A /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5ADD1CC610D100CC2B5A /* DataViewController.swift */; };
+		93BE5AE01CC610D100CC2B5A /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5ADF1CC610D100CC2B5A /* ModelController.swift */; };
+		93BE5AE31CC610D100CC2B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE11CC610D100CC2B5A /* Main.storyboard */; };
+		93BE5AE51CC610D100CC2B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE41CC610D100CC2B5A /* Assets.xcassets */; };
+		93BE5AE81CC610D100CC2B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5AE61CC610D100CC2B5A /* LaunchScreen.storyboard */; };
+		93BE5AF31CC610D100CC2B5A /* CDSenderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5AF21CC610D100CC2B5A /* CDSenderDemoTests.swift */; };
+		93BE5AFE1CC610D100CC2B5A /* CDSenderDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5AFD1CC610D100CC2B5A /* CDSenderDemoUITests.swift */; };
+		93BE5B101CC610FD00CC2B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B0F1CC610FD00CC2B5A /* AppDelegate.swift */; };
+		93BE5B121CC610FD00CC2B5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B111CC610FD00CC2B5A /* ViewController.swift */; };
+		93BE5B151CC610FD00CC2B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5B131CC610FD00CC2B5A /* Main.storyboard */; };
+		93BE5B171CC610FD00CC2B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5B161CC610FD00CC2B5A /* Assets.xcassets */; };
+		93BE5B1A1CC610FD00CC2B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BE5B181CC610FD00CC2B5A /* LaunchScreen.storyboard */; };
+		93BE5B251CC610FE00CC2B5A /* CDReceiverDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B241CC610FE00CC2B5A /* CDReceiverDemoTests.swift */; };
+		93BE5B301CC610FE00CC2B5A /* CDReceiverDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B2F1CC610FE00CC2B5A /* CDReceiverDemoUITests.swift */; };
+		93BE5B3C1CC611F300CC2B5A /* CardDeepLinkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */; };
+		93E6FDEB1CC6122400979AF5 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		93BE5AEF1CC610D100CC2B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BE5AD61CC610D100CC2B5A;
+			remoteInfo = CDSenderDemo;
+		};
+		93BE5AFA1CC610D100CC2B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BE5AD61CC610D100CC2B5A;
+			remoteInfo = CDSenderDemo;
+		};
+		93BE5B211CC610FE00CC2B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BE5B0C1CC610FD00CC2B5A;
+			remoteInfo = CDReceiverDemo;
+		};
+		93BE5B2C1CC610FE00CC2B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BE5B0C1CC610FD00CC2B5A;
+			remoteInfo = CDReceiverDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		81EB2AC11CC5053100F4459F /* Card_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81EB2AD01CC5055100F4459F /* CardDeepLinkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		81EB2AD21CC5055100F4459F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81EB2AD41CC5055100F4459F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		81EB2AD71CC5055100F4459F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		81EB2AD91CC5055100F4459F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		81EB2ADC1CC5055100F4459F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		81EB2ADE1CC5055100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BE5AD91CC610D100CC2B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93BE5ADB1CC610D100CC2B5A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		93BE5ADD1CC610D100CC2B5A /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		93BE5ADF1CC610D100CC2B5A /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		93BE5AE21CC610D100CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93BE5AE41CC610D100CC2B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93BE5AE71CC610D100CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93BE5AE91CC610D100CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BE5AEE1CC610D100CC2B5A /* CDSenderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDSenderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BE5AF21CC610D100CC2B5A /* CDSenderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSenderDemoTests.swift; sourceTree = "<group>"; };
+		93BE5AF41CC610D100CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BE5AF91CC610D100CC2B5A /* CDSenderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDSenderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BE5AFD1CC610D100CC2B5A /* CDSenderDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSenderDemoUITests.swift; sourceTree = "<group>"; };
+		93BE5AFF1CC610D100CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BE5B0D1CC610FD00CC2B5A /* CDReceiverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDReceiverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BE5B0F1CC610FD00CC2B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93BE5B111CC610FD00CC2B5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93BE5B141CC610FD00CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93BE5B161CC610FD00CC2B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93BE5B191CC610FD00CC2B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93BE5B1B1CC610FE00CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BE5B201CC610FE00CC2B5A /* CDReceiverDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDReceiverDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BE5B241CC610FE00CC2B5A /* CDReceiverDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDReceiverDemoTests.swift; sourceTree = "<group>"; };
+		93BE5B261CC610FE00CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BE5B2B1CC610FE00CC2B5A /* CDReceiverDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDReceiverDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BE5B2F1CC610FE00CC2B5A /* CDReceiverDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDReceiverDemoUITests.swift; sourceTree = "<group>"; };
+		93BE5B311CC610FE00CC2B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeepLinkKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +102,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81EB2ACD1CC5055100F4459F /* Frameworks */ = {
+		93BE5AD41CC610D100CC2B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E6FDEB1CC6122400979AF5 /* CardDeepLinkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5AEB1CC610D100CC2B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5AF61CC610D100CC2B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B0A1CC610FD00CC2B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B1D1CC610FE00CC2B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B281CC610FE00CC2B5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,7 +152,12 @@
 			isa = PBXGroup;
 			children = (
 				81EB2AC31CC5053100F4459F /* CardDeepLinkKit */,
-				81EB2AD11CC5055100F4459F /* CardDeepLinkDemo */,
+				93BE5AD81CC610D100CC2B5A /* CDSenderDemo */,
+				93BE5AF11CC610D100CC2B5A /* CDSenderDemoTests */,
+				93BE5AFC1CC610D100CC2B5A /* CDSenderDemoUITests */,
+				93BE5B0E1CC610FD00CC2B5A /* CDReceiverDemo */,
+				93BE5B231CC610FE00CC2B5A /* CDReceiverDemoTests */,
+				93BE5B2E1CC610FE00CC2B5A /* CDReceiverDemoUITests */,
 				81EB2AC21CC5053100F4459F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,8 +165,13 @@
 		81EB2AC21CC5053100F4459F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81EB2AC11CC5053100F4459F /* Card_Swift.framework */,
-				81EB2AD01CC5055100F4459F /* CardDeepLinkDemo.app */,
+				81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */,
+				93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */,
+				93BE5AEE1CC610D100CC2B5A /* CDSenderDemoTests.xctest */,
+				93BE5AF91CC610D100CC2B5A /* CDSenderDemoUITests.xctest */,
+				93BE5B0D1CC610FD00CC2B5A /* CDReceiverDemo.app */,
+				93BE5B201CC610FE00CC2B5A /* CDReceiverDemoTests.xctest */,
+				93BE5B2B1CC610FE00CC2B5A /* CDReceiverDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,71 +179,75 @@
 		81EB2AC31CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXGroup;
 			children = (
-				81EB2B121CC605BE00F4459F /* Venders */,
-				81EB2AE41CC5D85100F4459F /* Utils */,
-				81EB2AE31CC5D83600F4459F /* Receiver */,
-				81EB2AE21CC5D82C00F4459F /* Sender */,
 				81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */,
 				81EB2AC61CC5053100F4459F /* Info.plist */,
+				93BE5B3B1CC611F300CC2B5A /* CardDeepLinkKit.swift */,
 			);
 			path = CardDeepLinkKit;
 			sourceTree = "<group>";
 		};
-		81EB2AD11CC5055100F4459F /* CardDeepLinkDemo */ = {
+		93BE5AD81CC610D100CC2B5A /* CDSenderDemo */ = {
 			isa = PBXGroup;
 			children = (
-				81EB2AD21CC5055100F4459F /* AppDelegate.swift */,
-				81EB2AD41CC5055100F4459F /* ViewController.swift */,
-				81EB2AD61CC5055100F4459F /* Main.storyboard */,
-				81EB2AD91CC5055100F4459F /* Assets.xcassets */,
-				81EB2ADB1CC5055100F4459F /* LaunchScreen.storyboard */,
-				81EB2ADE1CC5055100F4459F /* Info.plist */,
+				93BE5AD91CC610D100CC2B5A /* AppDelegate.swift */,
+				93BE5ADB1CC610D100CC2B5A /* RootViewController.swift */,
+				93BE5ADD1CC610D100CC2B5A /* DataViewController.swift */,
+				93BE5ADF1CC610D100CC2B5A /* ModelController.swift */,
+				93BE5AE11CC610D100CC2B5A /* Main.storyboard */,
+				93BE5AE41CC610D100CC2B5A /* Assets.xcassets */,
+				93BE5AE61CC610D100CC2B5A /* LaunchScreen.storyboard */,
+				93BE5AE91CC610D100CC2B5A /* Info.plist */,
 			);
-			path = CardDeepLinkDemo;
+			path = CDSenderDemo;
 			sourceTree = "<group>";
 		};
-		81EB2AE21CC5D82C00F4459F /* Sender */ = {
+		93BE5AF11CC610D100CC2B5A /* CDSenderDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				93BE5AF21CC610D100CC2B5A /* CDSenderDemoTests.swift */,
+				93BE5AF41CC610D100CC2B5A /* Info.plist */,
 			);
-			name = Sender;
+			path = CDSenderDemoTests;
 			sourceTree = "<group>";
 		};
-		81EB2AE31CC5D83600F4459F /* Receiver */ = {
+		93BE5AFC1CC610D100CC2B5A /* CDSenderDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				93BE5AFD1CC610D100CC2B5A /* CDSenderDemoUITests.swift */,
+				93BE5AFF1CC610D100CC2B5A /* Info.plist */,
 			);
-			name = Receiver;
+			path = CDSenderDemoUITests;
 			sourceTree = "<group>";
 		};
-		81EB2AE41CC5D85100F4459F /* Utils */ = {
+		93BE5B0E1CC610FD00CC2B5A /* CDReceiverDemo */ = {
 			isa = PBXGroup;
 			children = (
-				81EB2B0D1CC6038900F4459F /* Bridge */,
-				81EB2AE51CC5D86600F4459F /* Net */,
+				93BE5B0F1CC610FD00CC2B5A /* AppDelegate.swift */,
+				93BE5B111CC610FD00CC2B5A /* ViewController.swift */,
+				93BE5B131CC610FD00CC2B5A /* Main.storyboard */,
+				93BE5B161CC610FD00CC2B5A /* Assets.xcassets */,
+				93BE5B181CC610FD00CC2B5A /* LaunchScreen.storyboard */,
+				93BE5B1B1CC610FE00CC2B5A /* Info.plist */,
 			);
-			name = Utils;
+			path = CDReceiverDemo;
 			sourceTree = "<group>";
 		};
-		81EB2AE51CC5D86600F4459F /* Net */ = {
+		93BE5B231CC610FE00CC2B5A /* CDReceiverDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				93BE5B241CC610FE00CC2B5A /* CDReceiverDemoTests.swift */,
+				93BE5B261CC610FE00CC2B5A /* Info.plist */,
 			);
-			name = Net;
+			path = CDReceiverDemoTests;
 			sourceTree = "<group>";
 		};
-		81EB2B0D1CC6038900F4459F /* Bridge */ = {
+		93BE5B2E1CC610FE00CC2B5A /* CDReceiverDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				93BE5B2F1CC610FE00CC2B5A /* CDReceiverDemoUITests.swift */,
+				93BE5B311CC610FE00CC2B5A /* Info.plist */,
 			);
-			name = Bridge;
-			sourceTree = "<group>";
-		};
-		81EB2B121CC605BE00F4459F /* Venders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Venders;
+			path = CDReceiverDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,25 +279,114 @@
 			);
 			name = CardDeepLinkKit;
 			productName = CardDeepLinkKit;
-			productReference = 81EB2AC11CC5053100F4459F /* Card_Swift.framework */;
+			productReference = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		81EB2ACF1CC5055100F4459F /* CardDeepLinkDemo */ = {
+		93BE5AD61CC610D100CC2B5A /* CDSenderDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81EB2ADF1CC5055100F4459F /* Build configuration list for PBXNativeTarget "CardDeepLinkDemo" */;
+			buildConfigurationList = 93BE5B001CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemo" */;
 			buildPhases = (
-				81EB2ACC1CC5055100F4459F /* Sources */,
-				81EB2ACD1CC5055100F4459F /* Frameworks */,
-				81EB2ACE1CC5055100F4459F /* Resources */,
+				93BE5AD31CC610D100CC2B5A /* Sources */,
+				93BE5AD41CC610D100CC2B5A /* Frameworks */,
+				93BE5AD51CC610D100CC2B5A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CardDeepLinkDemo;
-			productName = CardDeepLinkDemo;
-			productReference = 81EB2AD01CC5055100F4459F /* CardDeepLinkDemo.app */;
+			name = CDSenderDemo;
+			productName = CDSenderDemo;
+			productReference = 93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		93BE5AED1CC610D100CC2B5A /* CDSenderDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BE5B031CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoTests" */;
+			buildPhases = (
+				93BE5AEA1CC610D100CC2B5A /* Sources */,
+				93BE5AEB1CC610D100CC2B5A /* Frameworks */,
+				93BE5AEC1CC610D100CC2B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BE5AF01CC610D100CC2B5A /* PBXTargetDependency */,
+			);
+			name = CDSenderDemoTests;
+			productName = CDSenderDemoTests;
+			productReference = 93BE5AEE1CC610D100CC2B5A /* CDSenderDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93BE5AF81CC610D100CC2B5A /* CDSenderDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BE5B061CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoUITests" */;
+			buildPhases = (
+				93BE5AF51CC610D100CC2B5A /* Sources */,
+				93BE5AF61CC610D100CC2B5A /* Frameworks */,
+				93BE5AF71CC610D100CC2B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BE5AFB1CC610D100CC2B5A /* PBXTargetDependency */,
+			);
+			name = CDSenderDemoUITests;
+			productName = CDSenderDemoUITests;
+			productReference = 93BE5AF91CC610D100CC2B5A /* CDSenderDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BE5B321CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemo" */;
+			buildPhases = (
+				93BE5B091CC610FD00CC2B5A /* Sources */,
+				93BE5B0A1CC610FD00CC2B5A /* Frameworks */,
+				93BE5B0B1CC610FD00CC2B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CDReceiverDemo;
+			productName = CDReceiverDemo;
+			productReference = 93BE5B0D1CC610FD00CC2B5A /* CDReceiverDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93BE5B1F1CC610FE00CC2B5A /* CDReceiverDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BE5B351CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoTests" */;
+			buildPhases = (
+				93BE5B1C1CC610FE00CC2B5A /* Sources */,
+				93BE5B1D1CC610FE00CC2B5A /* Frameworks */,
+				93BE5B1E1CC610FE00CC2B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BE5B221CC610FE00CC2B5A /* PBXTargetDependency */,
+			);
+			name = CDReceiverDemoTests;
+			productName = CDReceiverDemoTests;
+			productReference = 93BE5B201CC610FE00CC2B5A /* CDReceiverDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93BE5B2A1CC610FE00CC2B5A /* CDReceiverDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BE5B381CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoUITests" */;
+			buildPhases = (
+				93BE5B271CC610FE00CC2B5A /* Sources */,
+				93BE5B281CC610FE00CC2B5A /* Frameworks */,
+				93BE5B291CC610FE00CC2B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BE5B2D1CC610FE00CC2B5A /* PBXTargetDependency */,
+			);
+			name = CDReceiverDemoUITests;
+			productName = CDReceiverDemoUITests;
+			productReference = 93BE5B2B1CC610FE00CC2B5A /* CDReceiverDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -189,15 +394,34 @@
 		81EB2AB81CC5053100F4459F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = AsiaInfo;
 				TargetAttributes = {
 					81EB2AC01CC5053100F4459F = {
 						CreatedOnToolsVersion = 7.3;
 					};
-					81EB2ACF1CC5055100F4459F = {
-						CreatedOnToolsVersion = 7.3;
+					93BE5AD61CC610D100CC2B5A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					93BE5AED1CC610D100CC2B5A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 93BE5AD61CC610D100CC2B5A;
+					};
+					93BE5AF81CC610D100CC2B5A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 93BE5AD61CC610D100CC2B5A;
+					};
+					93BE5B0C1CC610FD00CC2B5A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					93BE5B1F1CC610FE00CC2B5A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 93BE5B0C1CC610FD00CC2B5A;
+					};
+					93BE5B2A1CC610FE00CC2B5A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 93BE5B0C1CC610FD00CC2B5A;
 					};
 				};
 			};
@@ -215,7 +439,12 @@
 			projectRoot = "";
 			targets = (
 				81EB2AC01CC5053100F4459F /* CardDeepLinkKit */,
-				81EB2ACF1CC5055100F4459F /* CardDeepLinkDemo */,
+				93BE5AD61CC610D100CC2B5A /* CDSenderDemo */,
+				93BE5AED1CC610D100CC2B5A /* CDSenderDemoTests */,
+				93BE5AF81CC610D100CC2B5A /* CDSenderDemoUITests */,
+				93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */,
+				93BE5B1F1CC610FE00CC2B5A /* CDReceiverDemoTests */,
+				93BE5B2A1CC610FE00CC2B5A /* CDReceiverDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,13 +457,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81EB2ACE1CC5055100F4459F /* Resources */ = {
+		93BE5AD51CC610D100CC2B5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81EB2ADD1CC5055100F4459F /* LaunchScreen.storyboard in Resources */,
-				81EB2ADA1CC5055100F4459F /* Assets.xcassets in Resources */,
-				81EB2AD81CC5055100F4459F /* Main.storyboard in Resources */,
+				93BE5AE81CC610D100CC2B5A /* LaunchScreen.storyboard in Resources */,
+				93BE5AE51CC610D100CC2B5A /* Assets.xcassets in Resources */,
+				93BE5AE31CC610D100CC2B5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5AEC1CC610D100CC2B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5AF71CC610D100CC2B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B0B1CC610FD00CC2B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BE5B1A1CC610FD00CC2B5A /* LaunchScreen.storyboard in Resources */,
+				93BE5B171CC610FD00CC2B5A /* Assets.xcassets in Resources */,
+				93BE5B151CC610FD00CC2B5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B1E1CC610FE00CC2B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B291CC610FE00CC2B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,33 +512,116 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93BE5B3C1CC611F300CC2B5A /* CardDeepLinkKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81EB2ACC1CC5055100F4459F /* Sources */ = {
+		93BE5AD31CC610D100CC2B5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81EB2AD51CC5055100F4459F /* ViewController.swift in Sources */,
-				81EB2AD31CC5055100F4459F /* AppDelegate.swift in Sources */,
+				93BE5ADC1CC610D100CC2B5A /* RootViewController.swift in Sources */,
+				93BE5AE01CC610D100CC2B5A /* ModelController.swift in Sources */,
+				93BE5ADE1CC610D100CC2B5A /* DataViewController.swift in Sources */,
+				93BE5ADA1CC610D100CC2B5A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5AEA1CC610D100CC2B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BE5AF31CC610D100CC2B5A /* CDSenderDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5AF51CC610D100CC2B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BE5AFE1CC610D100CC2B5A /* CDSenderDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B091CC610FD00CC2B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BE5B121CC610FD00CC2B5A /* ViewController.swift in Sources */,
+				93BE5B101CC610FD00CC2B5A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B1C1CC610FE00CC2B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BE5B251CC610FE00CC2B5A /* CDReceiverDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BE5B271CC610FE00CC2B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BE5B301CC610FE00CC2B5A /* CDReceiverDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		93BE5AF01CC610D100CC2B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BE5AD61CC610D100CC2B5A /* CDSenderDemo */;
+			targetProxy = 93BE5AEF1CC610D100CC2B5A /* PBXContainerItemProxy */;
+		};
+		93BE5AFB1CC610D100CC2B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BE5AD61CC610D100CC2B5A /* CDSenderDemo */;
+			targetProxy = 93BE5AFA1CC610D100CC2B5A /* PBXContainerItemProxy */;
+		};
+		93BE5B221CC610FE00CC2B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */;
+			targetProxy = 93BE5B211CC610FE00CC2B5A /* PBXContainerItemProxy */;
+		};
+		93BE5B2D1CC610FE00CC2B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BE5B0C1CC610FD00CC2B5A /* CDReceiverDemo */;
+			targetProxy = 93BE5B2C1CC610FE00CC2B5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		81EB2AD61CC5055100F4459F /* Main.storyboard */ = {
+		93BE5AE11CC610D100CC2B5A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				81EB2AD71CC5055100F4459F /* Base */,
+				93BE5AE21CC610D100CC2B5A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		81EB2ADB1CC5055100F4459F /* LaunchScreen.storyboard */ = {
+		93BE5AE61CC610D100CC2B5A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				81EB2ADC1CC5055100F4459F /* Base */,
+				93BE5AE71CC610D100CC2B5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		93BE5B131CC610FD00CC2B5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93BE5B141CC610FD00CC2B5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93BE5B181CC610FD00CC2B5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93BE5B191CC610FD00CC2B5A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -375,6 +725,7 @@
 		81EB2ACA1CC5053100F4459F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -384,14 +735,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkKit;
-				PRODUCT_NAME = Card_Swift;
+				PRODUCT_NAME = CardDeepLinkKit;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		81EB2ACB1CC5053100F4459F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -401,32 +754,160 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkKit;
-				PRODUCT_NAME = Card_Swift;
+				PRODUCT_NAME = CardDeepLinkKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		81EB2AE01CC5055100F4459F /* Debug */ = {
+		93BE5B011CC610D100CC2B5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CardDeepLinkDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = CDSenderDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		81EB2AE11CC5055100F4459F /* Release */ = {
+		93BE5B021CC610D100CC2B5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CardDeepLinkDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = CDSenderDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		93BE5B041CC610D100CC2B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CDSenderDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDSenderDemo.app/CDSenderDemo";
+			};
+			name = Debug;
+		};
+		93BE5B051CC610D100CC2B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CDSenderDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDSenderDemo.app/CDSenderDemo";
+			};
+			name = Release;
+		};
+		93BE5B071CC610D100CC2B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CDSenderDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CDSenderDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		93BE5B081CC610D100CC2B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CDSenderDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDSenderDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CDSenderDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		93BE5B331CC610FE00CC2B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CDReceiverDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		93BE5B341CC610FE00CC2B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CDReceiverDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		93BE5B361CC610FE00CC2B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CDReceiverDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDReceiverDemo.app/CDReceiverDemo";
+			};
+			name = Debug;
+		};
+		93BE5B371CC610FE00CC2B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CDReceiverDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDReceiverDemo.app/CDReceiverDemo";
+			};
+			name = Release;
+		};
+		93BE5B391CC610FE00CC2B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CDReceiverDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CDReceiverDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		93BE5B3A1CC610FE00CC2B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CDReceiverDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiboss.CDReceiverDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CDReceiverDemo;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -449,14 +930,61 @@
 				81EB2ACB1CC5053100F4459F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		81EB2ADF1CC5055100F4459F /* Build configuration list for PBXNativeTarget "CardDeepLinkDemo" */ = {
+		93BE5B001CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81EB2AE01CC5055100F4459F /* Debug */,
-				81EB2AE11CC5055100F4459F /* Release */,
+				93BE5B011CC610D100CC2B5A /* Debug */,
+				93BE5B021CC610D100CC2B5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BE5B031CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BE5B041CC610D100CC2B5A /* Debug */,
+				93BE5B051CC610D100CC2B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BE5B061CC610D100CC2B5A /* Build configuration list for PBXNativeTarget "CDSenderDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BE5B071CC610D100CC2B5A /* Debug */,
+				93BE5B081CC610D100CC2B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BE5B321CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BE5B331CC610FE00CC2B5A /* Debug */,
+				93BE5B341CC610FE00CC2B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BE5B351CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BE5B361CC610FE00CC2B5A /* Debug */,
+				93BE5B371CC610FE00CC2B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BE5B381CC610FE00CC2B5A /* Build configuration list for PBXNativeTarget "CDReceiverDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BE5B391CC610FE00CC2B5A /* Debug */,
+				93BE5B3A1CC610FE00CC2B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
