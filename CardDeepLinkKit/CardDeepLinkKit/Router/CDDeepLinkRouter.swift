@@ -110,7 +110,7 @@ public class CDDeepLinkRouter: NSObject {
     
     func handleRoute(route: String, withDeepLink: CDDeepLink) -> Bool{
         
-        let handler = handlerKeyedSubscript(route)
+        let handler: AnyClass = handlerKeyedSubscript(route)
         if class_isMetaClass(handler) && handler.isSubclassOfClass(CDRouteHandler.self) {
             let routeHandler = (handler as! CDRouteHandler.Type).init()
             if routeHandler.shouldHandleDeepLink(withDeepLink) == false {

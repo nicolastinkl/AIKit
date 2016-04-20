@@ -6,11 +6,26 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		93374DA61CC77AD2004F8F79 /* CardDeepLinkKitTarget */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 93374DA71CC77AD2004F8F79 /* Build configuration list for PBXAggregateTarget "CardDeepLinkKitTarget" */;
+			buildPhases = (
+				93374DAA1CC77AFA004F8F79 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CardDeepLinkKitTarget;
+			productName = CardDeepLinkKitTarget;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93374D9E1CC77744004F8F79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9D1CC77744004F8F79 /* UIKit.framework */; };
 		93374DA01CC7774C004F8F79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9F1CC7774C004F8F79 /* Foundation.framework */; };
 		93374DA21CC77753004F8F79 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374DA11CC77753004F8F79 /* SystemConfiguration.framework */; };
+		93374DA51CC77A85004F8F79 /* CardDeepLinkKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */; };
 		936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E13571CC6200A00BA0FD0 /* NameSpace.swift */; };
 		937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F01CC61EE3001BF260 /* CDDeepLink.swift */; };
 		937811F91CC61F38001BF260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F81CC61F38001BF260 /* AppDelegate.swift */; };
@@ -49,6 +64,7 @@
 		93374D9D1CC77744004F8F79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93374D9F1CC7774C004F8F79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93374DA11CC77753004F8F79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardDeepLinkKit.bundle; sourceTree = "<group>"; };
 		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		937811F01CC61EE3001BF260 /* CDDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLink.swift; sourceTree = "<group>"; };
 		937811F61CC61F38001BF260 /* CardDeepLinkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +144,7 @@
 		81EB2AC31CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXGroup;
 			children = (
+				93374DA31CC77A85004F8F79 /* Resoures */,
 				93BA89851CC6359100195C67 /* Regex */,
 				93BA89861CC6359100195C67 /* View */,
 				93BA897C1CC628E700195C67 /* Application */,
@@ -141,6 +158,14 @@
 				936E13571CC6200A00BA0FD0 /* NameSpace.swift */,
 			);
 			path = CardDeepLinkKit;
+			sourceTree = "<group>";
+		};
+		93374DA31CC77A85004F8F79 /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */,
+			);
+			path = Resoures;
 			sourceTree = "<group>";
 		};
 		937811B61CC615D4001BF260 /* CardDeepLink */ = {
@@ -259,6 +284,7 @@
 				81EB2ABE1CC5053100F4459F /* Headers */,
 				81EB2ABF1CC5053100F4459F /* Resources */,
 				84DD63AF3CBEAACFD5F7DC85 /* Copy Pods Resources */,
+				93374DAB1CC77BEB004F8F79 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -300,6 +326,9 @@
 					81EB2AC01CC5053100F4459F = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					93374DA61CC77AD2004F8F79 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					937811F51CC61F38001BF260 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -320,6 +349,7 @@
 			targets = (
 				81EB2AC01CC5053100F4459F /* CardDeepLinkKit */,
 				937811F51CC61F38001BF260 /* CardDeepLinkKitDemo */,
+				93374DA61CC77AD2004F8F79 /* CardDeepLinkKitTarget */,
 			);
 		};
 /* End PBXProject section */
@@ -329,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93374DA51CC77A85004F8F79 /* CardDeepLinkKit.bundle in Resources */,
 				93C7CBB91CC77481001B5D3F /* CardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +406,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		93374DAA1CC77AFA004F8F79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"GameworkSDKFramewrok\"\nFMK_NAME=${PROJECT_NAME}\n\nSF_EXECUTABLE_PATH=\"lib${FMK_NAME}.a\"\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\necho \"------------------------ \"\necho \"${DEVICE_DIR}/${FMK_NAME}\"\necho \"------------------------ \"\necho \"${SIMULATOR_DIR}/${FMK_NAME}\"\necho \"------------------------ \"\necho \"${INSTALL_DIR}/${FMK_NAME}\"\necho \"------------------------ \"\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\n#cp -R \"${SRCROOT}/${DEVICE_DIR}/\" \"${INSTALL_DIR}\"\n\ncp -R \"${SRCROOT}/${DEVICE_DIR}/\" \"${INSTALL_DIR}\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\n\n#buile *.framework \"${SIMULATOR_DIR}/${FMK_NAME}\"\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\"  -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\n#build  *.a\n#lipo -create \"${DEVICE_DIR}/${SF_EXECUTABLE_PATH}\" \"${SIMULATOR_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${INSTALL_DIR}/${SF_EXECUTABLE_PATH}\"\n\n\nrm -r \"${WRK_DIR}\"\n\nopen \"${INSTALL_DIR}\"";
+		};
+		93374DAB1CC77BEB004F8F79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUNDLE_DIR=${PROJECT_DIR}/${PROJECT_NAME}/Resoures/CardDeepLinkKit.bundle\nINSTALL_DIR=${SRCROOT}/Products/${PROJECT_NAME}.framework\n\necho \"${BUNDLE_DIR}\"\necho \"${INSTALL_DIR}\"\nopen \"${INSTALL_DIR}\"\n\nif [ -d \"${BUNDLE_DIR}\" ];then\nif ls ${INSTALL_DIR}/*.nib >/dev/null 2>&1;then\n                     rm -rf ${BUNDLE_DIR}/*.nib\n                     cp -rf ${INSTALL_DIR}/*.nib ${BUNDLE_DIR}\n                     rm -rf ${INSTALL_DIR}/*.nib\n                     \n                     # copy to bundle\n                     rm -rf ${INSTALL_DIR}/GameWorksSDKBundle.bundle\n                     cp -rf ${BUNDLE_DIR} ${INSTALL_DIR}\n                     \n                     fi\n                     fi\n                     \n                     echo \"copy Products/***.framworks/**.nib to *.bundle\"\n                     \n                     \n                     \n                     \n                     \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -538,6 +595,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = CardDeepLinkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -547,6 +605,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -559,6 +618,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = CardDeepLinkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -567,6 +627,21 @@
 				PRODUCT_NAME = CardDeepLinkKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		93374DA81CC77AD2004F8F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		93374DA91CC77AD2004F8F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -614,6 +689,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		93374DA71CC77AD2004F8F79 /* Build configuration list for PBXAggregateTarget "CardDeepLinkKitTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93374DA81CC77AD2004F8F79 /* Debug */,
+				93374DA91CC77AD2004F8F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		937812051CC61F38001BF260 /* Build configuration list for PBXNativeTarget "CardDeepLinkKitDemo" */ = {
 			isa = XCConfigurationList;
