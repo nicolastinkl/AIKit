@@ -28,7 +28,7 @@ public struct CDApplication{
     }
 
     struct AppLinks {
-         static let CDAppLinksDataKey              = "al_applink_data"
+         static let CDAppLinksDataKey              = "applink_data"
          static let CDAppLinksTargetURLKey         = "target_url"
          static let CDAppLinksExtrasKey            = "extras"
          static let CDAppLinksVersionKey           = "version"

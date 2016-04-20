@@ -17,14 +17,25 @@
 
 import Foundation
 
-protocol CDTargetViewController {
+protocol CDTargetViewController: class{
     func configureWithDeepLink(deepLink: CDDeepLink)
 }
+
+public class CDViewController: UIViewController,CDTargetViewController{
+    func configureWithDeepLink(deepLink: CDDeepLink) {
+        
+    }
+}
+
 
 /**
 A base class for handling routes.
  */
 public class CDRouteHandler: NSObject{
+     
+    required public override init() {
+        super.init()
+    }
     
     /**
      Indicates whether the deep link should be handled.
@@ -38,7 +49,7 @@ public class CDRouteHandler: NSObject{
         return false
     }
     
-    public func targetViewController() -> UIViewController?{
+    public func targetViewController() -> CDViewController?{
         return nil
     }
     
@@ -46,5 +57,37 @@ public class CDRouteHandler: NSObject{
          return UIApplication.sharedApplication().keyWindow?.rootViewController
     }
     
+    public func presentTargetViewController(targetViewController: CDViewController,presentingViewController:UIViewController){
+        if preferModalPresentation() || !presentingViewController.isKindOfClass(UINavigationController.self)  {
+            presentingViewController.presentViewController(targetViewController, animated: false, completion: nil)
+        }else if presentingViewController.isKindOfClass(UINavigationController.self)  {
+            placeTargetViewController(targetViewController, navigationController: presentingViewController as? UINavigationController)
+        }
+    }
+    
+    
+    private func placeTargetViewController(targetViewController: UIViewController,navigationController: UINavigationController?){
+        if let navigationController = navigationController {
+            if navigationController.viewControllers.contains(targetViewController) {
+                navigationController.popToViewController(targetViewController, animated: false)
+            }else{
+                for controller in navigationController.viewControllers{
+                    navigationController.popToViewController(controller, animated: false)
+                    navigationController.popViewControllerAnimated(false)
+                    
+                    if controller.isEqual(navigationController.topViewController) {
+                        navigationController.setViewControllers([targetViewController], animated: false)
+                    }
+                    break
+                }
+                
+                if ((navigationController.topViewController?.isEqual(targetViewController)) != true) {
+                    navigationController.pushViewController(targetViewController, animated: false)
+                }
+                
+            }
+        }
+        
+    }
     
 }
