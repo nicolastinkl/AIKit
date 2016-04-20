@@ -265,7 +265,7 @@ extension String{
     
     
     /**
-     deep link
+      - returns: Deep Link
      */
     func cd_queryStringWithParameters(parameters: [String : String]) -> String {
         let query = NSMutableString()
@@ -297,7 +297,6 @@ extension String{
         }
         return paramsDict
     }
-
     
     func cd_stringByAddingPercentEscapesUsingEncoding(encoding: NSStringEncoding) -> String {
         let allowedCharactersSet: NSCharacterSet = NSCharacterSet(charactersInString: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.~")

@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let _ = CDDeepLink(url: NSURL(string: "")!)
-
+        
+        Card.sharedInstance.showInView(UIView(), serviceId: "")
+        
         return true
     }
 

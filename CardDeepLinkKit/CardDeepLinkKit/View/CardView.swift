@@ -1,5 +1,5 @@
 //
-//  Card.swift
+//  CardView.swift
 //  CardDeepLinkKit
 //
 // Copyright (c) 2016 AsiaInfo
@@ -24,41 +24,6 @@
 
 import Foundation
 
-public class Card: NSObject {
-    
-    /**
-     swift_once_block_invoke -> Thread Safe and from apple document function.
-     */
-    public static let sharedInstance = Card()
-    
-    private override init() {}
-
-    public typealias CDConfigErrorBlock =  (Bool,NSError) -> Void
-    
-    /**
-     Init config
-     
-     Card.sharedInstance.configureWithApplicationServiceId("") { (complate, error) -> Void in
-        //.....
-     }
-     - parameter token:  app token: Vh7giFfqA1JnJ3BYQLhWxXW1D63H5CcvkaIZa_B7
-     */
-    public func configureWithApplicationServiceToken(token: String?,comfigError:CDConfigErrorBlock){
-        if let token = token {
-            if token.length > 0 {
-                CDApplication.Settings.CDApplicationServiceToken = token
-            }
-        }
-    }
-    
-    /**
-     Allow alertView to be closed/renamed in a chainable manner
-     
-     - parameter view: super view
-     - parameter serviceId: ID
-     */
-    public func showInView(view: UIView,serviceId:String){
-        view.addSubview(CardView())
-    }
+public class CardView: UIView {
     
 }
