@@ -1,0 +1,10 @@
+framework module CardDeepLinkKit {
+  umbrella header "CardDeepLinkKit.h"
+
+  export *
+  module * { export * }
+}
+
+module CardDeepLinkKit.Swift {
+    header "CardDeepLinkKit-Swift.h"
+}

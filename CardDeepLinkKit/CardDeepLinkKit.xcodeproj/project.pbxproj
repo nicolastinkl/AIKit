@@ -46,16 +46,6 @@
 		E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37930384132BCB05B94301 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		937812091CC61F6B001BF260 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81EB2AB81CC5053100F4459F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 81EB2AC01CC5053100F4459F;
-			remoteInfo = CardDeepLinkKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +55,9 @@
 		93374D9F1CC7774C004F8F79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93374DA11CC77753004F8F79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardDeepLinkKit.bundle; sourceTree = "<group>"; };
+		93374DAE1CC78471004F8F79 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		93374DAF1CC78471004F8F79 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/SwiftHTTP.framework"; sourceTree = "<group>"; };
+		93374DB01CC78471004F8F79 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		937811F01CC61EE3001BF260 /* CDDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLink.swift; sourceTree = "<group>"; };
 		937811F61CC61F38001BF260 /* CardDeepLinkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +245,9 @@
 		AF2EC5DC4F6C3D23B7835E31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93374DAE1CC78471004F8F79 /* Pods.framework */,
+				93374DAF1CC78471004F8F79 /* SwiftHTTP.framework */,
+				93374DB01CC78471004F8F79 /* SwiftyJSON.framework */,
 				93374DA11CC77753004F8F79 /* SystemConfiguration.framework */,
 				93374D9F1CC7774C004F8F79 /* Foundation.framework */,
 				93374D9D1CC77744004F8F79 /* UIKit.framework */,
@@ -306,7 +302,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9378120A1CC61F6B001BF260 /* PBXTargetDependency */,
 			);
 			name = CardDeepLinkKitDemo;
 			productName = CardDeepLinkKitDemo;
@@ -431,7 +426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BUNDLE_DIR=${PROJECT_DIR}/${PROJECT_NAME}/Resoures/CardDeepLinkKit.bundle\nINSTALL_DIR=${SRCROOT}/Products/${PROJECT_NAME}.framework\n\necho \"${BUNDLE_DIR}\"\necho \"${INSTALL_DIR}\"\nopen \"${INSTALL_DIR}\"\n\nif [ -d \"${BUNDLE_DIR}\" ];then\nif ls ${INSTALL_DIR}/*.nib >/dev/null 2>&1;then\n                     rm -rf ${BUNDLE_DIR}/*.nib\n                     cp -rf ${INSTALL_DIR}/*.nib ${BUNDLE_DIR}\n                     rm -rf ${INSTALL_DIR}/*.nib\n                     \n                     # copy to bundle\n                     rm -rf ${INSTALL_DIR}/GameWorksSDKBundle.bundle\n                     cp -rf ${BUNDLE_DIR} ${INSTALL_DIR}\n                     \n                     fi\n                     fi\n                     \n                     echo \"copy Products/***.framworks/**.nib to *.bundle\"\n                     \n                     \n                     \n                     \n                     \n";
+			shellScript = "RELEASE_DIR=${BUILD_DIR}\n\nDEBUG_DIR_FRAME=${RELEASE_DIR}/Debug-iphonesimulator/${PROJECT_NAME}.framework\n\nRELEASE_DIR_FRAME=${RELEASE_DIR}/Release-iphonesimulator/${PROJECT_NAME}.framework\n\nPRO_BUNDLE_DIR=${PROJECT_DIR}/${PROJECT_NAME}/Resoures/CardDeepLinkKit.bundle\n\necho \"================ start ==================\"\necho \"${PRO_BUNDLE_DIR}\"\nBUNDLE_DIR=${DEBUG_DIR_FRAME}/CardDeepLinkKit.bundle\n\necho \"${RELEASE_DIR_FRAME}    ${BUNDLE_DIR}\"\n\nINSTALL_DIR=${SRCROOT}/Products/\necho \"================ clear cache ==================\"\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\necho \"================ mkdir path ==================\"\nmkdir -p \"${INSTALL_DIR}\"\n\necho \"================ do *.nib files ==================\"\n\nif [ -d \"${BUNDLE_DIR}\" ];then\nif ls ${DEBUG_DIR_FRAME}/*.nib >/dev/null 2>&1;then\n                           \n                           rm -rf ${BUNDLE_DIR}/*.nib\n                         \n                           rm -rf ${PRO_BUNDLE_DIR}/*.nib\n                           \n                           cp -rf ${DEBUG_DIR_FRAME}/*.nib ${BUNDLE_DIR}\n                         \n                           cp -rf ${DEBUG_DIR_FRAME}/*.nib ${PRO_BUNDLE_DIR}\n                           \n                           rm -rf ${DEBUG_DIR_FRAME}/*.nib\n                           \n                           \n                           # copy to bundle\n                           \n                           cp -rf ${DEBUG_DIR_FRAME} ${INSTALL_DIR}\n                           \n                           fi\n                           \n                           fi\n                           \n                           # copy framework to local path. \n\necho \"================ finish shell. ==================\"\nopen \"${INSTALL_DIR}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -464,14 +459,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9378120A1CC61F6B001BF260 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 81EB2AC01CC5053100F4459F /* CardDeepLinkKit */;
-			targetProxy = 937812091CC61F6B001BF260 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		937811FC1CC61F38001BF260 /* Main.storyboard */ = {
@@ -649,6 +636,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = CardDeepLinkKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -661,6 +652,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = CardDeepLinkKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

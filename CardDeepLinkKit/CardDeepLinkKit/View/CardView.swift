@@ -26,8 +26,14 @@ import Foundation
 
 public class CardView: UIView {
     
+    private static let frameworkName = "CardDeepLinkKit.framework"
+    
     public static func createInstance() -> CardView {
-        return NSBundle.mainBundle().loadNibNamed("CardView", owner: self, options: nil).first  as! CardView
+        print(NSBundle.mainBundle().bundlePath)
+        print(NSBundle.mainBundle().bundleIdentifier)
+        print(NSBundle.mainBundle().bundleURL)
+        
+        return NSBundle.mainBundle().loadNibNamed("\(frameworkName)/CardView", owner: self, options: nil).first  as! CardView
     }
         
     /**
