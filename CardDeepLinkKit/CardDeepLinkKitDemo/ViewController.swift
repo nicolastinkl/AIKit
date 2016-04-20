@@ -8,6 +8,8 @@
 
 import UIKit
 
+import CardDeepLinkKit
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -23,8 +25,14 @@ class ViewController: UIViewController {
 //        AnyClass
 //       let tableview =  UITableView()
 //        tableview.registerClass(<#T##aClass: AnyClass?##AnyClass?#>, forHeaderFooterViewReuseIdentifier: <#T##String#>)
+
     }
 
+    @IBAction func showView(sender: AnyObject) {
+        
+        Card.sharedInstance.showInView(self.view, serviceId: "121")
+        
+    }
 
 }
 
