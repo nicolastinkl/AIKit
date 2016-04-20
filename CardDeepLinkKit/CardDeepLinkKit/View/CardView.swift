@@ -26,16 +26,29 @@ import Foundation
 
 public class CardView: UIView {
     
-    private static let frameworkName = "CardDeepLinkKit.framework"
+    private static let frameworkName = "CardDeepLinkKit.bundle"
+
+    @IBOutlet weak var backgroundView: UIView!
     
+    //CardDeepLinkKit/CardDeepLinkKit.framework/CardDeepLinkKit.bundle/CardView
     public static func createInstance() -> CardView {
-        print(NSBundle.mainBundle().bundlePath)
-        print(NSBundle.mainBundle().bundleIdentifier)
-        print(NSBundle.mainBundle().bundleURL)
         
-        return NSBundle.mainBundle().loadNibNamed("\(frameworkName)/CardView", owner: self, options: nil).first  as! CardView
+        let cardview = NSBundle.mainBundle().loadNibNamed("CardDeepLinkKit.bundle/CardView", owner: self, options: nil).first as! CardView
+        
+        cardview.backgroundView.layer.cornerRadius = 10
+        cardview.backgroundView.layer.masksToBounds = true
+
+        return cardview
     }
         
+    @IBAction func dismissView(sender: AnyObject) {
+        
+        self.dynamicType.springEaseOut(0.5, animations: { () -> Void in
+            self.alpha = 0
+            }) { () -> Void in
+                self.removeFromSuperview()
+        }
+    }
     /**
      Animation springEaseIn
      */
@@ -51,14 +64,11 @@ public class CardView: UIView {
         )
     }
     
-    public class func springEaseOut(duration: NSTimeInterval, animations: (() -> Void)!) {
-        UIView.animateWithDuration(
-            duration,
-            delay: 0,
-            options: .CurveEaseOut,
-            animations: {
-                animations()
-            }, completion: nil
-        )
+    public class func springEaseOut(duration: NSTimeInterval, animations: (() -> Void)!,completion: (() -> Void)!) {
+        UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
+            animations()
+            }) { ( bol ) -> Void in
+            completion()
+        }
     }
 }

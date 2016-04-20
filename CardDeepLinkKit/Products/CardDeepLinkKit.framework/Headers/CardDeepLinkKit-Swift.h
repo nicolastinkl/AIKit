@@ -213,9 +213,14 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit8CardView")
 
 /// Animation springEaseIn
 + (void)springEaseIn:(NSTimeInterval)duration animations:(void (^ __null_unspecified)(void))animations;
-+ (void)springEaseOut:(NSTimeInterval)duration animations:(void (^ __null_unspecified)(void))animations;
++ (void)springEaseOut:(NSTimeInterval)duration animations:(void (^ __null_unspecified)(void))animations completion:(void (^ __null_unspecified)(void))completion;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface UIColor (SWIFT_EXTENSION(CardDeepLinkKit))
+- (nonnull instancetype)initWithHex:(NSString * __nonnull)hex;
 @end
 
 #pragma clang diagnostic pop

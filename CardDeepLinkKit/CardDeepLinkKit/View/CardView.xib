@@ -16,18 +16,38 @@
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jyn-2S-LSC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xJF-PP-ych" appends="YES" id="dFW-MT-YmH"/>
+                        </connections>
                     </view>
                     <blurEffect style="light"/>
                 </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qya-YI-3jw">
+                    <rect key="frame" x="20" y="175" width="560" height="249"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="KhR-IM-YBo" secondAttribute="bottom" id="BQ7-l5-FL5"/>
+                <constraint firstItem="Qya-YI-3jw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="175" id="HOW-Io-aUc"/>
                 <constraint firstItem="KhR-IM-YBo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IeS-N1-Txb"/>
                 <constraint firstAttribute="trailing" secondItem="KhR-IM-YBo" secondAttribute="trailing" id="JUB-Aw-iV6"/>
+                <constraint firstAttribute="trailing" secondItem="Qya-YI-3jw" secondAttribute="trailing" constant="20" id="PiK-C7-Vcm"/>
+                <constraint firstItem="Qya-YI-3jw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="irX-zY-Z58"/>
                 <constraint firstItem="KhR-IM-YBo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="meW-OC-ivS"/>
+                <constraint firstAttribute="bottom" secondItem="Qya-YI-3jw" secondAttribute="bottom" constant="176" id="z5E-6r-tQU"/>
             </constraints>
+            <connections>
+                <outlet property="backgroundView" destination="Qya-YI-3jw" id="XQT-D3-m37"/>
+            </connections>
             <point key="canvasLocation" x="313" y="410"/>
         </view>
+        <tapGestureRecognizer id="xJF-PP-ych">
+            <connections>
+                <action selector="dismissView:" destination="iN0-l3-epB" id="eQd-ja-463"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
