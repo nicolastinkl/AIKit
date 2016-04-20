@@ -23,3 +23,45 @@
 // THE SOFTWARE.
 
 import Foundation
+
+/// Matcher
+public class CDRouteMatcher: NSObject {
+ 
+    internal var scheme: String?
+    internal var regexMatcher: CDRegularExpression?
+    
+    override init() {
+        super.init()
+    }
+    
+    init(route: String){
+        let parts = route.componentsSeparatedByString("://")
+        scheme = parts.count > 1 ? parts.first : nil
+        regexMatcher = try! CDRegularExpression(pattern: parts.last ?? "", options: NSRegularExpressionOptions.CaseInsensitive)
+        
+    }
+    
+    func matcherWithRoute(route: String) -> CDRouteMatcher{
+        return CDRouteMatcher(route: route)
+    }
+    
+    func deepLinkWithURL(url: NSURL) -> CDDeepLink? {
+        
+        let deepLink = CDDeepLink(url: url)
+        let deepLinkString = "\(deepLink.URL?.host ?? "")\(deepLink.URL?.path ?? "")"
+        if self.scheme?.length > 0 && self.scheme != deepLink.URL?.scheme {
+            return nil
+        }
+        
+        let matchResult = regexMatcher?.matchResultForString(deepLinkString)
+        
+        if let match =  matchResult?.match {
+            if match == true {
+                deepLink.routeParameters = matchResult?.namedProperties
+                return deepLink
+            }
+        }
+        
+        return nil
+    }
+}

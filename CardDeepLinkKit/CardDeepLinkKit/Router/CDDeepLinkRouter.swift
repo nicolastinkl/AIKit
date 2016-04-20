@@ -23,3 +23,26 @@
 // THE SOFTWARE.
 
 import Foundation
+
+public class CDDeepLinkRouter: NSObject {
+    
+    public typealias RouteHandlerBlock =  (CDDeepLink) -> Void
+    
+    let block: RouteHandlerBlock?
+    
+    
+    private init(_ block: RouteHandlerBlock) {
+        self.block = block
+    }
+    
+    
+    func text(b: RouteHandlerBlock){
+        
+    }
+    
+    func etc(){
+        text { (CDDeepLink) -> Void in
+            
+        }
+    }
+}

@@ -28,13 +28,11 @@ public class CDRegularExpression: NSRegularExpression{
     
     var groupNames: NSArray?
     
-    static let DPLNamedGroupComponentPattern: String = ":[a-zA-Z0-9-_][^/]+"
+    static let CDNamedGroupComponentPattern: String = ":[a-zA-Z0-9-_][^/]+"
     
-    static let DPLRouteParameterPattern: String = ":[a-zA-Z0-9-_]+"
+    static let CDRouteParameterPattern: String = ":[a-zA-Z0-9-_]+"
     
-    static let DPLURLParameterPattern: String = "([^/]+)"
-    
-    static let DP0 = NSRegularExpressionOptions.CaseInsensitive
+    static let CDURLParameterPattern: String = "([^/]+)" 
     
     
     override init(pattern: String, options: NSRegularExpressionOptions) throws {
@@ -51,7 +49,7 @@ public class CDRegularExpression: NSRegularExpression{
  
     //NSRegularExpressionOptions.CaseInsensitive
     public func matchResultForString(str: String) -> CDMatchResult {
-
+        
         let matches = matchesInString(str, options: NSMatchingOptions.Anchored, range: NSMakeRange(0, str.length))
         let matchResult = CDMatchResult()
         if matches.count <= 0 {
@@ -75,7 +73,7 @@ public class CDRegularExpression: NSRegularExpression{
     public class func stringByRemovingNamedGroupsFromString(str: String) -> String {
         var modifiedStr = str
         let namedGroupExpressions = namedGroupTokensForString(str) as! [String]
-        let parameterRegex = try! NSRegularExpression(pattern: CDRegularExpression.DPLRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)
+        let parameterRegex = try! NSRegularExpression(pattern: CDRegularExpression.CDRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)
         // For each of the named group expressions (including name & regex)
         for namedExpression: String in namedGroupExpressions {
             var replacementExpression = namedExpression
@@ -87,7 +85,7 @@ public class CDRegularExpression: NSRegularExpression{
             }
             // If it was a named group, without regex constraining it, put in default regex
             if replacementExpression.length == 0 {
-                replacementExpression = CDRegularExpression.DPLURLParameterPattern
+                replacementExpression = CDRegularExpression.CDURLParameterPattern
             }
             modifiedStr = modifiedStr.stringByReplacingOccurrencesOfString(namedExpression, withString: replacementExpression)
         }
@@ -106,7 +104,7 @@ public class CDRegularExpression: NSRegularExpression{
     }
     
     public class func namedGroupTokensForString(str: String) -> [AnyObject] {
-        let componentRegex: NSRegularExpression = try! NSRegularExpression(pattern: CDRegularExpression.DPLRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)
+        let componentRegex: NSRegularExpression = try! NSRegularExpression(pattern: CDRegularExpression.CDRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)
         let matches: [AnyObject] = componentRegex.matchesInString(str, options: NSMatchingOptions.ReportProgress, range: NSMakeRange(0, str.length))
         var namedGroupTokens = Array<AnyObject>()
         for result in (matches as? [NSTextCheckingResult ])!{
@@ -121,7 +119,7 @@ public class CDRegularExpression: NSRegularExpression{
         var groupNames = Array<AnyObject>()
         let namedGroupExpressions  = CDRegularExpression.namedGroupTokensForString(str)
 
-        let parameterRegex: NSRegularExpression = try! NSRegularExpression(pattern: CDRegularExpression.DPLRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)
+        let parameterRegex: NSRegularExpression = try! NSRegularExpression(pattern: CDRegularExpression.CDRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)
         
         for namedExpression: String in (namedGroupExpressions as? [String])! {
             

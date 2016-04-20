@@ -24,6 +24,10 @@
 
 import Foundation
 
-public class Card: UIView {
+public class Card: NSObject {
     
+    
+    func configureWithApplicationServiceId(){
+        
+    }
 }

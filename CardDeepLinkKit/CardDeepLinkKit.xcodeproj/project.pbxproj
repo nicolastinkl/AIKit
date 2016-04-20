@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E13571CC6200A00BA0FD0 /* NameSpace.swift */; };
-		937811BC1CC61BD2001BF260 /* CardDeepLinkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */; };
 		937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F01CC61EE3001BF260 /* CDDeepLink.swift */; };
 		937811F91CC61F38001BF260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F81CC61F38001BF260 /* AppDelegate.swift */; };
 		937811FB1CC61F38001BF260 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811FA1CC61F38001BF260 /* ViewController.swift */; };
@@ -20,7 +19,7 @@
 		9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386946A1CC6581800CCF864 /* CDRegularExpression.swift */; };
 		93BA897B1CC6254800195C67 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897A1CC6254800195C67 /* String.swift */; };
 		93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897D1CC628FF00195C67 /* CDApplication.swift */; };
-		93BA89801CC6308600195C67 /* CDRegularHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897F1CC6308600195C67 /* CDRegularHandler.swift */; };
+		93BA89801CC6308600195C67 /* CDRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897F1CC6308600195C67 /* CDRouteHandler.swift */; };
 		93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */; };
 		93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */; };
 		93BA89881CC635B400195C67 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89871CC635B400195C67 /* Card.swift */; };
@@ -43,7 +42,6 @@
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
-		937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeepLinkKit.swift; sourceTree = "<group>"; };
 		937811F01CC61EE3001BF260 /* CDDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLink.swift; sourceTree = "<group>"; };
 		937811F61CC61F38001BF260 /* CardDeepLinkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		937811F81CC61F38001BF260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +54,7 @@
 		9386946A1CC6581800CCF864 /* CDRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRegularExpression.swift; sourceTree = "<group>"; };
 		93BA897A1CC6254800195C67 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		93BA897D1CC628FF00195C67 /* CDApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApplication.swift; sourceTree = "<group>"; };
-		93BA897F1CC6308600195C67 /* CDRegularHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRegularHandler.swift; sourceTree = "<group>"; };
+		93BA897F1CC6308600195C67 /* CDRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRouteHandler.swift; sourceTree = "<group>"; };
 		93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLinkRouter.swift; sourceTree = "<group>"; };
 		93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRouteMatcher.swift; sourceTree = "<group>"; };
 		93BA89871CC635B400195C67 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				937811B81CC615D4001BF260 /* Router */,
 				937811B91CC615D4001BF260 /* RouterMatcher */,
 				81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */,
-				937811BB1CC61BD2001BF260 /* CardDeepLinkKit.swift */,
 				81EB2AC61CC5053100F4459F /* Info.plist */,
 				936E13571CC6200A00BA0FD0 /* NameSpace.swift */,
 			);
@@ -145,7 +142,7 @@
 		937811B71CC615D4001BF260 /* RouteHandler */ = {
 			isa = PBXGroup;
 			children = (
-				93BA897F1CC6308600195C67 /* CDRegularHandler.swift */,
+				93BA897F1CC6308600195C67 /* CDRouteHandler.swift */,
 			);
 			path = RouteHandler;
 			sourceTree = "<group>";
@@ -372,11 +369,10 @@
 				93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */,
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
 				93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */,
-				93BA89801CC6308600195C67 /* CDRegularHandler.swift in Sources */,
+				93BA89801CC6308600195C67 /* CDRouteHandler.swift in Sources */,
 				93BA897B1CC6254800195C67 /* String.swift in Sources */,
 				9386946B1CC6581800CCF864 /* CDMatchResult.swift in Sources */,
 				9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */,
-				937811BC1CC61BD2001BF260 /* CardDeepLinkKit.swift in Sources */,
 				93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
