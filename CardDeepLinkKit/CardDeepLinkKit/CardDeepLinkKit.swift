@@ -15,5 +15,8 @@ import SwiftyJSON
 public class CardDeepLinkKit: NSObject {
     
     
-    
+    func test(){
+        _ = CDDeepLink(url: NSURL(string: "")!)
+        
+    }
 }
