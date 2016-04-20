@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93374D9E1CC77744004F8F79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9D1CC77744004F8F79 /* UIKit.framework */; };
+		93374DA01CC7774C004F8F79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9F1CC7774C004F8F79 /* Foundation.framework */; };
+		93374DA21CC77753004F8F79 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374DA11CC77753004F8F79 /* SystemConfiguration.framework */; };
 		936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E13571CC6200A00BA0FD0 /* NameSpace.swift */; };
 		937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F01CC61EE3001BF260 /* CDDeepLink.swift */; };
 		937811F91CC61F38001BF260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F81CC61F38001BF260 /* AppDelegate.swift */; };
@@ -24,6 +27,7 @@
 		93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89831CC630BB00195C67 /* CDRouteMatcher.swift */; };
 		93BA89881CC635B400195C67 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89871CC635B400195C67 /* Card.swift */; };
 		93C7CBB71CC7717A001B5D3F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7CBB61CC7717A001B5D3F /* CardView.swift */; };
+		93C7CBB91CC77481001B5D3F /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C7CBB81CC77481001B5D3F /* CardView.xib */; };
 		E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37930384132BCB05B94301 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,9 @@
 		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93374D9D1CC77744004F8F79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		93374D9F1CC7774C004F8F79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93374DA11CC77753004F8F79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		937811F01CC61EE3001BF260 /* CDDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLink.swift; sourceTree = "<group>"; };
 		937811F61CC61F38001BF260 /* CardDeepLinkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +68,7 @@
 		93BA89871CC635B400195C67 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C7CBB61CC7717A001B5D3F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		93C7CBB81CC77481001B5D3F /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		BB37930384132BCB05B94301 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93374DA21CC77753004F8F79 /* SystemConfiguration.framework in Frameworks */,
+				93374DA01CC7774C004F8F79 /* Foundation.framework in Frameworks */,
+				93374D9E1CC77744004F8F79 /* UIKit.framework in Frameworks */,
 				E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +219,7 @@
 			children = (
 				93BA89871CC635B400195C67 /* Card.swift */,
 				93C7CBB61CC7717A001B5D3F /* CardView.swift */,
+				93C7CBB81CC77481001B5D3F /* CardView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +227,9 @@
 		AF2EC5DC4F6C3D23B7835E31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93374DA11CC77753004F8F79 /* SystemConfiguration.framework */,
+				93374D9F1CC7774C004F8F79 /* Foundation.framework */,
+				93374D9D1CC77744004F8F79 /* UIKit.framework */,
 				BB37930384132BCB05B94301 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -314,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C7CBB91CC77481001B5D3F /* CardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

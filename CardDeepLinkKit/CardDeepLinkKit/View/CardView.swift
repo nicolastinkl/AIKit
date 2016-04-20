@@ -26,4 +26,33 @@ import Foundation
 
 public class CardView: UIView {
     
+    public static func createInstance() -> CardView {
+        return NSBundle.mainBundle().loadNibNamed("CardView", owner: self, options: nil).first  as! CardView
+    }
+        
+    /**
+     Animation springEaseIn
+     */
+    public class func springEaseIn(duration: NSTimeInterval, animations: (() -> Void)!) {
+        UIView.animateWithDuration(
+            duration,
+            delay: 0,
+            options: .CurveEaseIn,
+            animations: {
+                animations()
+            },
+            completion: nil
+        )
+    }
+    
+    public class func springEaseOut(duration: NSTimeInterval, animations: (() -> Void)!) {
+        UIView.animateWithDuration(
+            duration,
+            delay: 0,
+            options: .CurveEaseOut,
+            animations: {
+                animations()
+            }, completion: nil
+        )
+    }
 }
