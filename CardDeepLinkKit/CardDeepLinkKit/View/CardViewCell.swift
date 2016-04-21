@@ -27,22 +27,31 @@ import Alamofire
 
 public class CardViewCell: UIView{
 
+    var bgImage: UILabel = UILabel()
     var iconImage: UIImageView = UIImageView()
     var content: UILabel = UILabel()
     var price: UILabel = UILabel()
     var line: UILabel = UILabel()
     
+    var isSelect:Bool = false
+    
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.addSubview(bgImage)
         self.addSubview(iconImage)
         self.addSubview(content)
         self.addSubview(price)
         self.addSubview(line)
         
-        iconImage.frame = CGRectMake(16, 22, 10, 10)
-        content.frame = CGRectMake(iconImage.left + iconImage.width + 10,16, self.frame.width - 20, 20)
-        price.frame = CGRectMake(content.left + content.width + 10, 16, 10, 20)
+        let top:CGFloat = 10
+        
+        bgImage.frame = CGRectMake(0, 0, self.width, self.height)
+
+        iconImage.frame = CGRectMake(16, top + 5, 10, 10)
+        content.frame = CGRectMake(iconImage.left + iconImage.width + 10,top, self.frame.width - 20, 20)
+        price.frame = CGRectMake(content.left + content.width + 10, top, 10, 20)
         
         content.textColor = UIColor.whiteColor()
         price.textColor = UIColor.whiteColor()
@@ -54,6 +63,22 @@ public class CardViewCell: UIView{
         line.alpha = 0.3
         line.frame = CGRectMake(0, self.height - 1, self.width, 0.5)
         
+        let ges = UITapGestureRecognizer(target: self, action: "selectGesRecognizer")
+        self.addGestureRecognizer(ges)
+    }
+    
+    func selectGesRecognizer(){
+        if isSelect {
+            isSelect = false
+        }else{
+            isSelect = true
+        }
+        
+        if isSelect {
+            bgImage.backgroundColor = UIColor(hex: "#A3A0BE")
+        }else{
+            bgImage.backgroundColor = UIColor.clearColor()
+        }
     }
 
     required public init?(coder aDecoder: NSCoder) {

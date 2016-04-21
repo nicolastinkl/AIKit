@@ -15,6 +15,8 @@
 		93374DB71CC7CE32004F8F79 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */; };
 		93374DC11CC7D6A4004F8F79 /* CardDeepLinkKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */; };
 		93374DC31CC7D943004F8F79 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93374DC21CC7D943004F8F79 /* UIColor.swift */; };
+		9354D2271CC8973900814324 /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9354D2261CC8973900814324 /* UILoadingView.swift */; };
+		9354D2291CC8977800814324 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9354D2281CC8977800814324 /* LoadingView.xib */; };
 		9357EEDF1CC8713C00F1F2A2 /* CDVender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */; };
 		9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEE01CC873FB00F1F2A2 /* CDModel.swift */; };
 		936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E13571CC6200A00BA0FD0 /* NameSpace.swift */; };
@@ -55,6 +57,8 @@
 		93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardDeepLinkKit.framework; path = Products/CardDeepLinkKit.framework; sourceTree = "<group>"; };
 		93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CardDeepLinkKit.bundle; sourceTree = "<group>"; };
 		93374DC21CC7D943004F8F79 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9354D2261CC8973900814324 /* UILoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILoadingView.swift; sourceTree = "<group>"; };
+		9354D2281CC8977800814324 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDVender.swift; sourceTree = "<group>"; };
 		9357EEE01CC873FB00F1F2A2 /* CDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDModel.swift; sourceTree = "<group>"; };
 		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 				93374DC21CC7D943004F8F79 /* UIColor.swift */,
 				938C8B911CC87B4100E80887 /* UIImage.swift */,
 				938C8B951CC87F9900E80887 /* UIView.swift */,
+				9354D2261CC8973900814324 /* UILoadingView.swift */,
+				9354D2281CC8977800814324 /* LoadingView.xib */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9354D2291CC8977800814324 /* LoadingView.xib in Resources */,
 				93374DA51CC77A85004F8F79 /* CardDeepLinkKit.bundle in Resources */,
 				93C7CBB91CC77481001B5D3F /* CardView.xib in Resources */,
 			);
@@ -452,6 +459,7 @@
 				9386946B1CC6581800CCF864 /* CDMatchResult.swift in Sources */,
 				9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */,
 				938C8B961CC87F9900E80887 /* UIView.swift in Sources */,
+				9354D2271CC8973900814324 /* UILoadingView.swift in Sources */,
 				9357EEDF1CC8713C00F1F2A2 /* CDVender.swift in Sources */,
 				93C7CBB71CC7717A001B5D3F /* CardView.swift in Sources */,
 				93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */,

@@ -50,20 +50,21 @@ struct CDVender {
         Alamofire.request(.GET, "https://api.uber.com.cn/v1/products", headers: headers, parameters: urlParams)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
+                debugPrint("HTTP Request:  \(response.result.description)")
                 if (response.result.error == nil) {
                     
                     if let data = response.data {
                         let json = JSON(data: data)
                         completion(self.parseJson(json))
-                        
                     }
                     
                 }
                 else {
+                    completion(Array<CDModel>())
                     debugPrint("HTTP Request failed: \(response.result.error)")
                 }
         }
-
+        
     }
     
     

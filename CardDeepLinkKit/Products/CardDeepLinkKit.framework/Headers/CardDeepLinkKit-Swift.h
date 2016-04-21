@@ -216,6 +216,8 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit8CardView")
 /// Animation springEaseIn
 + (void)springEaseIn:(NSTimeInterval)duration animations:(void (^ __null_unspecified)(void))animations;
 + (void)springEaseOut:(NSTimeInterval)duration animations:(void (^ __null_unspecified)(void))animations completion:(void (^ __null_unspecified)(void))completion;
++ (void)spring:(NSTimeInterval)duration animations:(void (^ __nonnull)(void))animations;
++ (void)springWithCompletion:(NSTimeInterval)duration animations:(void (^ __null_unspecified)(void))animations completion:(void (^ __null_unspecified)(BOOL))completion;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -230,6 +232,22 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit12CardViewCell")
 
 @interface UIColor (SWIFT_EXTENSION(CardDeepLinkKit))
 - (nonnull instancetype)initWithHex:(NSString * __nonnull)hex;
+@end
+
+
+SWIFT_CLASS("_TtC15CardDeepLinkKit13UILoadingView")
+@interface UILoadingView : UIView
+- (CGFloat)degreesToRadians:(CGFloat)degrees;
+@property (nonatomic, weak) IBOutlet UIView * __null_unspecified indicatorView;
+- (void)awakeFromNib;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface UIView (SWIFT_EXTENSION(CardDeepLinkKit))
+- (void)showLoading;
+- (void)hideLoading;
 @end
 
 

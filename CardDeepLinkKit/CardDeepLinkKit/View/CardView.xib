@@ -27,7 +27,7 @@
                     <rect key="frame" x="20" y="175" width="560" height="249"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-NM-mXY">
-                            <rect key="frame" x="14" y="8" width="531" height="21"/>
+                            <rect key="frame" x="14" y="12" width="531" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="9Pz-hB-7uQ"/>
                             </constraints>
@@ -36,7 +36,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8F-Tx-vZd">
-                            <rect key="frame" x="0.0" y="49" width="560" height="205"/>
+                            <rect key="frame" x="0.0" y="53" width="560" height="201"/>
                             <color key="backgroundColor" white="1" alpha="0.23384862588652483" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -52,7 +52,7 @@
                         <constraint firstItem="L8F-Tx-vZd" firstAttribute="top" secondItem="z8S-NM-mXY" secondAttribute="bottom" constant="20" id="fti-OC-NfZ"/>
                         <constraint firstAttribute="trailing" secondItem="L8F-Tx-vZd" secondAttribute="trailing" id="ngM-Ie-PNT"/>
                         <constraint firstItem="L8F-Tx-vZd" firstAttribute="leading" secondItem="Qya-YI-3jw" secondAttribute="leading" id="o6l-ft-P82"/>
-                        <constraint firstItem="z8S-NM-mXY" firstAttribute="top" secondItem="Qya-YI-3jw" secondAttribute="top" constant="8" id="oYd-lL-F8X"/>
+                        <constraint firstItem="z8S-NM-mXY" firstAttribute="top" secondItem="Qya-YI-3jw" secondAttribute="top" constant="12" id="oYd-lL-F8X"/>
                     </constraints>
                 </view>
             </subviews>
@@ -79,7 +79,7 @@
                 <outlet property="backgroundView" destination="Qya-YI-3jw" id="XQT-D3-m37"/>
                 <outlet property="title" destination="z8S-NM-mXY" id="UKS-KW-fvJ"/>
             </connections>
-            <point key="canvasLocation" x="56" y="500"/>
+            <point key="canvasLocation" x="-652" y="479"/>
         </view>
         <tapGestureRecognizer id="xJF-PP-ych">
             <connections>

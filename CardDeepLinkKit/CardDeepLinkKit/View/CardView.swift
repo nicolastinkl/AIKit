@@ -51,13 +51,28 @@ public class CardView: UIView {
     
     func request(sId:String){
         title.text = "Uber"
-         CDVender().request { (modelArray) -> Void in
-            var heightOffset: CGFloat = 40
-            for model in modelArray {
-                let cardCell = CardViewCell(frame: CGRectMake(0,heightOffset,self.width,44))
-                self.backgroundView.addSubview(cardCell)
-                cardCell.providerData(model)
-                heightOffset += 44
+        
+        showLoading()
+        
+        CDVender().request { (modelArray) -> Void in
+            self.hideLoading()
+            var heightOffset: CGFloat = 50
+            if modelArray.count > 0 {
+                //Success
+                for model in modelArray {
+                    let cardCell = CardViewCell(frame: CGRectMake(0,heightOffset,self.width,44))
+                    self.backgroundView.addSubview(cardCell)
+                    cardCell.providerData(model)
+                    heightOffset += 44
+                }
+            }else{
+                //Error
+                let alert = UILabel(frame: CGRectMake(0,heightOffset,self.backgroundView.width,heightOffset))
+                alert.textColor = UIColor.whiteColor()
+                alert.textAlignment = NSTextAlignment.Center
+                alert.text = "Error 404"
+                self.backgroundView.addSubview(alert)
+                
             }
             
         }
@@ -94,4 +109,34 @@ public class CardView: UIView {
             completion()
         }
     }
+    
+    public class func spring(duration: NSTimeInterval, animations: () -> Void) {
+        UIView.animateWithDuration(
+            duration,
+            delay: 0,
+            usingSpringWithDamping: 0.7,
+            initialSpringVelocity: 0.7,
+            options: [],
+            animations: {
+                animations()
+            },
+            completion: nil
+        )
+    }
+    
+    public class func springWithCompletion(duration: NSTimeInterval, animations: (() -> Void)!, completion: (Bool -> Void)!) {
+        UIView.animateWithDuration(
+            duration,
+            delay: 0,
+            usingSpringWithDamping: 0.7,
+            initialSpringVelocity: 0.7,
+            options: [],
+            animations: {
+                animations()
+            }, completion: { finished in
+                completion(finished)
+            }
+        )
+    }
+
 }
