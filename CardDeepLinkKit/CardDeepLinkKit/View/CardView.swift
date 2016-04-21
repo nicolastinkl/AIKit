@@ -73,14 +73,12 @@ public class CardView: UIView {
             model1.image = "http://7xq9bx.com1.z0.glb.clouddn.com/chare.png"
             model1.display_name = "Item"
             model1.description = "Pregnancy Test"
-            
-            
+                        
             modelArray.append(model)
             modelArray.append(model1)
             
             updateUIConstraints(modelArray)
         }
-        
         
     }
     

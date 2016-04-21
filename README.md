@@ -1,7 +1,6 @@
-# AIKit
-A splendid route-matching, block-based way to handle your deep links. http://asiainfo.com
+ 
 
-<h1 align="center">DeepLink AIKit</h1>
+<h1 align="center"> CardDeepLinkKit</h1>
 
 
 <p align="center">
@@ -14,34 +13,23 @@ A splendid route-matching, block-based way to handle your deep links. http://asi
 
 ## Overview
 
-DeepLink Kit is a splendid route-matching, block-based way to handle your deep links. Rather than decide how to format your URLs, parse them, pass data, and navigate to specific content or perform actions, this library and a few lines of code will get you on your way.
-
-[Full Documentation](https://github.com/button/DeepLinkKit/wiki/DeepLink-Kit-Integration-Guide)
-
-[Guide to add Universal Links to your app](https://www.usebutton.com/developers/universal-links/)
-
-## Check it out
-
-Try the `DeepLinkKit` sample project by running the following command:
-```ruby
-pod try "DeepLinkKit"
-```
+CardDeepLinkKit is a splendid route-matching, block-based way to handle your deep links. Rather than decide how to format your URLs, parse them, pass data, and navigate to specific content or perform actions, this library and a few lines of code will get you on your way.
+ 
 
 ## Installation
 
 DeepLinkKit is available through [CocoaPods](http://cocoapods.org). To install
 the library, simply add the following line to your Podfile:
 ```ruby
-pod "DeepLinkKit"
+pod "CardDeepLinkKit"
 ```
 
-If you don't use CocoaPods, you can include all of the source files from the [DeepLinkKit directory](https://github.com/button/DeepLinkKit/tree/master/DeepLinkKit) in your project.
+If you don't use CocoaPods, you can include all of the source files from the [CardDeepLinkKit directory]() in your project.
 
 ## Usage
 Add deep link support to your app in 5 minutes or less following these simple steps.
-
-<em><strong>Note:</strong> As of `1.0.0`, all imports should be updated to import `<DeepLinkKit/DeepLinkKit.h>`.</em>
-
+ 
+![http://7xq9bx.com1.z0.glb.clouddn.com/github2.jpg](http://7xq9bx.com1.z0.glb.clouddn.com/github2.jpg)
 
 
 <br /><br />
@@ -52,7 +40,7 @@ Add deep link support to your app in 5 minutes or less following these simple st
 **2. Import DeepLinkKit**
 
 ```objc
-#import <DeepLinkKit/DeepLinkKit.h>
+#import <CardDeepLinkKit/CardDeepLinkKit-swift.h>
 ```
 <br />
 **3. Create an instance of `DPLDeepLinkRouter` in your app delegate**
@@ -61,7 +49,7 @@ Add deep link support to your app in 5 minutes or less following these simple st
 - (BOOL)application:(UIApplication *)application
         didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-  self.router = [[DPLDeepLinkRouter alloc] init];
+  self.router = [[CardDeepLinkKit alloc] init];
 
   return YES;
 }
@@ -70,7 +58,7 @@ Add deep link support to your app in 5 minutes or less following these simple st
 **4. Register a route handler**
 
 ````objc
-self.router[@"/log/:message"] = ^(DPLDeepLink *link) {
+self.router[@"/log/:message"] = ^(CardDeepLinkKit *link) {
   NSLog(@"%@", link.routeParameters[@"message"]);
 };
 ````
@@ -268,8 +256,7 @@ router[@"categories"] = ^(DPLDeepLink *link) {
 
 ## Authors
 
-[Wes Smith](http://twitter.com/ioswes)<br />
-[Chris Maddern](http://twitter.com/chrismaddern)
+[Nicolas Tinkl](http://twitter.com/tinkl)<br /> 
 
 ## License
 
