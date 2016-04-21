@@ -50,34 +50,70 @@ public class CardView: UIView {
     }
     
     func request(sId:String){
-        title.text = "Uber"
-        
         showLoading()
         
-        CDVender().request { (modelArray) -> Void in
-            self.hideLoading()
-            var heightOffset: CGFloat = 50
-            if modelArray.count > 0 {
-                //Success
-                for model in modelArray {
-                    let cardCell = CardViewCell(frame: CGRectMake(0,heightOffset,self.width,44))
-                    self.backgroundView.addSubview(cardCell)
-                    cardCell.providerData(model)
-                    heightOffset += 44
-                }
-            }else{
-                //Error
-                let alert = UILabel(frame: CGRectMake(0,heightOffset,self.backgroundView.width,heightOffset))
-                alert.textColor = UIColor.whiteColor()
-                alert.textAlignment = NSTextAlignment.Center
-                alert.text = "Error 404"
-                self.backgroundView.addSubview(alert)
+        if sId == "1" {
+            title.text = "Uber"
+            CDVender().request { (modelArray) -> Void in
+                self.hideLoading()
+                self.updateUIConstraints(modelArray)
                 
             }
+        }else if sId == "2" {
+            self.hideLoading()
+            title.text = "Hospital Appointment Booking"
+            var modelArray = Array<CDModel>()
+            var model = CDModel()
+            model.image = "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
+            model.display_name = "Clinic"
+            model.description = "Beijing Maternity & Child Care Institution"
+            
+            
+            var model1 = CDModel()
+            model1.image = "http://7xq9bx.com1.z0.glb.clouddn.com/chare.png"
+            model1.display_name = "Item"
+            model1.description = "Pregnancy Test"
+            
+            
+            modelArray.append(model)
+            modelArray.append(model1)
+            
+            updateUIConstraints(modelArray)
+        }
+        
+        
+    }
+    
+    
+    func updateUIConstraints(modelArray: [CDModel]) {
+        
+        var heightOffset: CGFloat = 50
+        if modelArray.count > 0 {
+            //Success
+            for model in modelArray {
+                let cardCell = CardViewCell(frame: CGRectMake(0,heightOffset,self.width,44))
+                self.backgroundView.addSubview(cardCell)
+                cardCell.providerData(model)
+                heightOffset += 44
+            }
+        }else{
+            //Error
+            let alert = UILabel(frame: CGRectMake(0,heightOffset,self.backgroundView.width,heightOffset))
+            alert.textColor = UIColor.whiteColor()
+            alert.textAlignment = NSTextAlignment.Center
+            alert.text = "Error 404"
+            self.backgroundView.addSubview(alert)
             
         }
-    }
+        /**
+        update Conttraint
+        */
+        self.backgroundView.removeConstraint(NSLayoutConstraint(item: self.backgroundView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Height, multiplier: 0, constant: 0))
         
+        self.backgroundView.addConstraint(NSLayoutConstraint(item: self.backgroundView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Height, multiplier: 0, constant: heightOffset))
+    
+    }
+    
     @IBAction func dismissView(sender: AnyObject) {
         
         self.dynamicType.springEaseOut(0.5, animations: { () -> Void in

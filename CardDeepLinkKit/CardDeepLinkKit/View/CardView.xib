@@ -31,7 +31,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="9Pz-hB-7uQ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -43,7 +43,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="L8F-Tx-vZd" secondAttribute="bottom" constant="-5" id="3uU-ct-dPx"/>
                         <constraint firstAttribute="height" constant="249" id="Hqz-tE-RCN"/>

@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-
         // Dispose of any resources that can be recreated.
 //        AnyClass
 //       let tableview =  UITableView()
@@ -28,9 +27,15 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func showPreView(sender: AnyObject) {
+        
+        Card.sharedInstance.showInView(self.view, serviceId: "1")
+    }
+
+    
     @IBAction func showView(sender: AnyObject) {
         
-        Card.sharedInstance.showInView(self.view, serviceId: "121")
+        Card.sharedInstance.showInView(self.view, serviceId: "2")
     }
 
 }

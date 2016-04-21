@@ -49,15 +49,15 @@ public class CardViewCell: UIView{
         
         bgImage.frame = CGRectMake(0, 0, self.width, self.height)
 
-        iconImage.frame = CGRectMake(16, top + 5, 10, 10)
-        content.frame = CGRectMake(iconImage.left + iconImage.width + 10,top, self.frame.width - 20, 20)
+        iconImage.frame = CGRectMake(5, top, 13, 20)
+        content.frame = CGRectMake(iconImage.left + iconImage.width + 5,top, self.frame.width - 20, 20)
         price.frame = CGRectMake(content.left + content.width + 10, top, 10, 20)
         
         content.textColor = UIColor.whiteColor()
         price.textColor = UIColor.whiteColor()
         
-        content.font  = UIFont.systemFontOfSize(15)
-        price.font  = UIFont.systemFontOfSize(15)
+        content.font  = UIFont.systemFontOfSize(13)
+        price.font  = UIFont.systemFontOfSize(13)
         
         line.backgroundColor = UIColor.groupTableViewBackgroundColor()
         line.alpha = 0.3
@@ -86,7 +86,7 @@ public class CardViewCell: UIView{
     }
     
     public func providerData(model: CDModel){
-        content.text = "\(model.display_name)" //: \(model.description)
+        content.text = "\(model.display_name): \(model.description)" //
         price.text = "\(model.currency_code):\(model.price)"
         
         Alamofire.request(.GET, model.image , parameters: nil)

@@ -31,6 +31,16 @@
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4qh-RO-gDd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvP-22-Q3b">
+                                <rect key="frame" x="20" y="328" width="560" height="120"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.21461103719999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="sss-VY-NFH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="showPreView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ery-mI-Uzv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -38,7 +48,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wc1-k6-gcR" secondAttribute="bottom" constant="52" id="2tj-6A-mFP"/>
                             <constraint firstItem="WRd-74-07C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Dm8-bI-quE"/>
                             <constraint firstItem="wc1-k6-gcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eiu-Io-w2Z"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PvP-22-Q3b" secondAttribute="leading" id="Loa-DG-5N3"/>
                             <constraint firstItem="WRd-74-07C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="XNF-uS-DDh"/>
+                            <constraint firstItem="wc1-k6-gcR" firstAttribute="top" secondItem="PvP-22-Q3b" secondAttribute="bottom" constant="24" id="aY6-Op-DoG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PvP-22-Q3b" secondAttribute="trailing" id="dVs-S0-Gdj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WRd-74-07C" secondAttribute="trailing" constant="-20" id="h30-PS-t1I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wc1-k6-gcR" secondAttribute="trailing" id="r3u-iA-Wx8"/>
                         </constraints>
