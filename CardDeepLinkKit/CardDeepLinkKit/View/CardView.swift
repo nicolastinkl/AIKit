@@ -25,20 +25,33 @@
 import Foundation
 
 public class CardView: UIView {
-    
-    private static let frameworkName = "CardDeepLinkKit.bundle"
 
     @IBOutlet weak var backgroundView: UIView!
     
-    //CardDeepLinkKit/CardDeepLinkKit.framework/CardDeepLinkKit.bundle/CardView
     public static func createInstance() -> CardView {
         
-        let cardview = NSBundle.mainBundle().loadNibNamed("CardDeepLinkKit.bundle/CardView", owner: self, options: nil).first as! CardView
+        let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/CardView", owner: self, options: nil).first as! CardView
         
-        cardview.backgroundView.layer.cornerRadius = 10
+        cardview.backgroundView.layer.cornerRadius = 8
         cardview.backgroundView.layer.masksToBounds = true
-
+        
+        let img = UIImageView(image: "bg".namedImage())
+        cardview.backgroundView.addSubview(img)       
+        
         return cardview
+    }
+    
+    public var serviceId:String = ""{
+        didSet{
+            request(serviceId)
+        }
+    }
+    
+    func request(sId:String){
+         CDVender().request { (dict) -> Void in
+            debugPrint(dict)
+            
+        }
     }
         
     @IBAction func dismissView(sender: AnyObject) {
@@ -49,6 +62,7 @@ public class CardView: UIView {
                 self.removeFromSuperview()
         }
     }
+    
     /**
      Animation springEaseIn
      */

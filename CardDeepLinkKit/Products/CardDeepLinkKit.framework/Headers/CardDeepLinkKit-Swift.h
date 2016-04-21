@@ -204,12 +204,14 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit4Card")
 ///
 /// \param serviceId ID
 - (void)showInView:(UIView * __nonnull)view serviceId:(NSString * __nonnull)serviceId;
+- (void)showInView:(UIView * __nonnull)view serviceId:(NSString * __nonnull)serviceId userInfo:(NSDictionary<NSString *, NSString *> * __nullable)userInfo;
 @end
 
 
 SWIFT_CLASS("_TtC15CardDeepLinkKit8CardView")
 @interface CardView : UIView
 + (CardView * __nonnull)createInstance;
+@property (nonatomic, copy) NSString * __nonnull serviceId;
 
 /// Animation springEaseIn
 + (void)springEaseIn:(NSTimeInterval)duration animations:(void (^ __null_unspecified)(void))animations;

@@ -15,6 +15,8 @@
 		93374DB71CC7CE32004F8F79 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */; };
 		93374DC11CC7D6A4004F8F79 /* CardDeepLinkKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */; };
 		93374DC31CC7D943004F8F79 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93374DC21CC7D943004F8F79 /* UIColor.swift */; };
+		9357EEDF1CC8713C00F1F2A2 /* CDVender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */; };
+		9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEE01CC873FB00F1F2A2 /* CDModel.swift */; };
 		936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E13571CC6200A00BA0FD0 /* NameSpace.swift */; };
 		937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F01CC61EE3001BF260 /* CDDeepLink.swift */; };
 		937811F91CC61F38001BF260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937811F81CC61F38001BF260 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 		937812031CC61F38001BF260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937812011CC61F38001BF260 /* LaunchScreen.storyboard */; };
 		9386946B1CC6581800CCF864 /* CDMatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938694691CC6581800CCF864 /* CDMatchResult.swift */; };
 		9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386946A1CC6581800CCF864 /* CDRegularExpression.swift */; };
+		938C8B921CC87B4100E80887 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B911CC87B4100E80887 /* UIImage.swift */; };
+		938C8B941CC87C9D00E80887 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B931CC87C9D00E80887 /* CardViewCell.swift */; };
 		93BA897B1CC6254800195C67 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897A1CC6254800195C67 /* String.swift */; };
 		93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897D1CC628FF00195C67 /* CDApplication.swift */; };
 		93BA89801CC6308600195C67 /* CDRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897F1CC6308600195C67 /* CDRouteHandler.swift */; };
@@ -50,6 +54,8 @@
 		93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardDeepLinkKit.framework; path = Products/CardDeepLinkKit.framework; sourceTree = "<group>"; };
 		93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CardDeepLinkKit.bundle; sourceTree = "<group>"; };
 		93374DC21CC7D943004F8F79 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDVender.swift; sourceTree = "<group>"; };
+		9357EEE01CC873FB00F1F2A2 /* CDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDModel.swift; sourceTree = "<group>"; };
 		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		937811F01CC61EE3001BF260 /* CDDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDeepLink.swift; sourceTree = "<group>"; };
 		937811F61CC61F38001BF260 /* CardDeepLinkKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDeepLinkKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,8 @@
 		937812041CC61F38001BF260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938694691CC6581800CCF864 /* CDMatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMatchResult.swift; sourceTree = "<group>"; };
 		9386946A1CC6581800CCF864 /* CDRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRegularExpression.swift; sourceTree = "<group>"; };
+		938C8B911CC87B4100E80887 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		938C8B931CC87C9D00E80887 /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		93BA897A1CC6254800195C67 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		93BA897D1CC628FF00195C67 /* CDApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApplication.swift; sourceTree = "<group>"; };
 		93BA897F1CC6308600195C67 /* CDRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRouteHandler.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 		81EB2AC31CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXGroup;
 			children = (
+				9357EEDD1CC8713100F1F2A2 /* Vender */,
 				93374DA31CC77A85004F8F79 /* Resoures */,
 				93BA89851CC6359100195C67 /* Regex */,
 				93BA89861CC6359100195C67 /* View */,
@@ -152,6 +161,15 @@
 				93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */,
 			);
 			path = Resoures;
+			sourceTree = "<group>";
+		};
+		9357EEDD1CC8713100F1F2A2 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */,
+				9357EEE01CC873FB00F1F2A2 /* CDModel.swift */,
+			);
+			path = Vender;
 			sourceTree = "<group>";
 		};
 		937811B61CC615D4001BF260 /* CardDeepLink */ = {
@@ -192,6 +210,7 @@
 			children = (
 				93BA897A1CC6254800195C67 /* String.swift */,
 				93374DC21CC7D943004F8F79 /* UIColor.swift */,
+				938C8B911CC87B4100E80887 /* UIImage.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -233,6 +252,7 @@
 				93BA89871CC635B400195C67 /* Card.swift */,
 				93C7CBB61CC7717A001B5D3F /* CardView.swift */,
 				93C7CBB81CC77481001B5D3F /* CardView.xib */,
+				938C8B931CC87C9D00E80887 /* CardViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,14 +437,18 @@
 			files = (
 				936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */,
 				93374DC31CC7D943004F8F79 /* UIColor.swift in Sources */,
+				938C8B941CC87C9D00E80887 /* CardViewCell.swift in Sources */,
 				93BA89881CC635B400195C67 /* Card.swift in Sources */,
 				93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */,
+				9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */,
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
+				938C8B921CC87B4100E80887 /* UIImage.swift in Sources */,
 				93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */,
 				93BA89801CC6308600195C67 /* CDRouteHandler.swift in Sources */,
 				93BA897B1CC6254800195C67 /* String.swift in Sources */,
 				9386946B1CC6581800CCF864 /* CDMatchResult.swift in Sources */,
 				9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */,
+				9357EEDF1CC8713C00F1F2A2 /* CDVender.swift in Sources */,
 				93C7CBB71CC7717A001B5D3F /* CardView.swift in Sources */,
 				93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */,
 			);

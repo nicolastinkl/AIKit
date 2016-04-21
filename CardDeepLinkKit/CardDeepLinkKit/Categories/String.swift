@@ -328,4 +328,9 @@ extension String{
     subscript (substring: String) -> Range<String.Index>? {
         return rangeOfString(substring, options: NSStringCompareOptions.LiteralSearch, range: Range(start: startIndex, end: endIndex), locale: NSLocale.currentLocale())
     }
+    
+    func namedImage() -> UIImage{
+        let image = UIImage(named: self, inBundle:  NSBundle(URL: NSURL(string: "\(NSBundle.mainBundle().bundleURL)\(CDApplication.Config.frameworkName)")!), compatibleWithTraitCollection: nil)        
+        return  image!
+    }
 }

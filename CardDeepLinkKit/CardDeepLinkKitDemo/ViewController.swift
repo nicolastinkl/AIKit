@@ -31,7 +31,6 @@ class ViewController: UIViewController {
     @IBAction func showView(sender: AnyObject) {
         
         Card.sharedInstance.showInView(self.view, serviceId: "121")
-        
     }
 
 }
