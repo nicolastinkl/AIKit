@@ -23,7 +23,60 @@
 // THE SOFTWARE.
 
 import Foundation
+import Alamofire
 
 public class CardViewCell: UIView{
+
+    var iconImage: UIImageView = UIImageView()
+    var content: UILabel = UILabel()
+    var price: UILabel = UILabel()
+    var line: UILabel = UILabel()
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.addSubview(iconImage)
+        self.addSubview(content)
+        self.addSubview(price)
+        self.addSubview(line)
+        
+        iconImage.frame = CGRectMake(16, 22, 10, 10)
+        content.frame = CGRectMake(iconImage.left + iconImage.width + 10,16, self.frame.width - 20, 20)
+        price.frame = CGRectMake(content.left + content.width + 10, 16, 10, 20)
+        
+        content.textColor = UIColor.whiteColor()
+        price.textColor = UIColor.whiteColor()
+        
+        content.font  = UIFont.systemFontOfSize(15)
+        price.font  = UIFont.systemFontOfSize(15)
+        
+        line.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        line.alpha = 0.3
+        line.frame = CGRectMake(0, self.height - 1, self.width, 0.5)
+        
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func providerData(model: CDModel){
+        content.text = "\(model.display_name)" //: \(model.description)
+        price.text = "\(model.currency_code):\(model.price)"
+        
+        Alamofire.request(.GET, model.image , parameters: nil)
+            .responseData { [weak self] data in
+                if let da = data.data {
+                    if let imageData = UIImage(data: da) {
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            self!.iconImage.image = imageData
+                        })
+                    }
+                }
+                
+        }
+        
+    }
+    
     
 }

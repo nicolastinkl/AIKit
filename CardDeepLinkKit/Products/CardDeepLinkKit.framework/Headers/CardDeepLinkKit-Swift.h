@@ -221,8 +221,19 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit8CardView")
 @end
 
 
+SWIFT_CLASS("_TtC15CardDeepLinkKit12CardViewCell")
+@interface CardViewCell : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 @interface UIColor (SWIFT_EXTENSION(CardDeepLinkKit))
 - (nonnull instancetype)initWithHex:(NSString * __nonnull)hex;
+@end
+
+
+@interface UIView (SWIFT_EXTENSION(CardDeepLinkKit))
 @end
 
 #pragma clang diagnostic pop

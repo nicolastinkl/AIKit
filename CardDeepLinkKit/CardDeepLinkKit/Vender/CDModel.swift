@@ -24,7 +24,7 @@
 
 import Foundation
 
-struct CDModel {
+public struct CDModel {
 
     var mid:String = ""
     var image:String = ""

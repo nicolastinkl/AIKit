@@ -28,6 +28,8 @@ public class CardView: UIView {
 
     @IBOutlet weak var backgroundView: UIView!
     
+    @IBOutlet weak var title: UILabel!
+    
     public static func createInstance() -> CardView {
         
         let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/CardView", owner: self, options: nil).first as! CardView
@@ -36,7 +38,7 @@ public class CardView: UIView {
         cardview.backgroundView.layer.masksToBounds = true
         
         let img = UIImageView(image: "bg".namedImage())
-        cardview.backgroundView.addSubview(img)       
+        cardview.backgroundView.insertSubview(img, atIndex: 0)
         
         return cardview
     }
@@ -48,8 +50,15 @@ public class CardView: UIView {
     }
     
     func request(sId:String){
-         CDVender().request { (dict) -> Void in
-            debugPrint(dict)
+        title.text = "Uber"
+         CDVender().request { (modelArray) -> Void in
+            var heightOffset: CGFloat = 40
+            for model in modelArray {
+                let cardCell = CardViewCell(frame: CGRectMake(0,heightOffset,self.width,44))
+                self.backgroundView.addSubview(cardCell)
+                cardCell.providerData(model)
+                heightOffset += 44
+            }
             
         }
     }
