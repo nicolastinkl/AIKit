@@ -103,12 +103,16 @@ public class CardView: UIView {
             self.backgroundView.addSubview(alert)
             
         }
+        
         /**
         update Conttraint
         */
-        self.backgroundView.removeConstraint(NSLayoutConstraint(item: self.backgroundView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Height, multiplier: 0, constant: 0))
-        
-        self.backgroundView.addConstraint(NSLayoutConstraint(item: self.backgroundView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Height, multiplier: 0, constant: heightOffset))
+        for constraint in self.backgroundView.constraints {
+            if constraint.constant == 249.0 {
+                constraint.constant = heightOffset
+            }
+        }
+                 
     
     }
     
