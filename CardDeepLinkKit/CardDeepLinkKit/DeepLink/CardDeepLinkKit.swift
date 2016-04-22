@@ -22,10 +22,17 @@ public class CardDeepLinkKit: NSObject {
     //MARK: Private
     private var defaultSenderID : String?
     
+
+    
     
     //MARK: 单例方法
     
-    class func singalInstance () -> CardDeepLinkKit {
+    /**
+     * 单例构造方法
+     *
+     */
+    
+    public class func singalInstance () -> CardDeepLinkKit {
         struct AISingleton{
             static var predicate : dispatch_once_t = 0
             static var instance : CardDeepLinkKit? = nil
@@ -40,11 +47,22 @@ public class CardDeepLinkKit: NSObject {
     
     private override init() {}
     
+    
+    /**
+     * 配置发送者ID
+     *
+     * @senderID 发送者ID，标记使用服务的APP
+     */
     public func configureSenderID(senderID : String) {
         defaultSenderID = senderID
     }
     
     
+    /**
+     * 判断是否有发送者ID
+     *
+     *
+     */
     public func hasSenderID() -> Bool {
         return defaultSenderID != nil && defaultSenderID != "YOUR_SENDER_ID"
     }

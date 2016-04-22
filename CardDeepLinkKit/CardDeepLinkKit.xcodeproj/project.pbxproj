@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8132B3771CCA162400153AF4 /* CardDeepLinkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B3761CCA162400153AF4 /* CardDeepLinkKit.swift */; };
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93374D9E1CC77744004F8F79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9D1CC77744004F8F79 /* UIKit.framework */; };
 		93374DA01CC7774C004F8F79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9F1CC7774C004F8F79 /* Foundation.framework */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8132B3761CCA162400153AF4 /* CardDeepLinkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeepLinkKit.swift; sourceTree = "<group>"; };
 		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		937811B61CC615D4001BF260 /* CardDeepLink */ = {
 			isa = PBXGroup;
 			children = (
+				8132B3761CCA162400153AF4 /* CardDeepLinkKit.swift */,
 				937811F01CC61EE3001BF260 /* CDDeepLink.swift */,
 			);
 			name = CardDeepLink;
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */,
+				8132B3771CCA162400153AF4 /* CardDeepLinkKit.swift in Sources */,
 				93374DC31CC7D943004F8F79 /* UIColor.swift in Sources */,
 				938C8B941CC87C9D00E80887 /* CardViewCell.swift in Sources */,
 				93BA89881CC635B400195C67 /* Card.swift in Sources */,

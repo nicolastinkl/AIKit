@@ -214,6 +214,22 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit4Card")
 @end
 
 
+SWIFT_CLASS("_TtC15CardDeepLinkKit15CardDeepLinkKit")
+@interface CardDeepLinkKit : NSObject
+
+/// 单例构造方法
++ (CardDeepLinkKit * _Nonnull)singalInstance;
+
+/// 配置发送者ID
+///
+/// @senderID 发送者ID，标记使用服务的APP
+- (void)configureSenderID:(NSString * _Nonnull)senderID;
+
+/// 判断是否有发送者ID
+- (BOOL)hasSenderID;
+@end
+
+
 SWIFT_CLASS("_TtC15CardDeepLinkKit8CardView")
 @interface CardView : UIView
 + (CardView * _Nonnull)createInstance;
