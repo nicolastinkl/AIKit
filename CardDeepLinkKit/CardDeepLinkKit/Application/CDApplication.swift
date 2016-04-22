@@ -19,8 +19,14 @@ import Foundation
 
 public struct CDApplication{
     
+    
+    /**
+     *  @author AsiaInfo, 16-04-20 15:04:28
+     *
+     *  config of some settings Info.
+     */
     struct Config {
-        
+        static let frameworkName = "CardDeepLinkKit.bundle"
         static let CDCallbackURLKey = "cd_callback_url"
         static let CDErrorDomain = "com.asiainfo.error"
         static let CDJSONEncodedFieldNamesKey = "cd_json_encoding_key"
@@ -28,7 +34,8 @@ public struct CDApplication{
     }
 
     struct AppLinks {
-         static let CDAppLinksDataKey              = "al_applink_data"
+        
+         static let CDAppLinksDataKey              = "applink_data"
          static let CDAppLinksTargetURLKey         = "target_url"
          static let CDAppLinksExtrasKey            = "extras"
          static let CDAppLinksVersionKey           = "version"
@@ -37,6 +44,14 @@ public struct CDApplication{
          static let CDAppLinksReferrerTargetURLKey = "target_url"
          static let CDAppLinksReferrerURLKey       = "url"
          static let CDAppLinksReferrerAppNameKey   = "app_name"
+        
+    }
+    
+    
+    struct Settings {
+        static var CDApplicationServiceToken = ""
+        static var CDApplicationServiceMode = ""
+        static var CDApplicationSecretKey = "KXCJVHJLKHDJKSLFIUYPDSF"
     }
     
 }

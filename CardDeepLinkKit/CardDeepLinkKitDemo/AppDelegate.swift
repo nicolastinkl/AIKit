@@ -14,12 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let _ = CDDeepLink(url: NSURL(string: "")!)
-
+        Card.sharedInstance.configureWithApplicationServiceToken("Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw") { (complate, error) -> Void in
+            
+        }
+        
         return true
     }
 

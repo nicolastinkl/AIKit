@@ -8,6 +8,8 @@
 
 import UIKit
 
+import CardDeepLinkKit
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -17,9 +19,24 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
+//        AnyClass
+//       let tableview =  UITableView()
+//        tableview.registerClass(<#T##aClass: AnyClass?##AnyClass?#>, forHeaderFooterViewReuseIdentifier: <#T##String#>)
+        
     }
 
+    @IBAction func showPreView(sender: AnyObject) {
+        
+        Card.sharedInstance.showInView(self.view, serviceId: "1")
+    }
+
+    
+    @IBAction func showView(sender: AnyObject) {
+        
+        Card.sharedInstance.showInView(self.view, serviceId: "2")
+    }
 
 }
 

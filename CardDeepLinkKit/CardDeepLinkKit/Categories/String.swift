@@ -21,12 +21,6 @@ extension String{
     
     //MARK: Helper methods
     
-    func cd_parametersFromQueryString() -> NSDictionary {
-
-        return ["key":"value"]
-    }
-    
-    
     /**
     Returns the length of the string.
     
@@ -270,6 +264,48 @@ extension String{
     }
     
     
+    /**
+      - returns: Deep Link
+     */
+    func cd_queryStringWithParameters(parameters: [String : String]) -> String {
+        let query = NSMutableString()
+        for (key,value) in parameters {
+            let newKey = key.cd_stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+            let newValue = value.cd_stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+            query.appendFormat("%@%@%@%@",  "&", newKey, (newValue.length > 0) ? "=" : "", newValue)
+        }        
+        return query as String
+    }
+    
+    
+    func cd_parametersFromQueryString() -> [String : String] {
+        let params: [String] = self.componentsSeparatedByString("&")
+        var paramsDict = [String : String](minimumCapacity: params.count)
+        for param: String in params {
+            var pairs: [String] = param.componentsSeparatedByString("=")
+            if pairs.count == 2 {
+                // e.g. ?key=value
+                let key: String = pairs[0].cd_stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+                let value: String = pairs[1].cd_stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+                paramsDict[key] = value
+            }
+            else if pairs.count == 1 {
+                // e.g. ?key
+                let key: String = pairs.first!.cd_stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+                paramsDict[key] = ""
+            }
+        }
+        return paramsDict
+    }
+    
+    func cd_stringByAddingPercentEscapesUsingEncoding(encoding: NSStringEncoding) -> String {
+        let allowedCharactersSet: NSCharacterSet = NSCharacterSet(charactersInString: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.~")
+        return stringByAddingPercentEncodingWithAllowedCharacters(allowedCharactersSet) ?? ""
+    }
+    
+    func cd_stringByReplacingPercentEscapesUsingEncoding(encoding: NSStringEncoding) -> String {
+        return stringByRemovingPercentEncoding ?? ""
+    }
     
     // MARK: Subscript Methods
     
@@ -291,5 +327,10 @@ extension String{
     
     subscript (substring: String) -> Range<String.Index>? {
         return rangeOfString(substring, options: NSStringCompareOptions.LiteralSearch, range: Range(start: startIndex, end: endIndex), locale: NSLocale.currentLocale())
+    }
+    
+    func namedImage() -> UIImage{
+        let image = UIImage(named: self, inBundle:  NSBundle(URL: NSURL(string: "\(NSBundle.mainBundle().bundleURL)\(CDApplication.Config.frameworkName)")!), compatibleWithTraitCollection: nil)        
+        return  image!
     }
 }
