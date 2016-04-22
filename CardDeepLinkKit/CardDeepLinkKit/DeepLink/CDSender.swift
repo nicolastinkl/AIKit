@@ -1,18 +1,17 @@
 //
-//  CardDeepLinkKit.swift
-//  CardDeepLinkKit
+//  CDSender.swift
+//  CDSender
 //
-//  Created by tinkl on 4/19/16.
+//  Created by WangLi on 4/19/16.
 //  Copyright © 2016 AsiaInfo. All rights reserved.
 //
 
 import Foundation
-import SwiftHTTP
-import SwiftyJSON
+
 // MARK: -
 // MARK: CardDeepLinkKit
 // MARK: -
-public class CardDeepLinkKit: NSObject {
+public class CDSender: NSObject {
     
     //MARK: Public
     
@@ -32,13 +31,13 @@ public class CardDeepLinkKit: NSObject {
      *
      */
     
-    public class func singalInstance () -> CardDeepLinkKit {
+    public class func singalInstance () -> CDSender {
         struct AISingleton{
             static var predicate : dispatch_once_t = 0
-            static var instance : CardDeepLinkKit? = nil
+            static var instance : CDSender? = nil
         }
         dispatch_once(&AISingleton.predicate,{
-            AISingleton.instance = CardDeepLinkKit()
+            AISingleton.instance = CDSender()
             }
         )
         return AISingleton.instance!

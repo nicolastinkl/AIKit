@@ -178,6 +178,22 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit14CDRouteMatcher")
 @interface CDRouteMatcher : NSObject
 @end
 
+
+SWIFT_CLASS("_TtC15CardDeepLinkKit8CDSender")
+@interface CDSender : NSObject
+
+/// 单例构造方法
++ (CDSender * _Nonnull)singalInstance;
+
+/// 配置发送者ID
+///
+/// @senderID 发送者ID，标记使用服务的APP
+- (void)configureSenderID:(NSString * _Nonnull)senderID;
+
+/// 判断是否有发送者ID
+- (BOOL)hasSenderID;
+@end
+
 @class NSBundle;
 
 SWIFT_CLASS("_TtC15CardDeepLinkKit16CDViewController")
@@ -211,22 +227,6 @@ SWIFT_CLASS("_TtC15CardDeepLinkKit4Card")
 /// \param serviceId ID
 - (void)showInView:(UIView * _Nonnull)view serviceId:(NSString * _Nonnull)serviceId;
 - (void)showInView:(UIView * _Nonnull)view serviceId:(NSString * _Nonnull)serviceId userInfo:(NSDictionary<NSString *, NSString *> * _Nullable)userInfo;
-@end
-
-
-SWIFT_CLASS("_TtC15CardDeepLinkKit15CardDeepLinkKit")
-@interface CardDeepLinkKit : NSObject
-
-/// 单例构造方法
-+ (CardDeepLinkKit * _Nonnull)singalInstance;
-
-/// 配置发送者ID
-///
-/// @senderID 发送者ID，标记使用服务的APP
-- (void)configureSenderID:(NSString * _Nonnull)senderID;
-
-/// 判断是否有发送者ID
-- (BOOL)hasSenderID;
 @end
 
 
