@@ -26,7 +26,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
 struct CDVender {
          
     func request(completion: ([CDModel]) -> Void){

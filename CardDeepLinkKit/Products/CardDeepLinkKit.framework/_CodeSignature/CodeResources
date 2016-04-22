@@ -6,11 +6,11 @@
 	<dict>
 		<key>CardDeepLinkKit.bundle/CardView.nib</key>
 		<data>
-		FP/qpXxLgdYp68g/yB816sfiH4k=
+		FfViMMu9j3pgtIvz3Zgx75L+VsM=
 		</data>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<data>
-		dkSUla4RzRjKi+4HCXdgL5vVlgc=
+		fEvEAZa+hTX9sVmQcEO75zVquyM=
 		</data>
 		<key>CardDeepLinkKit.bundle/bg.png</key>
 		<data>
@@ -114,7 +114,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2YFzrRN1lXjR+hfEjVSvi0NBgJ8=
+		3ocSMu3w0awCX+gtD/Wq/v9pets=
+		</data>
+		<key>Modules/CardDeepLinkKit.swiftmodule/arm.swiftdoc</key>
+		<data>
+		vwFHgGGaYwquVtRU+z1ikwFuXtU=
+		</data>
+		<key>Modules/CardDeepLinkKit.swiftmodule/arm.swiftmodule</key>
+		<data>
+		jf5+s8p2ODpoihLju/NBXDaAwuI=
 		</data>
 		<key>Modules/CardDeepLinkKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -133,11 +141,11 @@
 	<dict>
 		<key>CardDeepLinkKit.bundle/CardView.nib</key>
 		<data>
-		FP/qpXxLgdYp68g/yB816sfiH4k=
+		FfViMMu9j3pgtIvz3Zgx75L+VsM=
 		</data>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<data>
-		dkSUla4RzRjKi+4HCXdgL5vVlgc=
+		fEvEAZa+hTX9sVmQcEO75zVquyM=
 		</data>
 		<key>CardDeepLinkKit.bundle/bg.png</key>
 		<data>
@@ -238,6 +246,14 @@
 		<key>Headers/CardDeepLinkKit.h</key>
 		<data>
 		ETHJYj/IJxdZiWMJ+CA1CkMLnTA=
+		</data>
+		<key>Modules/CardDeepLinkKit.swiftmodule/arm.swiftdoc</key>
+		<data>
+		vwFHgGGaYwquVtRU+z1ikwFuXtU=
+		</data>
+		<key>Modules/CardDeepLinkKit.swiftmodule/arm.swiftmodule</key>
+		<data>
+		jf5+s8p2ODpoihLju/NBXDaAwuI=
 		</data>
 		<key>Modules/CardDeepLinkKit.swiftmodule/arm64.swiftdoc</key>
 		<data>

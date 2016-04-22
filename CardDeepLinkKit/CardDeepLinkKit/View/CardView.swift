@@ -111,8 +111,7 @@ public class CardView: UIView {
             if constraint.constant == 249.0 {
                 constraint.constant = heightOffset
             }
-        }
-                 
+        }                 
     
     }
     
