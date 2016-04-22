@@ -6,11 +6,11 @@
 	<dict>
 		<key>CardDeepLinkKit.bundle/CardView.nib</key>
 		<data>
-		FP/qpXxLgdYp68g/yB816sfiH4k=
+		zzmqpnFNGLHPHnrUTMt2XPIrf64=
 		</data>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<data>
-		dkSUla4RzRjKi+4HCXdgL5vVlgc=
+		6gnOX82q2gyA779V4Wl/BCC7dwI=
 		</data>
 		<key>CardDeepLinkKit.bundle/bg.png</key>
 		<data>
@@ -20,93 +20,45 @@
 		<data>
 		jIeCWlu2NoE34C6krEfJCnyB5bs=
 		</data>
-		<key>Frameworks/Alamofire.framework/Alamofire</key>
-		<data>
-		TsyOeWeZrAhEe39OD8O/geCb9c8=
-		</data>
-		<key>Frameworks/Alamofire.framework/Info.plist</key>
-		<data>
-		qhNIHOiSRkiTkRD1DZ7da+gzrRE=
-		</data>
-		<key>Frameworks/Alamofire.framework/_CodeSignature/CodeResources</key>
-		<data>
-		BXgppC+wf04Q8z0z5ZBmI5VMu3M=
-		</data>
-		<key>Frameworks/Pods.framework/Info.plist</key>
-		<data>
-		AvrXjyF47/4qmrc32f3SfT52hxc=
-		</data>
-		<key>Frameworks/Pods.framework/Pods</key>
-		<data>
-		jdZylfD+APmc19BbD2PTqyNZDIY=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeDirectory</key>
-		<data>
-		k7XMTPy8mRimHi6OhH0pPHdgiAM=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeRequirements</key>
-		<data>
-		hN/hf6tiTY/103U5EzIyszrgFv4=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeResources</key>
-		<data>
-		znPBKHNCI/fEqpoI5ylS8DcTRqo=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeSignature</key>
-		<data>
-		+2OaW4tw3UJAjb4guWDEWf+1q8U=
-		</data>
-		<key>Frameworks/SwiftyJSON.framework/Info.plist</key>
-		<data>
-		rbqhzfzb7S2eP9kuEGldyvetWmg=
-		</data>
-		<key>Frameworks/SwiftyJSON.framework/SwiftyJSON</key>
-		<data>
-		z8C7aY7r9mTvfhgN6LQwkKcqKJs=
-		</data>
-		<key>Frameworks/SwiftyJSON.framework/_CodeSignature/CodeResources</key>
-		<data>
-		cEcUuXFcspt/bcXwd47i0JS0Ew4=
-		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
-		Xg3Si2nesTrh2Sbecl/3QakvOUI=
+		0kG+RJlhjANJXFOfl3kSj+OOgxg=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
-		n9auRgEY8gDRWxRTDkFKCTGR0v4=
+		YhELoGWzL1Jnmu9Ki+xqqPvOilk=
 		</data>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<data>
-		1IcKGKm38ot6kBmzJZvptG0ZGVk=
+		1GfytZLKU+b+YcI0yDElcKp/NTs=
 		</data>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
-		IIND0c5IwgzjOrvxpsO3OLps2xc=
+		lddERYV6vBtTJTmdP181QIL8cCw=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
-		xpT9AxqF2QGRyJuE2JzwAGGFU3c=
+		1jySNEvy73sgFzwH6MQELMGqDe8=
 		</data>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<data>
-		/EcckUA8E5gCGQY9b0NSCIWPh8k=
+		yfRQ9d2CBm9doD/osbrw8twvA6o=
 		</data>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<data>
-		WEcmc1ZoxX0IADipL0/NOHtUP/M=
+		8DWwyPHBvLq2TuVB9FtMAj/gmXE=
 		</data>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<data>
-		qAbnOO/XsRDlOuwrdDyg/Q+SP1I=
+		d0aLRuLLaiqDyjDa22ai0JhSs2o=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
-		Agw1qbfpjZ7B8ZihdKPdw4hrRro=
+		7xHyYeG9YlcdARrP5x3YrbHmeJ0=
 		</data>
 		<key>Headers/CardDeepLinkKit-Swift.h</key>
 		<data>
-		tToN5xB0Zm/Z9lHfCYKfTVjo50s=
+		JAwyPYVnp++AHLsTwVP7nEqD+W0=
 		</data>
 		<key>Headers/CardDeepLinkKit.h</key>
 		<data>
@@ -114,15 +66,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2YFzrRN1lXjR+hfEjVSvi0NBgJ8=
+		zh/ccmN6S0GYjz1dSJYj2MiVDSo=
 		</data>
 		<key>Modules/CardDeepLinkKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		QT0MqaATAIif7sOX9YH4ETNDEj8=
+		Ur9GIso+54RZ9FK4CcoxKPvRkKo=
 		</data>
 		<key>Modules/CardDeepLinkKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		tMHN1ap4r4Rm8M9nJgc9e49yIJk=
+		3pb6Zz6cxMDltQfPTRLnUK0L8nU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -133,11 +85,11 @@
 	<dict>
 		<key>CardDeepLinkKit.bundle/CardView.nib</key>
 		<data>
-		FP/qpXxLgdYp68g/yB816sfiH4k=
+		zzmqpnFNGLHPHnrUTMt2XPIrf64=
 		</data>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<data>
-		dkSUla4RzRjKi+4HCXdgL5vVlgc=
+		6gnOX82q2gyA779V4Wl/BCC7dwI=
 		</data>
 		<key>CardDeepLinkKit.bundle/bg.png</key>
 		<data>
@@ -147,93 +99,45 @@
 		<data>
 		jIeCWlu2NoE34C6krEfJCnyB5bs=
 		</data>
-		<key>Frameworks/Alamofire.framework/Alamofire</key>
-		<data>
-		TsyOeWeZrAhEe39OD8O/geCb9c8=
-		</data>
-		<key>Frameworks/Alamofire.framework/Info.plist</key>
-		<data>
-		qhNIHOiSRkiTkRD1DZ7da+gzrRE=
-		</data>
-		<key>Frameworks/Alamofire.framework/_CodeSignature/CodeResources</key>
-		<data>
-		BXgppC+wf04Q8z0z5ZBmI5VMu3M=
-		</data>
-		<key>Frameworks/Pods.framework/Info.plist</key>
-		<data>
-		AvrXjyF47/4qmrc32f3SfT52hxc=
-		</data>
-		<key>Frameworks/Pods.framework/Pods</key>
-		<data>
-		jdZylfD+APmc19BbD2PTqyNZDIY=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeDirectory</key>
-		<data>
-		k7XMTPy8mRimHi6OhH0pPHdgiAM=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeRequirements</key>
-		<data>
-		hN/hf6tiTY/103U5EzIyszrgFv4=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeResources</key>
-		<data>
-		znPBKHNCI/fEqpoI5ylS8DcTRqo=
-		</data>
-		<key>Frameworks/Pods.framework/_CodeSignature/CodeSignature</key>
-		<data>
-		+2OaW4tw3UJAjb4guWDEWf+1q8U=
-		</data>
-		<key>Frameworks/SwiftyJSON.framework/Info.plist</key>
-		<data>
-		rbqhzfzb7S2eP9kuEGldyvetWmg=
-		</data>
-		<key>Frameworks/SwiftyJSON.framework/SwiftyJSON</key>
-		<data>
-		z8C7aY7r9mTvfhgN6LQwkKcqKJs=
-		</data>
-		<key>Frameworks/SwiftyJSON.framework/_CodeSignature/CodeResources</key>
-		<data>
-		cEcUuXFcspt/bcXwd47i0JS0Ew4=
-		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
-		Xg3Si2nesTrh2Sbecl/3QakvOUI=
+		0kG+RJlhjANJXFOfl3kSj+OOgxg=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
-		n9auRgEY8gDRWxRTDkFKCTGR0v4=
+		YhELoGWzL1Jnmu9Ki+xqqPvOilk=
 		</data>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<data>
-		1IcKGKm38ot6kBmzJZvptG0ZGVk=
+		1GfytZLKU+b+YcI0yDElcKp/NTs=
 		</data>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
-		IIND0c5IwgzjOrvxpsO3OLps2xc=
+		lddERYV6vBtTJTmdP181QIL8cCw=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
-		xpT9AxqF2QGRyJuE2JzwAGGFU3c=
+		1jySNEvy73sgFzwH6MQELMGqDe8=
 		</data>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<data>
-		/EcckUA8E5gCGQY9b0NSCIWPh8k=
+		yfRQ9d2CBm9doD/osbrw8twvA6o=
 		</data>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<data>
-		WEcmc1ZoxX0IADipL0/NOHtUP/M=
+		8DWwyPHBvLq2TuVB9FtMAj/gmXE=
 		</data>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<data>
-		qAbnOO/XsRDlOuwrdDyg/Q+SP1I=
+		d0aLRuLLaiqDyjDa22ai0JhSs2o=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
-		Agw1qbfpjZ7B8ZihdKPdw4hrRro=
+		7xHyYeG9YlcdARrP5x3YrbHmeJ0=
 		</data>
 		<key>Headers/CardDeepLinkKit-Swift.h</key>
 		<data>
-		tToN5xB0Zm/Z9lHfCYKfTVjo50s=
+		JAwyPYVnp++AHLsTwVP7nEqD+W0=
 		</data>
 		<key>Headers/CardDeepLinkKit.h</key>
 		<data>
@@ -241,11 +145,11 @@
 		</data>
 		<key>Modules/CardDeepLinkKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		QT0MqaATAIif7sOX9YH4ETNDEj8=
+		Ur9GIso+54RZ9FK4CcoxKPvRkKo=
 		</data>
 		<key>Modules/CardDeepLinkKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		tMHN1ap4r4Rm8M9nJgc9e49yIJk=
+		3pb6Zz6cxMDltQfPTRLnUK0L8nU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
