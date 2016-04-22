@@ -24,6 +24,54 @@
 
 import Foundation
 
+
+public typealias CardCallBackBlock = Void -> ()
+
+public typealias ActionBlock = Void -> ([String : AnyObject])
+
 public class Card: UIView {
+    
+    
+    
+    
+    
+    /**
+     说明：设置服务的标识
+     identifier ： 服务的标识
+     
+     */
+    public func setServiceIdentifier(identifier : String) {
+        
+    }
+    
+    /**
+     说明：设置服务卡片点击事件
+     actionBlock ： 事件Block，异步操作，返回该服务需要的参数Key
+     
+     */
+    public func addActionBlock(actionBlock : ActionBlock) {
+        
+    }
+
+    
+    /**
+     * 说明：设置Card调用的回调block
+     * @block ： 闭包
+     *
+     */
+    public func setCallBackBlock(block : CardCallBackBlock) {
+        
+    }
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
     
 }
