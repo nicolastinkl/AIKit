@@ -24,6 +24,7 @@
 
 import Foundation
 
+
 public class Card: NSObject {
     
     /**
@@ -75,6 +76,9 @@ public class Card: NSObject {
         }
         cardView.serviceId = serviceId
     }
+
+
+
     
     
 }
