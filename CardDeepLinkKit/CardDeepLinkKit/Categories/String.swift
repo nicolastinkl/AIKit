@@ -163,7 +163,7 @@ extension String{
      - returns: [NSDate]
      */
     func getDates() -> [NSDate] {
-        let error: NSErrorPointer = NSErrorPointer()
+        let error: NSErrorPointer = nil
         let detector: NSDataDetector?
         do {
             detector = try NSDataDetector(types: NSTextCheckingType.Date.rawValue)
@@ -316,17 +316,19 @@ extension String{
     subscript (r: Range<Int>) -> String {
         let start = startIndex.advancedBy(r.startIndex),
         end = startIndex.advancedBy(r.endIndex)
-        
-        return substringWithRange(Range(start: start, end: end))
+        let continousDigitsRange = start..<end
+        return substringWithRange(continousDigitsRange)
     }
     
     subscript (range: NSRange) -> String {
         let end = range.location + range.length
-        return self[Range(start: range.location, end: end)]
+        let continousDigitsRange = range.location..<end
+        return self[continousDigitsRange]
     }
     
     subscript (substring: String) -> Range<String.Index>? {
-        return rangeOfString(substring, options: NSStringCompareOptions.LiteralSearch, range: Range(start: startIndex, end: endIndex), locale: NSLocale.currentLocale())
+        let continousDigitsRange = startIndex..<endIndex
+        return rangeOfString(substring, options: NSStringCompareOptions.LiteralSearch, range: continousDigitsRange, locale: NSLocale.currentLocale())
     }
     
     func namedImage() -> UIImage{

@@ -60,11 +60,14 @@ public class CDRegularExpression: NSRegularExpression{
         let routeParameters = NSMutableDictionary()
         for result: NSTextCheckingResult in matches {
             // Begin at 1 as first range is the whole match
-            for var i = 1; i < result.numberOfRanges && i <= groupNames?.count; i++ {
-                let parameterName = groupNames?[i - 1]
-                let parameterValue: String = str[result.rangeAtIndex(i)]
-                routeParameters.setValue(parameterValue, forKey: parameterName as! String)
+            if result.numberOfRanges < groupNames?.count{
+                for i in 1...result.numberOfRanges {
+                    let parameterName = groupNames?[i - 1]
+                    let parameterValue: String = str[result.rangeAtIndex(i)]
+                    routeParameters.setValue(parameterValue, forKey: parameterName as! String)
+                }
             }
+            
         }
         matchResult.namedProperties = routeParameters
         return matchResult

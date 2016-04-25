@@ -63,7 +63,7 @@ public class CardViewCell: UIView{
         line.alpha = 0.3
         line.frame = CGRectMake(0, self.height - 1, self.width, 0.5)
         
-        let ges = UITapGestureRecognizer(target: self, action: "selectGesRecognizer")
+        let ges = UITapGestureRecognizer(target: self, action: #selector(CardViewCell.selectGesRecognizer))
         self.addGestureRecognizer(ges)
     }
     
