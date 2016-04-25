@@ -24,16 +24,17 @@
 
 import Foundation
 
-public class CardView: UIView {
-
+/// Alert View Card.
+public class CardAlertView: UIView {
+    
     @IBOutlet weak var backgroundView: UIView!
     
     @IBOutlet weak var title: UILabel!
     
-    public static func createInstance() -> CardView {
+    public static func createInstance() -> CardAlertView {
         
-        let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/CardView", owner: self, options: nil).first as! CardView
-        
+        let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/CardAlertView", owner: self, options: nil).first as! CardAlertView
+                
         cardview.backgroundView.layer.cornerRadius = 8
         cardview.backgroundView.layer.masksToBounds = true
         

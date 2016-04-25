@@ -65,20 +65,17 @@ public class Card: NSObject {
     
     public func showInView(view: UIView,serviceId:String,userInfo:[String:String]?){
         
-        let cardView = CardView.createInstance()
+        let cardView = CardAlertView.createInstance()
         cardView.alpha = 0
         cardView.backgroundView.alpha = 0
         view.addSubview(cardView)
         cardView.frame = view.frame
-        CardView.springEaseIn(0.3) { () -> Void in
+        CardAlertView.springEaseIn(0.3) { () -> Void in
             cardView.alpha = 1
             cardView.backgroundView.alpha = 1
         }
         cardView.serviceId = serviceId
     }
 
-
-
-    
     
 }
