@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: -
-// MARK: CardDeepLinkKit
+// MARK: CDSender
 // MARK: -
 public class CDSender: NSObject {
     
