@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import Foundation 
 
 /// Used to store all response data returned from a completed `Request`.
 public struct Response<Value, Error: ErrorType> {

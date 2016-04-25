@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 
 import Foundation
-import Alamofire
+
 
 public class CardViewCell: UIView{
 
@@ -91,8 +91,7 @@ public class CardViewCell: UIView{
     public func providerData(model: CDModel){
         content.text = "\(model.display_name): \(model.description)" //
         price.text = "\(model.currency_code):\(model.price)"
-        
-        Alamofire.request(.GET, model.image , parameters: nil)
+        AlamofireCD().request(.GET, model.image , parameters: nil)
             .responseData { [weak self] data in
                 if let da = data.data {
                     if let imageData = UIImage(data: da) {

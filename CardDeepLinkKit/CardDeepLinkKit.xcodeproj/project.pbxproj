@@ -15,14 +15,24 @@
 		93374DA51CC77A85004F8F79 /* CardDeepLinkKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */; };
 		93374DC11CC7D6A4004F8F79 /* CardDeepLinkKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */; };
 		93374DC31CC7D943004F8F79 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93374DC21CC7D943004F8F79 /* UIColor.swift */; };
+		934B96501CCDFFF800A2D815 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96401CCDFFF800A2D815 /* Alamofire.swift */; };
+		934B96511CCDFFF800A2D815 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96411CCDFFF800A2D815 /* Download.swift */; };
+		934B96521CCDFFF800A2D815 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96421CCDFFF800A2D815 /* Error.swift */; };
+		934B96531CCDFFF800A2D815 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96431CCDFFF800A2D815 /* Manager.swift */; };
+		934B96541CCDFFF800A2D815 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96441CCDFFF800A2D815 /* MultipartFormData.swift */; };
+		934B96551CCDFFF800A2D815 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96451CCDFFF800A2D815 /* ParameterEncoding.swift */; };
+		934B96561CCDFFF800A2D815 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96461CCDFFF800A2D815 /* Request.swift */; };
+		934B96571CCDFFF800A2D815 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96471CCDFFF800A2D815 /* Response.swift */; };
+		934B96581CCDFFF800A2D815 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96481CCDFFF800A2D815 /* ResponseSerialization.swift */; };
+		934B96591CCDFFF800A2D815 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96491CCDFFF800A2D815 /* Result.swift */; };
+		934B965A1CCDFFF800A2D815 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964A1CCDFFF800A2D815 /* ServerTrustPolicy.swift */; };
+		934B965B1CCDFFF800A2D815 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964B1CCDFFF800A2D815 /* Stream.swift */; };
+		934B965C1CCDFFF800A2D815 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964C1CCDFFF800A2D815 /* Upload.swift */; };
+		934B965D1CCDFFF800A2D815 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964D1CCDFFF800A2D815 /* Validation.swift */; };
+		934B965E1CCDFFF800A2D815 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964F1CCDFFF800A2D815 /* SwiftyJSON.swift */; };
 		9354D2271CC8973900814324 /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9354D2261CC8973900814324 /* UILoadingView.swift */; };
 		9354D2291CC8977800814324 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9354D2281CC8977800814324 /* LoadingView.xib */; };
 		9354D22A1CC8A90600814324 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */; };
-		9354D22D1CC8AC5D00814324 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354D22B1CC8AC5D00814324 /* Alamofire.framework */; };
-		9354D22E1CC8AC5D00814324 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354D22C1CC8AC5D00814324 /* SwiftyJSON.framework */; };
-		9354D2351CC8AFC700814324 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9354D22B1CC8AC5D00814324 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9354D2361CC8AFC700814324 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9354D22C1CC8AC5D00814324 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9354D2381CC8AFC700814324 /* Pods.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93374DAE1CC78471004F8F79 /* Pods.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9354D2391CC8AFD500814324 /* CardDeepLinkKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9357EEDF1CC8713C00F1F2A2 /* CDVender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */; };
 		9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEE01CC873FB00F1F2A2 /* CDModel.swift */; };
@@ -46,7 +56,6 @@
 		93BA89881CC635B400195C67 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA89871CC635B400195C67 /* Card.swift */; };
 		93C7CBB71CC7717A001B5D3F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7CBB61CC7717A001B5D3F /* CardView.swift */; };
 		93C7CBB91CC77481001B5D3F /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C7CBB81CC77481001B5D3F /* CardView.xib */; };
-		E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37930384132BCB05B94301 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,9 +75,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9354D2391CC8AFD500814324 /* CardDeepLinkKit.framework in CopyFiles */,
-				9354D2351CC8AFC700814324 /* Alamofire.framework in CopyFiles */,
-				9354D2361CC8AFC700814324 /* SwiftyJSON.framework in CopyFiles */,
-				9354D2381CC8AFC700814324 /* Pods.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +90,26 @@
 		93374D9F1CC7774C004F8F79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93374DA11CC77753004F8F79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardDeepLinkKit.bundle; sourceTree = "<group>"; };
-		93374DAE1CC78471004F8F79 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
-		93374DAF1CC78471004F8F79 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/SwiftHTTP.framework"; sourceTree = "<group>"; };
-		93374DB01CC78471004F8F79 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardDeepLinkKit.framework; path = Products/CardDeepLinkKit.framework; sourceTree = "<group>"; };
 		93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CardDeepLinkKit.bundle; sourceTree = "<group>"; };
 		93374DC21CC7D943004F8F79 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		934B96401CCDFFF800A2D815 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		934B96411CCDFFF800A2D815 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		934B96421CCDFFF800A2D815 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		934B96431CCDFFF800A2D815 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		934B96441CCDFFF800A2D815 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		934B96451CCDFFF800A2D815 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		934B96461CCDFFF800A2D815 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		934B96471CCDFFF800A2D815 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		934B96481CCDFFF800A2D815 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		934B96491CCDFFF800A2D815 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		934B964A1CCDFFF800A2D815 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		934B964B1CCDFFF800A2D815 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		934B964C1CCDFFF800A2D815 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		934B964D1CCDFFF800A2D815 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		934B964F1CCDFFF800A2D815 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9354D2261CC8973900814324 /* UILoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILoadingView.swift; sourceTree = "<group>"; };
 		9354D2281CC8977800814324 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		9354D22B1CC8AC5D00814324 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		9354D22C1CC8AC5D00814324 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDVender.swift; sourceTree = "<group>"; };
 		9357EEE01CC873FB00F1F2A2 /* CDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDModel.swift; sourceTree = "<group>"; };
 		936E13571CC6200A00BA0FD0 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
@@ -119,7 +135,6 @@
 		93BE5AD71CC610D100CC2B5A /* CDSenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C7CBB61CC7717A001B5D3F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		93C7CBB81CC77481001B5D3F /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
-		BB37930384132BCB05B94301 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,12 +143,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9354D22D1CC8AC5D00814324 /* Alamofire.framework in Frameworks */,
-				9354D22E1CC8AC5D00814324 /* SwiftyJSON.framework in Frameworks */,
 				93374DA21CC77753004F8F79 /* SystemConfiguration.framework in Frameworks */,
 				93374DA01CC7774C004F8F79 /* Foundation.framework in Frameworks */,
 				93374D9E1CC77744004F8F79 /* UIKit.framework in Frameworks */,
-				E2255BD4BA33CF5ACF379F5B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +193,7 @@
 		81EB2AC31CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXGroup;
 			children = (
+				934B963E1CCDFFF800A2D815 /* UIGitKit */,
 				9357EEDD1CC8713100F1F2A2 /* Vender */,
 				93374DA31CC77A85004F8F79 /* Resoures */,
 				93BA89851CC6359100195C67 /* Regex */,
@@ -204,6 +217,44 @@
 				93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */,
 			);
 			path = Resoures;
+			sourceTree = "<group>";
+		};
+		934B963E1CCDFFF800A2D815 /* UIGitKit */ = {
+			isa = PBXGroup;
+			children = (
+				934B963F1CCDFFF800A2D815 /* Alamofire */,
+				934B964E1CCDFFF800A2D815 /* SwiftyJSON */,
+			);
+			path = UIGitKit;
+			sourceTree = "<group>";
+		};
+		934B963F1CCDFFF800A2D815 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				934B96401CCDFFF800A2D815 /* Alamofire.swift */,
+				934B96411CCDFFF800A2D815 /* Download.swift */,
+				934B96421CCDFFF800A2D815 /* Error.swift */,
+				934B96431CCDFFF800A2D815 /* Manager.swift */,
+				934B96441CCDFFF800A2D815 /* MultipartFormData.swift */,
+				934B96451CCDFFF800A2D815 /* ParameterEncoding.swift */,
+				934B96461CCDFFF800A2D815 /* Request.swift */,
+				934B96471CCDFFF800A2D815 /* Response.swift */,
+				934B96481CCDFFF800A2D815 /* ResponseSerialization.swift */,
+				934B96491CCDFFF800A2D815 /* Result.swift */,
+				934B964A1CCDFFF800A2D815 /* ServerTrustPolicy.swift */,
+				934B964B1CCDFFF800A2D815 /* Stream.swift */,
+				934B964C1CCDFFF800A2D815 /* Upload.swift */,
+				934B964D1CCDFFF800A2D815 /* Validation.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		934B964E1CCDFFF800A2D815 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				934B964F1CCDFFF800A2D815 /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		9357EEDD1CC8713100F1F2A2 /* Vender */ = {
@@ -307,16 +358,10 @@
 		AF2EC5DC4F6C3D23B7835E31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9354D22B1CC8AC5D00814324 /* Alamofire.framework */,
-				9354D22C1CC8AC5D00814324 /* SwiftyJSON.framework */,
 				93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */,
-				93374DAE1CC78471004F8F79 /* Pods.framework */,
-				93374DAF1CC78471004F8F79 /* SwiftHTTP.framework */,
-				93374DB01CC78471004F8F79 /* SwiftyJSON.framework */,
 				93374DA11CC77753004F8F79 /* SystemConfiguration.framework */,
 				93374D9F1CC7774C004F8F79 /* Foundation.framework */,
 				93374D9D1CC77744004F8F79 /* UIKit.framework */,
-				BB37930384132BCB05B94301 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -449,7 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "#diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\n#if [[ $? != 0 ]] ; then\n    cat << EOM\n#error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\n#EOM\n#    exit 1\n#fi\n";
 			showEnvVarsInLog = 0;
 		};
 		84DD63AF3CBEAACFD5F7DC85 /* Copy Pods Resources */ = {
@@ -464,7 +509,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "#\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		93374DAB1CC77BEB004F8F79 /* ShellScript */ = {
@@ -478,7 +523,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "RELEASE_DIR=${BUILD_DIR}\n\nDEBUG_DIR_FRAME=${RELEASE_DIR}/Debug-iphoneos/${PROJECT_NAME}.framework\n\nRELEASE_DIR_FRAME=${RELEASE_DIR}/Debug-iphoneos/${PROJECT_NAME}.framework\n\nPRO_BUNDLE_DIR=${PROJECT_DIR}/${PROJECT_NAME}/Resoures/CardDeepLinkKit.bundle\n\necho \"================ start ==================\"\necho \"${PRO_BUNDLE_DIR}\"\nBUNDLE_DIR=${DEBUG_DIR_FRAME}/CardDeepLinkKit.bundle\n\necho \"${RELEASE_DIR_FRAME}    ${BUNDLE_DIR}\"\n\nINSTALL_DIR=${SRCROOT}/Products/\necho \"================ clear cache ==================\"\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\necho \"================ mkdir path ==================\"\nmkdir -p \"${INSTALL_DIR}\"\n\necho \"================ do *.nib files ==================\"\n\nif [ -d \"${BUNDLE_DIR}\" ];then\nif ls ${DEBUG_DIR_FRAME}/*.nib >/dev/null 2>&1;then\n                         \n                         rm -rf ${BUNDLE_DIR}/*.nib\n                         \n                         rm -rf ${PRO_BUNDLE_DIR}/*.nib\n                         \n                         cp -rf ${DEBUG_DIR_FRAME}/*.nib ${BUNDLE_DIR}\n                         \n                         cp -rf ${DEBUG_DIR_FRAME}/*.nib ${PRO_BUNDLE_DIR}\n                         \n                         rm -rf ${DEBUG_DIR_FRAME}/*.nib\n                         \n                         \n                         # copy to bundle\n                         \n                         cp -rf ${DEBUG_DIR_FRAME} ${INSTALL_DIR}\n                         \n                         fi\n                         \n                         fi\n                         \n                         # copy framework to local path.\n                         \n                         echo \"================ finish shell. ==================\"\n                         #open \"${INSTALL_DIR}\"";
+			shellScript = "RELEASE_DIR=${BUILD_DIR}\n\nDEBUG_IMULLATOR_DIR_FRAME=${RELEASE_DIR}/Debug-iphonesimulator/${PROJECT_NAME}.framework\nDEBUG_DIR_FRAME=${RELEASE_DIR}/Debug-iphoneos/${PROJECT_NAME}.framework\n\nRELEASE_DIR_FRAME=${RELEASE_DIR}/Debug-iphoneos/${PROJECT_NAME}.framework\n\nPRO_BUNDLE_DIR=${PROJECT_DIR}/${PROJECT_NAME}/Resoures/CardDeepLinkKit.bundle\n\necho \"================ start ==================\"\necho \"${PRO_BUNDLE_DIR}\"\nBUNDLE_DIR=${DEBUG_DIR_FRAME}/CardDeepLinkKit.bundle\n\necho \"${RELEASE_DIR_FRAME} \"\necho \"${BUNDLE_DIR}\"\n\nINSTALL_DIR=${SRCROOT}/Products/\necho \"================ clear cache ==================\"\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\necho \"================ mkdir path ==================\"\nmkdir -p \"${INSTALL_DIR}\"\n\necho \"================ do *.nib files ==================\"\n\nif [ -d \"${BUNDLE_DIR}\" ];then\nif ls ${DEBUG_DIR_FRAME}/*.nib >/dev/null 2>&1;then\n                         \n                         rm -rf ${BUNDLE_DIR}/*.nib\n                         \n                         rm -rf ${PRO_BUNDLE_DIR}/*.nib\n                         \n                         cp -rf ${DEBUG_DIR_FRAME}/*.nib ${BUNDLE_DIR}\n                         \n                         cp -rf ${DEBUG_DIR_FRAME}/*.nib ${PRO_BUNDLE_DIR}\n                         \n                         rm -rf ${DEBUG_DIR_FRAME}/*.nib\n                         \n                         \n                         # copy to bundle\n                         \n                         cp -rf ${DEBUG_DIR_FRAME} ${INSTALL_DIR}\n                         \n                         fi\n                         \n                         fi\n                         \n                         # copy framework to local path.\n                         \n                         echo \"================ finish shell. ==================\"\n                         #open \"${INSTALL_DIR}\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -487,23 +532,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934B965B1CCDFFF800A2D815 /* Stream.swift in Sources */,
+				934B96531CCDFFF800A2D815 /* Manager.swift in Sources */,
+				934B96561CCDFFF800A2D815 /* Request.swift in Sources */,
 				936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */,
 				8132B3771CCA162400153AF4 /* CDSender.swift in Sources */,
 				93374DC31CC7D943004F8F79 /* UIColor.swift in Sources */,
 				938C8B941CC87C9D00E80887 /* CardViewCell.swift in Sources */,
 				93BA89881CC635B400195C67 /* Card.swift in Sources */,
 				93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */,
+				934B96501CCDFFF800A2D815 /* Alamofire.swift in Sources */,
 				9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */,
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
+				934B965C1CCDFFF800A2D815 /* Upload.swift in Sources */,
+				934B965D1CCDFFF800A2D815 /* Validation.swift in Sources */,
 				938C8B921CC87B4100E80887 /* UIImage.swift in Sources */,
 				93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */,
+				934B96571CCDFFF800A2D815 /* Response.swift in Sources */,
 				93BA89801CC6308600195C67 /* CDRouteHandler.swift in Sources */,
+				934B96511CCDFFF800A2D815 /* Download.swift in Sources */,
 				93BA897B1CC6254800195C67 /* String.swift in Sources */,
+				934B96521CCDFFF800A2D815 /* Error.swift in Sources */,
 				9386946B1CC6581800CCF864 /* CDMatchResult.swift in Sources */,
+				934B96581CCDFFF800A2D815 /* ResponseSerialization.swift in Sources */,
+				934B96551CCDFFF800A2D815 /* ParameterEncoding.swift in Sources */,
 				9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */,
+				934B96541CCDFFF800A2D815 /* MultipartFormData.swift in Sources */,
 				938C8B961CC87F9900E80887 /* UIView.swift in Sources */,
+				934B96591CCDFFF800A2D815 /* Result.swift in Sources */,
 				9354D2271CC8973900814324 /* UILoadingView.swift in Sources */,
 				9357EEDF1CC8713C00F1F2A2 /* CDVender.swift in Sources */,
+				934B965A1CCDFFF800A2D815 /* ServerTrustPolicy.swift in Sources */,
+				934B965E1CCDFFF800A2D815 /* SwiftyJSON.swift in Sources */,
 				93C7CBB71CC7717A001B5D3F /* CardView.swift in Sources */,
 				93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */,
 			);
@@ -635,7 +695,6 @@
 		};
 		81EB2ACA1CC5053100F4459F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCDA3EA87D081ED0A0A95B84 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -661,7 +720,6 @@
 		};
 		81EB2ACB1CC5053100F4459F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -687,7 +745,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -706,7 +763,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

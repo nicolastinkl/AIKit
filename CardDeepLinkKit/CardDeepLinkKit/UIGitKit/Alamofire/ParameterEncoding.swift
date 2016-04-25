@@ -23,7 +23,7 @@
 import Foundation
 
 /**
-    HTTP method definitions.
+    HTTP method definitions. 
 
     See https://tools.ietf.org/html/rfc7231#section-4.3
 */

@@ -39,7 +39,7 @@ public class Manager {
 
         return Manager(configuration: configuration)
     }()
-
+ 
     /**
         Creates default values for the "Accept-Encoding", "Accept-Language" and "User-Agent" headers.
     */
