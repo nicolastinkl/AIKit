@@ -23,9 +23,6 @@
 // THE SOFTWARE.
 
 import Foundation
-import Alamofire
-import SwiftyJSON
-
 
 struct CDVender {
          
@@ -47,10 +44,10 @@ struct CDVender {
         ]
         
         // Fetch Request
-        Alamofire.request(.GET, "https://api.uber.com.cn/v1/products", headers: headers, parameters: urlParams)
+        AlamofireCD().request(.GET, "https://api.uber.com.cn/v1/products", headers: headers, parameters: urlParams)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
-                debugPrint("HTTP Request:  \(response.result.description)")
+                debugPrint("HTTP Request:  \(response)")
                 if (response.result.error == nil) {
                     
                     if let data = response.data {

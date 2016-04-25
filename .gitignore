@@ -17,6 +17,10 @@ DerivedData
 !default.perspectivev3
 xcuserdata
 
+## ignore: Build and Product
+Products
+build
+
 ## Other
 *.xccheckout
 *.moved-aside

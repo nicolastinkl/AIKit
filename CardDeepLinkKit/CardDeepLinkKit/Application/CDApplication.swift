@@ -26,7 +26,7 @@ public struct CDApplication{
      *  config of some settings Info.
      */
     struct Config {
-        static let frameworkName = "CardDeepLinkKit.bundle"
+        static let frameworkName = "Frameworks/CardDeepLinkKit.framework/CardDeepLinkKit.bundle"
         static let CDCallbackURLKey = "cd_callback_url"
         static let CDErrorDomain = "com.asiainfo.error"
         static let CDJSONEncodedFieldNamesKey = "cd_json_encoding_key"

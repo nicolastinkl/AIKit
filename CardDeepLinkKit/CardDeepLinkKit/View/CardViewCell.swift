@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 
 import Foundation
-import Alamofire
+
 
 public class CardViewCell: UIView{
 
@@ -63,7 +63,7 @@ public class CardViewCell: UIView{
         line.alpha = 0.3
         line.frame = CGRectMake(0, self.height - 1, self.width, 0.5)
         
-        let ges = UITapGestureRecognizer(target: self, action: "selectGesRecognizer")
+        let ges = UITapGestureRecognizer(target: self, action: #selector(CardViewCell.selectGesRecognizer))
         self.addGestureRecognizer(ges)
     }
     
@@ -91,8 +91,7 @@ public class CardViewCell: UIView{
     public func providerData(model: CDModel){
         content.text = "\(model.display_name): \(model.description)" //
         price.text = "\(model.currency_code):\(model.price)"
-        
-        Alamofire.request(.GET, model.image , parameters: nil)
+        AlamofireCD().request(.GET, model.image , parameters: nil)
             .responseData { [weak self] data in
                 if let da = data.data {
                     if let imageData = UIImage(data: da) {
