@@ -15,7 +15,7 @@
 		93374DA51CC77A85004F8F79 /* CardDeepLinkKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */; };
 		93374DC11CC7D6A4004F8F79 /* CardDeepLinkKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */; };
 		93374DC31CC7D943004F8F79 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93374DC21CC7D943004F8F79 /* UIColor.swift */; };
-		934B96501CCDFFF800A2D815 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96401CCDFFF800A2D815 /* Alamofire.swift */; };
+		934B96501CCDFFF800A2D815 /* AlamofireCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96401CCDFFF800A2D815 /* AlamofireCD.swift */; };
 		934B96511CCDFFF800A2D815 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96411CCDFFF800A2D815 /* Download.swift */; };
 		934B96521CCDFFF800A2D815 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96421CCDFFF800A2D815 /* Error.swift */; };
 		934B96531CCDFFF800A2D815 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96431CCDFFF800A2D815 /* Manager.swift */; };
@@ -93,7 +93,7 @@
 		93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardDeepLinkKit.framework; path = Products/CardDeepLinkKit.framework; sourceTree = "<group>"; };
 		93374DC01CC7D6A4004F8F79 /* CardDeepLinkKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CardDeepLinkKit.bundle; sourceTree = "<group>"; };
 		93374DC21CC7D943004F8F79 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		934B96401CCDFFF800A2D815 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		934B96401CCDFFF800A2D815 /* AlamofireCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireCD.swift; sourceTree = "<group>"; };
 		934B96411CCDFFF800A2D815 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		934B96421CCDFFF800A2D815 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		934B96431CCDFFF800A2D815 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		934B963F1CCDFFF800A2D815 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				934B96401CCDFFF800A2D815 /* Alamofire.swift */,
+				934B96401CCDFFF800A2D815 /* AlamofireCD.swift */,
 				934B96411CCDFFF800A2D815 /* Download.swift */,
 				934B96421CCDFFF800A2D815 /* Error.swift */,
 				934B96431CCDFFF800A2D815 /* Manager.swift */,
@@ -541,7 +541,7 @@
 				938C8B941CC87C9D00E80887 /* CardViewCell.swift in Sources */,
 				93BA89881CC635B400195C67 /* Card.swift in Sources */,
 				93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */,
-				934B96501CCDFFF800A2D815 /* Alamofire.swift in Sources */,
+				934B96501CCDFFF800A2D815 /* AlamofireCD.swift in Sources */,
 				9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */,
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
 				934B965C1CCDFFF800A2D815 /* Upload.swift in Sources */,
