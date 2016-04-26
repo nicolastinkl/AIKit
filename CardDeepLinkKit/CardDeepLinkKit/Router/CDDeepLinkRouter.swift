@@ -43,12 +43,6 @@ public class CDDeepLinkRouter: NSObject {
     
     class CDRouteHandlerBlockTransfer:NSObject {
         var block: CDRouteHandlerBlock?
-        
-        required override init() {
-            super.init()
-        }
-        
-        
     }
     
     public init(_ routeCBlock:CDRouteCompletionBlock, _ appDBlock: CDRouteHandlerBlock ) {
@@ -65,8 +59,7 @@ public class CDDeepLinkRouter: NSObject {
             blocksByRoute.removeObjectForKey(route)
             classesByRoute[route] = handlerClass
         }
-    }
-    
+    }    
     
     /**
       Registers a block for a given route.
@@ -80,15 +73,8 @@ public class CDDeepLinkRouter: NSObject {
             classesByRoute.removeObjectForKey(route)
             let transfr = CDRouteHandlerBlockTransfer()
             transfr.block = routeHandlerBlock
-//            let object: AnyObject = routeHandlerBlock as! AnyObject
-            //unsafeBitCast(routeHandlerBlock, CDRouteHandlerBlock.self) as CDRouteHandlerBlock
             blocksByRoute[route] = transfr
             
-            // encoding 
-            /*
-            let ch = // the AnyObject
-            let ch2 = unsafeBitCast(ch, MyDownloaderCompletionHandler.self)
-            */
         }
     }
     
@@ -131,8 +117,12 @@ public class CDDeepLinkRouter: NSObject {
         
         let handler: AnyClass = handlerKeyedSubscript(route)
         if handler.isSubclassOfClass(CDRouteHandlerBlockTransfer.self){
-            let routeHandler = (handler as! CDRouteHandlerBlockTransfer.Type).init()
-            routeHandler.block!(withDeepLink)
+            if let h = blocksByRoute[route] as? CDRouteHandlerBlockTransfer
+            {
+                if let block = h.block {
+                    block(withDeepLink)
+                }
+            }            
         }else if class_isMetaClass(handler) || handler.isSubclassOfClass(CDRouteHandler.self) {
             let routeHandler = (handler as! CDRouteHandler.Type).init()
             if routeHandler.shouldHandleDeepLink(withDeepLink) == false {
@@ -167,7 +157,7 @@ public class CDDeepLinkRouter: NSObject {
      - parameter applicationCanHandleDeepLinksBlock: applicationCanHandleDeepLinksBlock description
      */
     public func setApplicationCanHandleDeepLinksBlock(applicationCanHandleDeepLinksBlock: CDApplicationCanHandleDeepLinksBlock){
-        
+        applicationCanHandleDeepLinksBlock()
     }
     
     
@@ -193,15 +183,24 @@ public class CDDeepLinkRouter: NSObject {
      Though not recommended, route handlers can be retrieved as follows:
      @code
      id handler = deepLinkRouter[@"table/book/:id"];
+     @code
+     router.registerBlock({ (deeplink) in
+     }, route: "/say/:title")
      @endcode
      @note The type of the returned handler is the type you registered for that route.
      */
     public func handlerKeyedSubscript(key: String) -> AnyClass{
         let route = "\(key)"
         if route.length > 0 {
-            return classesByRoute[route] as! AnyClass
+            
+            let obj = classesByRoute[route]
+            if obj != nil {
+                return obj as! AnyClass
+            }else{
+                let block = blocksByRoute[route] as! CDRouteHandlerBlockTransfer
+                return block.dynamicType
+            }
         }
-        
         
         return AnyObject.self
     }

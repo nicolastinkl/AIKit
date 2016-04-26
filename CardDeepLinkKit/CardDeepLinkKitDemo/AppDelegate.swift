@@ -28,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             debugPrint("deeplink \(deeplink.URL)")
             }, route: "/say/:title")
         
+        router.registerBlock({ (deeplink) in
+            debugPrint("deeplink2 \(deeplink.URL)")
+            }, route: "/say2/:desc")
         
         return true
     }
