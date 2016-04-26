@@ -20,7 +20,7 @@ public class CDSender: NSObject {
     
     //MARK: Private
     private var defaultSenderID : String?
-    
+    private var callbackScheme: String?
 
     
     
@@ -47,6 +47,8 @@ public class CDSender: NSObject {
     private override init() {}
     
     
+    //MARK:参数配置
+    
     /**
      * 配置发送者ID
      *
@@ -57,6 +59,31 @@ public class CDSender: NSObject {
     }
     
     
+    
+    /**
+     * 配置回调Scheme
+     *
+     *@scheme 发送者APP的scheme
+     */
+    public func configureCallbackScheme(scheme : String) {
+        callbackScheme = scheme
+    }
+    
+    
+    
+    /**
+     * 配置回调参数
+     *
+     *@parameters 回调参数，字典类型，调用者需要根据实际情况将Key赋值
+     */
+    public func configureServiceParameters (parameters : (NSDictionary)-> NSDictionary){
+
+
+   }
+    
+    //MARK:条件判断
+    
+
     /**
      * 判断是否有发送者ID
      *
@@ -67,11 +94,14 @@ public class CDSender: NSObject {
     }
     
     
-    
-    
-    
-    func test(){
-        _ = CDDeepLink(url: NSURL(string: "")!)
-        
+    /**
+     * 判断是否有设置发送者APP的scheme
+     *
+     *
+     */
+    public func hasCallbackScheme() -> Bool {
+        return callbackScheme != nil && callbackScheme != ""
     }
+    
+
 }
