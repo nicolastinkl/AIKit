@@ -14,22 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    lazy var router: CDDeepLinkRouter = CDDeepLinkRouter()
+    private lazy var router: CDDeepLinkRouter = CDDeepLinkRouter()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Card.sharedInstance.configureWithApplicationServiceToken("Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw") { (complate, error) -> Void in
-            
+        Card.sharedInstance.configureWithApplicationServiceToken("Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw") { (complate, error) -> Void in            
         }
-         
-        //router.registerHandlerClass(TestProductRouteHandler.self, route: "/say/:title")
-        router.registerBlock({ (deeplink) in
-            debugPrint("deeplink \(deeplink.URL)")
-            }, route: "/say/:title")
+        
+        router.registerHandlerClass(TestProductRouteHandler.self, route: "/say")
         
         router.registerBlock({ (deeplink) in
-            debugPrint("deeplink2 \(deeplink.URL)")
+            debugPrint("deeplink2 \(deeplink)")
             }, route: "/say2/:desc")
         
         return true
