@@ -29,7 +29,7 @@ If you don't use CocoaPods, you can include all of the source files from the [Ca
 ## Usage
 Add deep link support to your app in 5 minutes or less following these simple steps.
  
-![http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg](http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg)
+[http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg](http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg)
 
 
 <br /><br />
@@ -41,38 +41,42 @@ Add deep link support to your app in 5 minutes or less following these simple st
 
 ```objc
 #import <CardDeepLinkKit/CardDeepLinkKit-swift.h>
+or
+import CardDeepLinkKit
 ```
 <br />
-**3. Create an instance of `DPLDeepLinkRouter` in your app delegate**
+**3. Create an instance of `CDDeepLinkRouter` in your app delegate**
 
 ````objc
-- (BOOL)application:(UIApplication *)application
-        didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-  self.router = [[CardDeepLinkKit alloc] init];
+private lazy var router: CDDeepLinkRouter = CDDeepLinkRouter()
 
-  return YES;
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+       return true
 }
 ````
 <br />
 **4. Register a route handler**
 
 ````objc
-self.router[@"/log/:message"] = ^(CardDeepLinkKit *link) {
-  NSLog(@"%@", link.routeParameters[@"message"]);
-};
+  router.registerBlock({ (deeplink) in
+            debugPrint("deeplink2 \(deeplink)")
+            }, route: "/say2/:desc")
+or
+router.registerHandlerClass(TestProductRouteHandler.self, route: "/say")
 ````
 <br />
 **5. Pass incoming URLs to the router**
 
 ```objc
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
-
-  return [self.router handleURL:url withCompletion:NULL];
-}
+func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        
+        router.handleURL(url) { (complte, error) in
+            debugPrint("info : \(complte)")
+        }
+        
+        return true
+    }
 ```
 **6. Passing `NSUserActivity` objects to the router** (optional)
 <br/>
@@ -89,7 +93,7 @@ _**Note:** If your application supports [Apple's new universal links](https://de
 
 
 
-Learn more about the DeepLinkKit by reading our [Integration Guide](https://github.com/button/DeepLinkKit/wiki/DeepLink-Kit-Integration-Guide).
+Learn more about the DeepLinkKit by reading our [Integration Guide]().
 
 ## Route Registration Examples
 
@@ -109,7 +113,7 @@ router[@"timeline"] = ^{ … }
 router[@"/timeline"] = ^{ … }
 ```
 
-In another example, a URL of `twitter://dpl.com/timeline`
+In another example, a URL of `cddpl://asiainfo.com/timeline`
 
 ```objc
 // Matches the URL.

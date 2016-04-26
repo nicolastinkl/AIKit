@@ -45,24 +45,99 @@ public class CDDeepLink : NSObject {
      */
     public var routeParameters: NSDictionary?
     
-
     // MARK: -> public properties with AppLinks.
     
-    public var targetURL: NSURL?
+    public var appLinkData: NSDictionary? {
+        get{
+            if let query = queryParameters {
+                return query[CDApplication.AppLinks.CDAppLinksDataKey] as? NSDictionary
+            }
+            return nil
+        }
     
-    public var extras: NSDictionary?
+    }
     
-    public var version: String?
+    public var targetURL: NSURL? {
+        get{
+            if let data = appLinkData {
+                if let url = data[CDApplication.AppLinks.CDAppLinksTargetURLKey] as? String{
+                    return NSURL(string: url)!
+                }
+            }
+            return nil
+        }
+        
+    }
     
-    public var userAgent: String?
+    public var extras: NSDictionary? {
+        get{
+            if let data = appLinkData {
+                return data[CDApplication.AppLinks.CDAppLinksExtrasKey] as? NSDictionary
+            }
+            return nil
+        }
+        
+    }
     
-    public var appLinkData: NSDictionary?
+    public var version: String? {
+        get{
+            if let data = appLinkData {
+                if let str = data[CDApplication.AppLinks.CDAppLinksVersionKey] as? String{
+                    return str
+                }
+            }
+            return nil
+        }
+        
+    }
     
-    public var referrerTargetURL: NSURL?
+    public var userAgent: String? {
+        get{
+            if let data = appLinkData {
+                if let str = data[CDApplication.AppLinks.CDAppLinksUserAgentKey] as? String{
+                    return str
+                }
+            }
+            return nil
+        }
+        
+    }
     
-    public var referrerURL: NSURL?
+    public var referrerTargetURL: NSURL? {
+        get{
+            if let data = appLinkData {
+                if let url = data[CDApplication.AppLinks.CDAppLinksReferrerTargetURLKey] as? String{
+                    return NSURL(string: url)!
+                }
+            }
+            return nil
+        }
+        
+    }
     
-    public var referrerAppName: String?
+    public var referrerURL: NSURL? {
+        get{
+            if let data = appLinkData {
+                if let url = data[CDApplication.AppLinks.CDAppLinksReferrerURLKey] as? String{
+                    return NSURL(string: url)!
+                }
+            }
+            return nil
+        }
+        
+    }
+    
+    public var referrerAppName: String? {
+        get{
+            if let data = appLinkData {
+                if let str = data[CDApplication.AppLinks.CDAppLinksReferrerAppNameKey] as? String{
+                    return str
+                }
+            }
+            return nil
+        }
+        
+    }
     
     /**
     A deep link URL for linking back to the source application.

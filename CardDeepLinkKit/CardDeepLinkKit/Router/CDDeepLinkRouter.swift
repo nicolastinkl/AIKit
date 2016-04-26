@@ -26,9 +26,9 @@ import Foundation
 
 public class CDDeepLinkRouter: NSObject {
     
-    public typealias CDRouteHandlerBlock =  (CDDeepLink) -> Void
-    public typealias CDRouteCompletionBlock =  (Bool,NSError) -> Void
-    public typealias CDApplicationCanHandleDeepLinksBlock =  (Void) -> Bool
+    public typealias CDRouteHandlerBlock = @convention(block) (CDDeepLink) -> Void
+    public typealias CDRouteCompletionBlock =  @convention(block) (Bool,NSError) -> Void
+    public typealias CDApplicationCanHandleDeepLinksBlock = @convention(block) (Void) -> Bool
     
     private var routeCompletionHandler: CDRouteCompletionBlock?
     private var applicationCanHandleDeepLinksBlock: CDRouteHandlerBlock?
@@ -37,7 +37,15 @@ public class CDDeepLinkRouter: NSObject {
     private let classesByRoute = NSMutableDictionary()
     private let blocksByRoute = NSMutableDictionary()
     
-    private init(_ routeCBlock:CDRouteCompletionBlock, _ appDBlock: CDRouteHandlerBlock ) {
+    public override init() {
+        super.init()
+    }
+    
+    class CDRouteHandlerBlockTransfer:NSObject {
+        var block: CDRouteHandlerBlock?
+    }
+    
+    public init(_ routeCBlock:CDRouteCompletionBlock, _ appDBlock: CDRouteHandlerBlock ) {
         self.routeCompletionHandler = routeCBlock
         self.applicationCanHandleDeepLinksBlock = appDBlock
     }
@@ -45,14 +53,13 @@ public class CDDeepLinkRouter: NSObject {
     /**
     Registers a subclass of `DPLRouteHandler' for a given route.
     */
-    func registerHandlerClass(handlerClass: AnyClass,route: String){
+    public func registerHandlerClass(handlerClass: AnyClass,route: String){
         if route.length > 0 {
             routes.addObject(route)
             blocksByRoute.removeObjectForKey(route)
             classesByRoute[route] = handlerClass
         }
-    }
-    
+    }    
     
     /**
       Registers a block for a given route.
@@ -60,18 +67,14 @@ public class CDDeepLinkRouter: NSObject {
      - parameter routeHandlerBlock: routeHandlerBlock description
      - parameter route:             route description
      */
-    func registerBlock(routeHandlerBlock: CDRouteHandlerBlock,route: String){
+    public func registerBlock(routeHandlerBlock: CDRouteHandlerBlock,route: String){
         if route.length > 0 {
             routes.addObject(route)
             classesByRoute.removeObjectForKey(route)
-            let object: AnyObject = unsafeBitCast(routeHandlerBlock, AnyObject.self)
-            blocksByRoute[route] = object
+            let transfr = CDRouteHandlerBlockTransfer()
+            transfr.block = routeHandlerBlock
+            blocksByRoute[route] = transfr
             
-            // encoding 
-            /*
-            let ch = // the AnyObject
-            let ch2 = unsafeBitCast(ch, MyDownloaderCompletionHandler.self)
-            */
         }
     }
     
@@ -83,7 +86,7 @@ public class CDDeepLinkRouter: NSObject {
      
      - returns: return value description
      */
-    func handleURL(url: NSURL, completionHandler: CDRouteCompletionBlock) -> Bool{
+    public func handleURL(url: NSURL, completionHandler: CDRouteCompletionBlock) -> Bool{
         routeCompletionHandler = completionHandler
         if url.scheme.length <= 0{
             return false
@@ -103,15 +106,24 @@ public class CDDeepLinkRouter: NSObject {
         
         if isHandled == false {
             completeRouteWithSuccess(isHandled, error: NSError(domain: CDApplication.Config.CDErrorDomain, code: 100, userInfo: nil))
+        }else{
+            completeRouteWithSuccess(isHandled,error: NSError(domain: "", code: 0, userInfo: nil))
         }
         return isHandled
     }
     
     
-    func handleRoute(route: String, withDeepLink: CDDeepLink) -> Bool{
+    public func handleRoute(route: String, withDeepLink: CDDeepLink) -> Bool{
         
         let handler: AnyClass = handlerKeyedSubscript(route)
-        if class_isMetaClass(handler) && handler.isSubclassOfClass(CDRouteHandler.self) {
+        if handler.isSubclassOfClass(CDRouteHandlerBlockTransfer.self){
+            if let h = blocksByRoute[route] as? CDRouteHandlerBlockTransfer
+            {
+                if let block = h.block {
+                    block(withDeepLink)
+                }
+            }            
+        }else if class_isMetaClass(handler) || handler.isSubclassOfClass(CDRouteHandler.self) {
             let routeHandler = (handler as! CDRouteHandler.Type).init()
             if routeHandler.shouldHandleDeepLink(withDeepLink) == false {
                 return false
@@ -131,7 +143,7 @@ public class CDDeepLinkRouter: NSObject {
         return true
     }
     
-    func completeRouteWithSuccess(handle: Bool,error: NSError){
+    public func completeRouteWithSuccess(handle: Bool,error: NSError){
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             if let completionHandler = self.routeCompletionHandler {
                 completionHandler(handle,error)
@@ -144,8 +156,8 @@ public class CDDeepLinkRouter: NSObject {
      
      - parameter applicationCanHandleDeepLinksBlock: applicationCanHandleDeepLinksBlock description
      */
-    func setApplicationCanHandleDeepLinksBlock(applicationCanHandleDeepLinksBlock: CDApplicationCanHandleDeepLinksBlock){
-        
+    public func setApplicationCanHandleDeepLinksBlock(applicationCanHandleDeepLinksBlock: CDApplicationCanHandleDeepLinksBlock){
+        applicationCanHandleDeepLinksBlock()
     }
     
     
@@ -160,7 +172,7 @@ public class CDDeepLinkRouter: NSObject {
      - parameter obj:    obj description
      - parameter forKey: forKey description
      */
-    func setHandlerClass(obj: AnyClass,forKey: String){
+    public func setHandlerClass(obj: AnyClass,forKey: String){
         let route = "\(forKey)"
         if route.length > 0 {
             registerHandlerClass(obj, route: route)
@@ -171,14 +183,25 @@ public class CDDeepLinkRouter: NSObject {
      Though not recommended, route handlers can be retrieved as follows:
      @code
      id handler = deepLinkRouter[@"table/book/:id"];
+     @code
+     router.registerBlock({ (deeplink) in
+     }, route: "/say/:title")
      @endcode
      @note The type of the returned handler is the type you registered for that route.
      */
-    func handlerKeyedSubscript(key: String) -> AnyClass{
+    public func handlerKeyedSubscript(key: String) -> AnyClass{
         let route = "\(key)"
         if route.length > 0 {
-            return classesByRoute[route] as! AnyClass
+            
+            let obj = classesByRoute[route]
+            if obj != nil {
+                return obj as! AnyClass
+            }else{
+                let block = blocksByRoute[route] as! CDRouteHandlerBlockTransfer
+                return block.dynamicType
+            }
         }
+        
         return AnyObject.self
     }
 }

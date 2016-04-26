@@ -11,6 +11,8 @@
 		8132B3791CCA211000153AF4 /* CDReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B3781CCA211000153AF4 /* CDReceiver.swift */; };
 		8132B37B1CCDAE8100153AF4 /* CDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B37A1CCDAE8100153AF4 /* CDConstants.swift */; };
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9324A46B1CCF063100A0A397 /* TestProductRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324A46A1CCF063100A0A397 /* TestProductRouteHandler.swift */; };
+		9324A46D1CCF06A400A0A397 /* TestTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324A46C1CCF06A400A0A397 /* TestTargetViewController.swift */; };
 		93374D9E1CC77744004F8F79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9D1CC77744004F8F79 /* UIKit.framework */; };
 		93374DA01CC7774C004F8F79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374D9F1CC7774C004F8F79 /* Foundation.framework */; };
 		93374DA21CC77753004F8F79 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93374DA11CC77753004F8F79 /* SystemConfiguration.framework */; };
@@ -31,7 +33,7 @@
 		934B965C1CCDFFF800A2D815 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964C1CCDFFF800A2D815 /* Upload.swift */; };
 		934B965D1CCDFFF800A2D815 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964D1CCDFFF800A2D815 /* Validation.swift */; };
 		934B965E1CCDFFF800A2D815 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B964F1CCDFFF800A2D815 /* SwiftyJSON.swift */; };
-		934B96601CCE0BFE00A2D815 /* CardViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B965F1CCE0BFE00A2D815 /* CardViewProtocol.swift */; };
+		934B96631CCE19E900A2D815 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96621CCE19E900A2D815 /* CardView.swift */; };
 		9354D2271CC8973900814324 /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9354D2261CC8973900814324 /* UILoadingView.swift */; };
 		9354D2291CC8977800814324 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9354D2281CC8977800814324 /* LoadingView.xib */; };
 		9354D2391CC8AFD500814324 /* CardDeepLinkKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -89,6 +91,8 @@
 		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9324A46A1CCF063100A0A397 /* TestProductRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestProductRouteHandler.swift; sourceTree = "<group>"; };
+		9324A46C1CCF06A400A0A397 /* TestTargetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTargetViewController.swift; sourceTree = "<group>"; };
 		93374D9D1CC77744004F8F79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93374D9F1CC7774C004F8F79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93374DA11CC77753004F8F79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -110,7 +114,7 @@
 		934B964C1CCDFFF800A2D815 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		934B964D1CCDFFF800A2D815 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		934B964F1CCDFFF800A2D815 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		934B965F1CCE0BFE00A2D815 /* CardViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewProtocol.swift; sourceTree = "<group>"; };
+		934B96621CCE19E900A2D815 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9354D2261CC8973900814324 /* UILoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILoadingView.swift; sourceTree = "<group>"; };
 		9354D2281CC8977800814324 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDVender.swift; sourceTree = "<group>"; };
@@ -326,6 +330,8 @@
 				937811FF1CC61F38001BF260 /* Assets.xcassets */,
 				937812011CC61F38001BF260 /* LaunchScreen.storyboard */,
 				937812041CC61F38001BF260 /* Info.plist */,
+				9324A46A1CCF063100A0A397 /* TestProductRouteHandler.swift */,
+				9324A46C1CCF06A400A0A397 /* TestTargetViewController.swift */,
 			);
 			path = CardDeepLinkKitDemo;
 			sourceTree = "<group>";
@@ -354,7 +360,7 @@
 				93C7CBB61CC7717A001B5D3F /* CardAlertView.swift */,
 				93C7CBB81CC77481001B5D3F /* CardAlertView.xib */,
 				938C8B931CC87C9D00E80887 /* CardViewCell.swift */,
-				934B965F1CCE0BFE00A2D815 /* CardViewProtocol.swift */,
+				934B96621CCE19E900A2D815 /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,7 +552,7 @@
 				93BA89881CC635B400195C67 /* Card.swift in Sources */,
 				93BA89841CC630BB00195C67 /* CDRouteMatcher.swift in Sources */,
 				934B96501CCDFFF800A2D815 /* AlamofireCD.swift in Sources */,
-				934B96601CCE0BFE00A2D815 /* CardViewProtocol.swift in Sources */,
+				934B96631CCE19E900A2D815 /* CardView.swift in Sources */,
 				9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */,
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
 				934B965C1CCDFFF800A2D815 /* Upload.swift in Sources */,
@@ -580,7 +586,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				937811FB1CC61F38001BF260 /* ViewController.swift in Sources */,
+				9324A46B1CCF063100A0A397 /* TestProductRouteHandler.swift in Sources */,
 				937811F91CC61F38001BF260 /* AppDelegate.swift in Sources */,
+				9324A46D1CCF06A400A0A397 /* TestTargetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
