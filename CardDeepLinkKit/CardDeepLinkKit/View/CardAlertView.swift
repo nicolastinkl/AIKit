@@ -83,7 +83,6 @@ public class CardAlertView: UIView {
         
     }
     
-    
     func updateUIConstraints(modelArray: [CDModel]) {
         
         var heightOffset: CGFloat = 50

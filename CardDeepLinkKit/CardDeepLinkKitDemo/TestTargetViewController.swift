@@ -1,5 +1,5 @@
 //
-//  CardViewProtocol.swift
+//  TestTargetViewController.swift
 //  CardDeepLinkKit
 //
 // Copyright (c) 2016 AsiaInfo
@@ -23,8 +23,22 @@
 // THE SOFTWARE.
 
 import Foundation
+import CardDeepLinkKit
 
-public protocol CardViewProtocol: class {
+public class TestTargetViewContrller : CDViewController {
     
     
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let v = UIView(frame: self.view.frame)
+        view.addSubview(v)
+        v.backgroundColor = UIColor(hex: "#170F48")
+    }
+    
+    
+    public override func configureWithDeepLink(deepLink: CDDeepLink) {
+        
+        debugPrint("configureWithDeepLink : \(deepLink.URL)")
+    }
 }

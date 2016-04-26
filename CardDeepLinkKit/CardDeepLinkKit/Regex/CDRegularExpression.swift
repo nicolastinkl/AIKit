@@ -50,7 +50,7 @@ public class CDRegularExpression: NSRegularExpression{
     //NSRegularExpressionOptions.CaseInsensitive
     public func matchResultForString(str: String) -> CDMatchResult {
         
-        let matches = matchesInString(str, options: NSMatchingOptions.Anchored, range: NSMakeRange(0, str.length))
+        let matches = matchesInString(str, options: NSMatchingOptions.ReportProgress, range: NSMakeRange(0, str.length))
         let matchResult = CDMatchResult()
         if matches.count <= 0 {
             return matchResult
@@ -60,14 +60,16 @@ public class CDRegularExpression: NSRegularExpression{
         let routeParameters = NSMutableDictionary()
         for result: NSTextCheckingResult in matches {
             // Begin at 1 as first range is the whole match
-            if result.numberOfRanges < groupNames?.count{
-                for i in 1...result.numberOfRanges {
-                    let parameterName = groupNames?[i - 1]
-                    let parameterValue: String = str[result.rangeAtIndex(i)]
-                    routeParameters.setValue(parameterValue, forKey: parameterName as! String)
-                }
-            }
             
+            for i in 1...result.numberOfRanges {
+                if i <= groupNames?.count{
+                    let parameterName = groupNames?[i - 1] as! String?
+                    let parameterValue: String = str[result.rangeAtIndex(i)]
+                    routeParameters.setValue(parameterValue, forKey: "\(parameterName ?? "")")
+                }
+                
+            }
+           
         }
         matchResult.namedProperties = routeParameters
         return matchResult
@@ -110,16 +112,16 @@ public class CDRegularExpression: NSRegularExpression{
         let componentRegex: NSRegularExpression = try! NSRegularExpression(pattern: CDRegularExpression.CDRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)
         let matches: [AnyObject] = componentRegex.matchesInString(str, options: NSMatchingOptions.ReportProgress, range: NSMakeRange(0, str.length))
         var namedGroupTokens = Array<AnyObject>()
-        for result in (matches as? [NSTextCheckingResult ])!{
+        for result in (matches as? [NSTextCheckingResult])!{
             let namedGroupToken: String = str[result.range]
             namedGroupTokens.append(namedGroupToken)
         }
         return namedGroupTokens
     }
     
-    public class func namedGroupsForString(str: String) -> [AnyObject] {
+    public class func namedGroupsForString(str: String) -> [String] {
         
-        var groupNames = Array<AnyObject>()
+        var groupNames = Array<String>()
         let namedGroupExpressions  = CDRegularExpression.namedGroupTokensForString(str)
 
         let parameterRegex: NSRegularExpression = try! NSRegularExpression(pattern: CDRegularExpression.CDRouteParameterPattern, options: NSRegularExpressionOptions.CaseInsensitive)

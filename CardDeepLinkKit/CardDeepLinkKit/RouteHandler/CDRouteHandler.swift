@@ -17,12 +17,12 @@
 
 import Foundation
 
-protocol CDTargetViewController: class{
+public protocol CDTargetViewController: class{
     func configureWithDeepLink(deepLink: CDDeepLink)
 }
 
 public class CDViewController: UIViewController,CDTargetViewController{
-    func configureWithDeepLink(deepLink: CDDeepLink) {
+    public func configureWithDeepLink(deepLink: CDDeepLink) {
         
     }
 }

@@ -35,6 +35,7 @@ public struct CDApplication{
 
     struct AppLinks {
         
+         static let CDAppLinksSchemes              = "cddpl"
          static let CDAppLinksDataKey              = "applink_data"
          static let CDAppLinksTargetURLKey         = "target_url"
          static let CDAppLinksExtrasKey            = "extras"
