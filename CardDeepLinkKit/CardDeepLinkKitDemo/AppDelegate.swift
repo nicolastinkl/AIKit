@@ -9,6 +9,22 @@
 import UIKit
 import CardDeepLinkKit
 
+
+/// 跳转测试：
+/*
+ 
+ 1. cddpl://asiainfo.com/say?client_id=Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw&action=setPickup&pickup[latitude]=30.6475740000&pickup[longitude]=104.0555800000&pickup[nickname]=UberX&pickup[formatted_address]=%E5%80%AA%E5%AE%B6%E6%A1%A5&dropoff[latitude]=30.6416763503&dropoff[longitude]=104.0805369599&dropoff[nickname]=YY&dropoff[formatted_address]=YY&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383
+ 
+ 
+ 2. cddpl://asiainfo.com/say/:message
+ 
+ 
+ 3. cddpl://asiainfo.com/say/no
+ 
+ */
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
