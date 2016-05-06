@@ -101,7 +101,12 @@ func URLRequest(
     return mutableURLRequest
 }
 
-public struct AlamofireCD {
+/**
+ *  @author AsiaInfo, 16-05-06 15:05:39
+ *
+ *  Change By Tinkl
+ */
+struct AlamofireCD {
     
     // MARK: - Request Methods
     /**
@@ -116,7 +121,7 @@ public struct AlamofireCD {
      
      - returns: The created request.
      */
-    public func request(
+    internal func request(
         method: Method,
         _ URLString: URLStringConvertible,
           parameters: [String: AnyObject]? = nil,
@@ -142,7 +147,7 @@ public struct AlamofireCD {
      
      - returns: The created request.
      */
-    public func request(URLRequest: URLRequestConvertible) -> Request {
+    internal func request(URLRequest: URLRequestConvertible) -> Request {
         return Manager.sharedInstance.request(URLRequest.URLRequest)
     }
     
@@ -160,7 +165,7 @@ public struct AlamofireCD {
      
      - returns: The created upload request.
      */
-    public func upload(
+    internal func upload(
         method: Method,
         _ URLString: URLStringConvertible,
           headers: [String: String]? = nil,
@@ -178,7 +183,7 @@ public struct AlamofireCD {
      
      - returns: The created upload request.
      */
-    public func upload(URLRequest: URLRequestConvertible, file: NSURL) -> Request {
+    internal func upload(URLRequest: URLRequestConvertible, file: NSURL) -> Request {
         return Manager.sharedInstance.upload(URLRequest, file: file)
     }
     
@@ -194,7 +199,7 @@ public struct AlamofireCD {
      
      - returns: The created upload request.
      */
-    public func upload(
+    internal func upload(
         method: Method,
         _ URLString: URLStringConvertible,
           headers: [String: String]? = nil,
@@ -212,7 +217,7 @@ public struct AlamofireCD {
      
      - returns: The created upload request.
      */
-    public func upload(URLRequest: URLRequestConvertible, data: NSData) -> Request {
+    internal func upload(URLRequest: URLRequestConvertible, data: NSData) -> Request {
         return Manager.sharedInstance.upload(URLRequest, data: data)
     }
     
@@ -228,7 +233,7 @@ public struct AlamofireCD {
      
      - returns: The created upload request.
      */
-    public func upload(
+    internal func upload(
         method: Method,
         _ URLString: URLStringConvertible,
           headers: [String: String]? = nil,
@@ -246,7 +251,7 @@ public struct AlamofireCD {
      
      - returns: The created upload request.
      */
-    public func upload(URLRequest: URLRequestConvertible, stream: NSInputStream) -> Request {
+    internal func upload(URLRequest: URLRequestConvertible, stream: NSInputStream) -> Request {
         return Manager.sharedInstance.upload(URLRequest, stream: stream)
     }
     
@@ -263,7 +268,7 @@ public struct AlamofireCD {
      `MultipartFormDataEncodingMemoryThreshold` by default.
      - parameter encodingCompletion:      The closure called when the `MultipartFormData` encoding is complete.
      */
-    public func upload(
+    internal func upload(
         method: Method,
         _ URLString: URLStringConvertible,
           headers: [String: String]? = nil,
@@ -290,7 +295,7 @@ public struct AlamofireCD {
      `MultipartFormDataEncodingMemoryThreshold` by default.
      - parameter encodingCompletion:      The closure called when the `MultipartFormData` encoding is complete.
      */
-    public func upload(
+    internal func upload(
         URLRequest: URLRequestConvertible,
         multipartFormData: MultipartFormData -> Void,
         encodingMemoryThreshold: UInt64 = Manager.MultipartFormDataEncodingMemoryThreshold,
@@ -320,7 +325,7 @@ public struct AlamofireCD {
      
      - returns: The created download request.
      */
-    public func download(
+    internal func download(
         method: Method,
         _ URLString: URLStringConvertible,
           parameters: [String: AnyObject]? = nil,
@@ -347,7 +352,7 @@ public struct AlamofireCD {
      
      - returns: The created download request.
      */
-    public func download(URLRequest: URLRequestConvertible, destination: Request.DownloadFileDestination) -> Request {
+    internal func download(URLRequest: URLRequestConvertible, destination: Request.DownloadFileDestination) -> Request {
         return Manager.sharedInstance.download(URLRequest, destination: destination)
     }
     
@@ -364,7 +369,7 @@ public struct AlamofireCD {
      
      - returns: The created download request.
      */
-    public func download(resumeData data: NSData, destination: Request.DownloadFileDestination) -> Request {
+    internal func download(resumeData data: NSData, destination: Request.DownloadFileDestination) -> Request {
         return Manager.sharedInstance.download(data, destination: destination)
     }
 }

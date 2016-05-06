@@ -81,7 +81,7 @@ extension Request {
 
         - returns: The request.
     */
-    public func response(
+    internal func response(
         queue queue: dispatch_queue_t? = nil,
         completionHandler: (NSURLRequest?, NSHTTPURLResponse?, NSData?, NSError?) -> Void)
         -> Self
@@ -105,7 +105,7 @@ extension Request {
 
         - returns: The request.
     */
-    public func response<T: ResponseSerializerType>(
+    internal func response<T: ResponseSerializerType>(
         queue queue: dispatch_queue_t? = nil,
         responseSerializer: T,
         completionHandler: Response<T.SerializedObject, T.ErrorObject> -> Void)
@@ -144,7 +144,7 @@ extension Request {
 
         - returns: A data response serializer.
     */
-    public static func dataResponseSerializer() -> ResponseSerializer<NSData, NSError> {
+    internal static func dataResponseSerializer() -> ResponseSerializer<NSData, NSError> {
         return ResponseSerializer { _, response, data, error in
             guard error == nil else { return .Failure(error!) }
 
@@ -167,7 +167,7 @@ extension Request {
 
         - returns: The request.
     */
-    public func responseData(completionHandler: Response<NSData, NSError> -> Void) -> Self {
+    internal func responseData(completionHandler: Response<NSData, NSError> -> Void) -> Self {
         return response(responseSerializer: Request.dataResponseSerializer(), completionHandler: completionHandler)
     }
 }
@@ -185,7 +185,7 @@ extension Request {
 
         - returns: A string response serializer.
     */
-    public static func stringResponseSerializer(
+    internal static func stringResponseSerializer(
         var encoding encoding: NSStringEncoding? = nil)
         -> ResponseSerializer<String, NSError>
     {
@@ -228,7 +228,7 @@ extension Request {
 
         - returns: The request.
     */
-    public func responseString(
+    internal func responseString(
         encoding encoding: NSStringEncoding? = nil,
         completionHandler: Response<String, NSError> -> Void)
         -> Self
@@ -252,7 +252,7 @@ extension Request {
 
         - returns: A JSON object response serializer.
     */
-    public static func JSONResponseSerializer(
+    internal static func JSONResponseSerializer(
         options options: NSJSONReadingOptions = .AllowFragments)
         -> ResponseSerializer<AnyObject, NSError>
     {
@@ -284,7 +284,7 @@ extension Request {
 
         - returns: The request.
     */
-    public func responseJSON(
+    internal func responseJSON(
         options options: NSJSONReadingOptions = .AllowFragments,
         completionHandler: Response<AnyObject, NSError> -> Void)
         -> Self
@@ -308,7 +308,7 @@ extension Request {
 
         - returns: A property list object response serializer.
     */
-    public static func propertyListResponseSerializer(
+    internal static func propertyListResponseSerializer(
         options options: NSPropertyListReadOptions = NSPropertyListReadOptions())
         -> ResponseSerializer<AnyObject, NSError>
     {
@@ -342,7 +342,7 @@ extension Request {
 
         - returns: The request.
     */
-    public func responsePropertyList(
+    internal func responsePropertyList(
         options options: NSPropertyListReadOptions = NSPropertyListReadOptions(),
         completionHandler: Response<AnyObject, NSError> -> Void)
         -> Self

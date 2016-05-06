@@ -36,7 +36,6 @@
 		934B96631CCE19E900A2D815 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B96621CCE19E900A2D815 /* CardView.swift */; };
 		9354D2271CC8973900814324 /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9354D2261CC8973900814324 /* UILoadingView.swift */; };
 		9354D2291CC8977800814324 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9354D2281CC8977800814324 /* LoadingView.xib */; };
-		9354D2391CC8AFD500814324 /* CardDeepLinkKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93374DB41CC7CCC8004F8F79 /* CardDeepLinkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9357EEDF1CC8713C00F1F2A2 /* CDVender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEDE1CC8713C00F1F2A2 /* CDVender.swift */; };
 		9357EEE11CC873FB00F1F2A2 /* CDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357EEE01CC873FB00F1F2A2 /* CDModel.swift */; };
 		936E13581CC6200A00BA0FD0 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E13571CC6200A00BA0FD0 /* NameSpace.swift */; };
@@ -68,16 +67,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9354D2331CC8AF6600814324 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9354D2391CC8AFD500814324 /* CardDeepLinkKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +197,6 @@
 				937811BA1CC61601001BF260 /* Categories */,
 				937811B61CC615D4001BF260 /* CardDeepLink */,
 				937811B71CC615D4001BF260 /* RouteHandler */,
-				937811B81CC615D4001BF260 /* Router */,
 				937811B91CC615D4001BF260 /* RouterMatcher */,
 				81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */,
 				81EB2AC61CC5053100F4459F /* Info.plist */,
@@ -287,6 +275,7 @@
 		937811B71CC615D4001BF260 /* RouteHandler */ = {
 			isa = PBXGroup;
 			children = (
+				937811B81CC615D4001BF260 /* Router */,
 				93BA897F1CC6308600195C67 /* CDRouteHandler.swift */,
 			);
 			path = RouteHandler;
@@ -297,7 +286,8 @@
 			children = (
 				93BA89811CC630A500195C67 /* CDDeepLinkRouter.swift */,
 			);
-			path = Router;
+			name = Router;
+			path = ../Router;
 			sourceTree = "<group>";
 		};
 		937811B91CC615D4001BF260 /* RouterMatcher */ = {
@@ -419,7 +409,6 @@
 				937811F21CC61F38001BF260 /* Sources */,
 				937811F31CC61F38001BF260 /* Frameworks */,
 				937811F41CC61F38001BF260 /* Resources */,
-				9354D2331CC8AF6600814324 /* CopyFiles */,
 			);
 			buildRules = (
 			);

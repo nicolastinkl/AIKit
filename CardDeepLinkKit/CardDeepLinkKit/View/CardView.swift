@@ -42,7 +42,7 @@ public extension CardView{
         
         CDVender().request { (modelArray) -> Void in
             //Array & Dictionary
-            var json: JSON =  ["name": "Jack", "age": 25]
+            let json: JSON =  ["name": "Jack", "age": 25]
             response(json)
         }
     }

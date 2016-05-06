@@ -64,7 +64,7 @@ extension Manager {
 
         :returns: The created stream request.
     */
-    public func stream(hostName hostName: String, port: Int) -> Request {
+    func stream(hostName hostName: String, port: Int) -> Request {
         return stream(.Stream(hostName, port))
     }
 
@@ -75,7 +75,7 @@ extension Manager {
 
         - returns: The created stream request.
     */
-    public func stream(netService netService: NSNetService) -> Request {
+    func stream(netService netService: NSNetService) -> Request {
         return stream(.NetService(netService))
     }
 }
