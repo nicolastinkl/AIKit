@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8132B3771CCA162400153AF4 /* CDSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B3761CCA162400153AF4 /* CDSender.swift */; };
+		8132B3791CCA211000153AF4 /* CDReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B3781CCA211000153AF4 /* CDReceiver.swift */; };
+		8132B37B1CCDAE8100153AF4 /* CDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B37A1CCDAE8100153AF4 /* CDConstants.swift */; };
 		81EB2AC51CC5053100F4459F /* CardDeepLinkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9324A46B1CCF063100A0A397 /* TestProductRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324A46A1CCF063100A0A397 /* TestProductRouteHandler.swift */; };
 		9324A46D1CCF06A400A0A397 /* TestTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324A46C1CCF06A400A0A397 /* TestTargetViewController.swift */; };
@@ -84,6 +86,8 @@
 /* Begin PBXFileReference section */
 		00E5DB1BBD59CB8DF665EC7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8132B3761CCA162400153AF4 /* CDSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDSender.swift; sourceTree = "<group>"; };
+		8132B3781CCA211000153AF4 /* CDReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDReceiver.swift; sourceTree = "<group>"; };
+		8132B37A1CCDAE8100153AF4 /* CDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDConstants.swift; sourceTree = "<group>"; };
 		81EB2AC11CC5053100F4459F /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDeepLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EB2AC41CC5053100F4459F /* CardDeepLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDeepLinkKit.h; sourceTree = "<group>"; };
 		81EB2AC61CC5053100F4459F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				93374DA41CC77A85004F8F79 /* CardDeepLinkKit.bundle */,
+				8132B37A1CCDAE8100153AF4 /* CDConstants.swift */,
 			);
 			path = Resoures;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			children = (
 				8132B3761CCA162400153AF4 /* CDSender.swift */,
 				937811F01CC61EE3001BF260 /* CDDeepLink.swift */,
+				8132B3781CCA211000153AF4 /* CDReceiver.swift */,
 			);
 			name = CardDeepLink;
 			path = DeepLink;
@@ -535,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8132B37B1CCDAE8100153AF4 /* CDConstants.swift in Sources */,
 				934B965B1CCDFFF800A2D815 /* Stream.swift in Sources */,
 				934B96531CCDFFF800A2D815 /* Manager.swift in Sources */,
 				934B96561CCDFFF800A2D815 /* Request.swift in Sources */,
@@ -570,6 +577,7 @@
 				934B965E1CCDFFF800A2D815 /* SwiftyJSON.swift in Sources */,
 				93C7CBB71CC7717A001B5D3F /* CardAlertView.swift in Sources */,
 				93BA897E1CC628FF00195C67 /* CDApplication.swift in Sources */,
+				8132B3791CCA211000153AF4 /* CDReceiver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
