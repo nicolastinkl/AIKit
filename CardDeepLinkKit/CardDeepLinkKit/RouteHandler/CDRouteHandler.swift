@@ -17,6 +17,10 @@
 
 import Foundation
 
+/**
+ * Implement this method on conforming view controllers to configure it with data provided by the passed deep link.
+  @note Depending on your view controller implementation, its views may not be instantiated when this method gets called. In that case, you might store the relevantdata and configure its views in '-[UIViewController ViewDidLoad]'.
+ */
 public protocol CDTargetViewController: class{
     func configureWithDeepLink(deepLink: CDDeepLink)
 }
@@ -28,7 +32,7 @@ public class CDViewController: UIViewController,CDTargetViewController{
 }
 
 /**
-A base class for handling routes.
+ A base class for handling routes.
  */
 public class CDRouteHandler: NSObject{
      

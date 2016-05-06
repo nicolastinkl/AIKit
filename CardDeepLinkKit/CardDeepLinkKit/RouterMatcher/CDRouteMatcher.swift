@@ -24,7 +24,7 @@
 
 import Foundation
 
-/// Matcher
+/// Matcher as Regular 
 public class CDRouteMatcher: NSObject {
  
     internal var scheme: String?

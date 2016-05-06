@@ -24,8 +24,16 @@
 
 import Foundation
 
+/**
+ * Route Registration: Provided a Route rule to let register other appliction initializer in method 'didFinishLaunchingWithOptions'
+ @note private lazy var router: CDDeepLinkRouter = CDDeepLinkRouter()
+ */
 public class CDDeepLinkRouter: NSObject {
     
+    /**
+     * Defines the Closure'block' type to be used as the Handleer when registering a route.
+     @param block deepLink the deep link to be handle.
+     */
     public typealias CDRouteHandlerBlock = @convention(block) (CDDeepLink) -> Void
     public typealias CDRouteCompletionBlock =  @convention(block) (Bool,NSError) -> Void
     public typealias CDApplicationCanHandleDeepLinksBlock = @convention(block) (Void) -> Bool
