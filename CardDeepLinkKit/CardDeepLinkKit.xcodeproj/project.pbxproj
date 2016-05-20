@@ -47,6 +47,8 @@
 		937812031CC61F38001BF260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937812011CC61F38001BF260 /* LaunchScreen.storyboard */; };
 		9386946B1CC6581800CCF864 /* CDMatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938694691CC6581800CCF864 /* CDMatchResult.swift */; };
 		9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386946A1CC6581800CCF864 /* CDRegularExpression.swift */; };
+		938C37EB1CEEF4BC00545B69 /* CardDeepLinkKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 938C37EA1CEEF4BC00545B69 /* CardDeepLinkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		938C37EC1CEEF5BB00545B69 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938C37EA1CEEF4BC00545B69 /* CardDeepLinkKit.framework */; };
 		938C8B921CC87B4100E80887 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B911CC87B4100E80887 /* UIImage.swift */; };
 		938C8B941CC87C9D00E80887 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B931CC87C9D00E80887 /* CardViewCell.swift */; };
 		938C8B961CC87F9900E80887 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B951CC87F9900E80887 /* UIView.swift */; };
@@ -67,6 +69,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		938C37E81CEEF49100545B69 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				938C37EB1CEEF4BC00545B69 /* CardDeepLinkKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +131,7 @@
 		937812041CC61F38001BF260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938694691CC6581800CCF864 /* CDMatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMatchResult.swift; sourceTree = "<group>"; };
 		9386946A1CC6581800CCF864 /* CDRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRegularExpression.swift; sourceTree = "<group>"; };
+		938C37EA1CEEF4BC00545B69 /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardDeepLinkKit.framework; path = Products/CardDeepLinkKit.framework; sourceTree = "<group>"; };
 		938C8B911CC87B4100E80887 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		938C8B931CC87C9D00E80887 /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		938C8B951CC87F9900E80887 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -149,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938C37EC1CEEF5BB00545B69 /* CardDeepLinkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +181,7 @@
 		81EB2AB71CC5053100F4459F = {
 			isa = PBXGroup;
 			children = (
+				938C37EA1CEEF4BC00545B69 /* CardDeepLinkKit.framework */,
 				81EB2AC31CC5053100F4459F /* CardDeepLinkKit */,
 				937811F71CC61F38001BF260 /* CardDeepLinkKitDemo */,
 				81EB2AC21CC5053100F4459F /* Products */,
@@ -406,6 +421,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 937812051CC61F38001BF260 /* Build configuration list for PBXNativeTarget "CardDeepLinkKitDemo" */;
 			buildPhases = (
+				938C37E81CEEF49100545B69 /* CopyFiles */,
 				937811F21CC61F38001BF260 /* Sources */,
 				937811F31CC61F38001BF260 /* Frameworks */,
 				937811F41CC61F38001BF260 /* Resources */,
