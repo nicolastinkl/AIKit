@@ -24,7 +24,7 @@
 
 import Foundation
 
-extension UIView{
+internal extension UIView{
     
     
     // MARK: SYSTEM Extension

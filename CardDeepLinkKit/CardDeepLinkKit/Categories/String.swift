@@ -17,7 +17,7 @@
 
 import Foundation
 
-extension String{
+internal extension String{
     
     //MARK: Helper methods
     
@@ -27,11 +27,11 @@ extension String{
     - returns: Int length of the string.
     */
     
-    var length: Int {
+    internal var length: Int {
         return self.characters.count
     }
     
-    var objcLength: Int {
+    internal var objcLength: Int {
         return self.utf16.count
     }
     

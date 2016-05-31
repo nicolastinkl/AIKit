@@ -25,13 +25,13 @@
 import Foundation
 
 // MARK: - UIColor some Utils
-public extension UIColor {
-    convenience init(hex: String) {
+internal extension UIColor {
+    internal convenience init(hexColor: String) {
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue:  CGFloat = 0.0
         var alpha: CGFloat = 1.0
-        var hex:   String = hex
+        var hex:   String = hexColor
         
         if hex.hasPrefix("#") {
             let index = hex.startIndex.advancedBy(1)
@@ -70,12 +70,12 @@ public extension UIColor {
     }
 }
 
-public func rgbaToUIColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
+internal func rgbaToUIColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
     
     return UIColor(red: red, green: green, blue: blue, alpha: alpha)
 }
 
-public func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+internal func UIColorFromRGB(rgbValue: UInt) -> UIColor {
     return UIColor(
         red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
         green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,

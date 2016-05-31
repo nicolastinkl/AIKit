@@ -28,7 +28,7 @@ import Foundation
     Types adopting the `URLStringConvertible` protocol can be used to construct URL strings, which are then used to 
     construct URL requests.
 */
-public protocol URLStringConvertible {
+internal protocol URLStringConvertible {
     /**
         A URL that conforms to RFC 2396.
 
@@ -42,25 +42,25 @@ public protocol URLStringConvertible {
 }
 
 extension String: URLStringConvertible {
-    public var URLString: String {
+    internal var URLString: String {
         return self
     }
 }
 
 extension NSURL: URLStringConvertible {
-    public var URLString: String {
+    internal var URLString: String {
         return absoluteString
     }
 }
 
 extension NSURLComponents: URLStringConvertible {
-    public var URLString: String {
+    internal var URLString: String {
         return URL!.URLString
     }
 }
 
 extension NSURLRequest: URLStringConvertible {
-    public var URLString: String {
+    internal var URLString: String {
         return URL!.URLString
     }
 }
@@ -70,13 +70,13 @@ extension NSURLRequest: URLStringConvertible {
 /**
     Types adopting the `URLRequestConvertible` protocol can be used to construct URL requests.
 */
-public protocol URLRequestConvertible {
+internal protocol URLRequestConvertible {
     /// The URL request.
     var URLRequest: NSMutableURLRequest { get }
 }
 
 extension NSURLRequest: URLRequestConvertible {
-    public var URLRequest: NSMutableURLRequest {
+    internal var URLRequest: NSMutableURLRequest {
         return self.mutableCopy() as! NSMutableURLRequest
     }
 } 

@@ -59,7 +59,7 @@ public enum Method: String {
     - `Custom`:          Uses the associated closure value to construct a new request given an existing request and
                          parameters.
 */
-public enum ParameterEncoding {
+internal enum ParameterEncoding {
     case URL
     case URLEncodedInURL
     case JSON
@@ -75,7 +75,7 @@ public enum ParameterEncoding {
         - returns: A tuple containing the constructed request and the error that occurred during parameter encoding, 
                    if any.
     */
-    public func encode(
+    internal func encode(
         URLRequest: URLRequestConvertible,
         parameters: [String: AnyObject]?)
         -> (NSMutableURLRequest, NSError?)

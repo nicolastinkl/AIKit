@@ -86,17 +86,17 @@ public class CardAlertView: UIView {
     }
     
     func request(sId:String){
-        showLoading()
+        showAlertLoading()
         
         if sId == "1" {
             title.text = "Uber"
             CDVender().request { (modelArray) -> Void in
-                self.hideLoading()
+                self.hideAlertLoading()
                 self.updateUIConstraints(modelArray)
                 
             }
         }else if sId == "2" {
-            self.hideLoading()
+            self.hideAlertLoading()
             title.text = "Hospital Appointment Booking"
             var modelArray = Array<CDModel>()
             var model = CDModel()
@@ -162,7 +162,7 @@ public class CardAlertView: UIView {
     /**
      Animation springEaseIn
      */
-    public class func springEaseIn(duration: NSTimeInterval, animations: (() -> Void)!) {
+    internal class func springEaseIn(duration: NSTimeInterval, animations: (() -> Void)!) {
         UIView.animateWithDuration(
             duration,
             delay: 0,
@@ -174,7 +174,7 @@ public class CardAlertView: UIView {
         )
     }
     
-    public class func springEaseOut(duration: NSTimeInterval, animations: (() -> Void)!,completion: (() -> Void)!) {
+    internal class func springEaseOut(duration: NSTimeInterval, animations: (() -> Void)!,completion: (() -> Void)!) {
         UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
             animations()
             }) { ( bol ) -> Void in
@@ -182,7 +182,7 @@ public class CardAlertView: UIView {
         }
     }
     
-    public class func spring(duration: NSTimeInterval, animations: () -> Void) {
+    internal class func spring(duration: NSTimeInterval, animations: () -> Void) {
         UIView.animateWithDuration(
             duration,
             delay: 0,
@@ -196,7 +196,7 @@ public class CardAlertView: UIView {
         )
     }
     
-    public class func springWithCompletion(duration: NSTimeInterval, animations: (() -> Void)!, completion: (Bool -> Void)!) {
+    internal class func springWithCompletion(duration: NSTimeInterval, animations: (() -> Void)!, completion: (Bool -> Void)!) {
         UIView.animateWithDuration(
             duration,
             delay: 0,

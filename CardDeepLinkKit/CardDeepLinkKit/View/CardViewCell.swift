@@ -75,7 +75,7 @@ public class CardViewCell: UIView{
         }
         
         if isSelect {
-            bgImage.backgroundColor = UIColor(hex: "#A3A0BE")
+            bgImage.backgroundColor = UIColor(hexColor: "#A3A0BE")
         }else{
             bgImage.backgroundColor = UIColor.clearColor()
         }        

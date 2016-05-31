@@ -24,16 +24,16 @@
 
 import Foundation
 
-public class UILoadingView: UIView {
+internal class UILoadingView: UIView {
     
-    public func degreesToRadians(degrees: CGFloat) -> CGFloat {
+    internal func degreesToRadians(degrees: CGFloat) -> CGFloat {
         return degrees * CGFloat(M_PI / 180)
     }
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet public weak var indicatorView: UIView!
+    @IBOutlet internal weak var indicatorView: UIView!
     
-    override public func awakeFromNib() {
+    override internal func awakeFromNib() {
         let animation = CABasicAnimation()
         animation.keyPath = "transform.rotation.z"
         animation.fromValue = degreesToRadians(0)
@@ -52,22 +52,22 @@ public class UILoadingView: UIView {
     }
 }
 
-public extension UIView {
+extension UIView {
     
-    struct LoadingViewConstants {
+    struct LoadingViewAlertConstants {
         static let Tag = 1000
     }
     
-    public func showLoading() {
+    func showAlertLoading() {
         
-        if self.viewWithTag(LoadingViewConstants.Tag) != nil {
+        if self.viewWithTag(LoadingViewAlertConstants.Tag) != nil {
             // If loading view is already found in current view hierachy, do nothing
             return
         }
         
         let loadingXibView = UILoadingView.designCodeLoadingView()
         loadingXibView.frame = self.bounds
-        loadingXibView.tag = LoadingViewConstants.Tag
+        loadingXibView.tag = LoadingViewAlertConstants.Tag
         self.addSubview(loadingXibView)
         
         loadingXibView.alpha = 0
@@ -75,10 +75,10 @@ public extension UIView {
             loadingXibView.alpha = 1
         })
     }
-    
-    public func hideLoading() {
+    //hideAlertLoading
+    func hideAlertLoading() {
         
-        if let loadingXibView = self.viewWithTag(LoadingViewConstants.Tag) {
+        if let loadingXibView = self.viewWithTag(LoadingViewAlertConstants.Tag) {
             loadingXibView.alpha = 1
             
             CardAlertView.springWithCompletion(0.7, animations: {
