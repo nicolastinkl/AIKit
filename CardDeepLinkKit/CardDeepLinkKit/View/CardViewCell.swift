@@ -27,10 +27,16 @@ import Foundation
 public class CardViewCell: UIView{
     
     var bgImage: UILabel = UILabel()
+    
     var iconImage: UIImageView = UIImageView()
+    
     var content: UILabel = UILabel()
+    
     var price: UILabel = UILabel()
+    
     var line: UILabel = UILabel()
+    
+    var currentModel: CDModel?
     
     var isSelect:Bool = false
     
@@ -79,7 +85,32 @@ public class CardViewCell: UIView{
         }else{
             bgImage.backgroundColor = UIColor.clearColor()
         }
-               
+        
+        openURL()
+    }
+    
+    func openURL(){
+        
+        if CDApplication.AuthCache.CDApplicationServiceID == "1" {
+            let url = "uber://?client_id=Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw&action=setPickup&pickup[latitude]=30.6475740000&pickup[longitude]=104.0555800000&pickup[nickname]=UberX&pickup[formatted_address]=XX&dropoff[latitude]=30.6416763503&dropoff[longitude]=104.0805369599&dropoff[nickname]=YY&dropoff[formatted_address]=YY&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383"
+            if UIApplication.sharedApplication().canOpenURL(NSURL(string: url)!) {
+                UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+            }else{
+                UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app/uber/id368677368?mt=8")!)
+            }
+        }else if CDApplication.AuthCache.CDApplicationServiceID == "2"{
+            
+            let deeplink = CDDeepLink(url: NSURL(string: "hospital://asiainfo.com/action=hospital")!)
+            deeplink.setObject("serviceId", value: "\(CDApplication.AuthCache.CDApplicationServiceID)")
+            deeplink.setObject("departmentId", value: "1")
+            deeplink.setObject("departmentGroupId", value: "1")
+            if let url = deeplink.getURL() {
+                debugPrint(url)
+                UIApplication.sharedApplication().openURL(url)
+            }
+            
+        }
+        
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -90,6 +121,7 @@ public class CardViewCell: UIView{
      downloading imageView
      */
     public func providerData(model: CDModel){
+        currentModel = model
         content.text = "\(model.display_name): \(model.description)" //
         price.text = "\(model.currency_code):\(model.price)"
         AlamofireCD().request(.GET, model.image , parameters: nil)
@@ -101,7 +133,6 @@ public class CardViewCell: UIView{
                         })
                     }
                 }
-                
         }
         
     }

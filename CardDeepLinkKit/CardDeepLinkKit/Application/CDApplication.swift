@@ -55,4 +55,8 @@ public struct CDApplication{
         static var CDApplicationSecretKey = "KXCJVHJLKHDJKSLFIUYPDSF"
     }
     
+    struct AuthCache {
+        static var CDApplicationServiceID = ""
+    }
+    
 }

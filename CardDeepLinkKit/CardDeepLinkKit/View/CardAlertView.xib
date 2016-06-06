@@ -36,7 +36,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8F-Tx-vZd">
-                            <rect key="frame" x="0.0" y="53" width="560" height="201"/>
+                            <rect key="frame" x="0.0" y="51" width="560" height="203"/>
                             <color key="backgroundColor" white="1" alpha="0.23384862588652483" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,7 +120,7 @@
                         <constraint firstAttribute="bottom" secondItem="tQt-hy-Loi" secondAttribute="bottom" id="Ugw-Go-0Da"/>
                         <constraint firstAttribute="trailing" secondItem="z8S-NM-mXY" secondAttribute="trailing" constant="15" id="aJc-Sd-Pfq"/>
                         <constraint firstItem="z8S-NM-mXY" firstAttribute="leading" secondItem="Qya-YI-3jw" secondAttribute="leading" constant="14" id="cTd-h9-PK2"/>
-                        <constraint firstItem="L8F-Tx-vZd" firstAttribute="top" secondItem="z8S-NM-mXY" secondAttribute="bottom" constant="20" id="fti-OC-NfZ"/>
+                        <constraint firstItem="L8F-Tx-vZd" firstAttribute="top" secondItem="z8S-NM-mXY" secondAttribute="bottom" constant="18" id="fti-OC-NfZ"/>
                         <constraint firstAttribute="trailing" secondItem="L8F-Tx-vZd" secondAttribute="trailing" id="ngM-Ie-PNT"/>
                         <constraint firstItem="L8F-Tx-vZd" firstAttribute="leading" secondItem="Qya-YI-3jw" secondAttribute="leading" id="o6l-ft-P82"/>
                         <constraint firstItem="z8S-NM-mXY" firstAttribute="top" secondItem="Qya-YI-3jw" secondAttribute="top" constant="12" id="oYd-lL-F8X"/>

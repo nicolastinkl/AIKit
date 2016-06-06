@@ -46,7 +46,7 @@ internal class UILoadingView: UIView {
     class func designCodeLoadingView() -> UIView {
         
         let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/LoadingView", owner: self, options: nil).first as! UILoadingView
-        cardview.imageView.image = "loading".namedImage()
+        cardview.imageView.image = "dp_round_red".namedImage()
         return cardview
         // NSBundle(forClass: self).loadNibNamed("LoadingView", owner: self, options: nil)[0] as! UIView
     }
@@ -83,7 +83,7 @@ extension UIView {
             
             CardAlertView.springWithCompletion(0.7, animations: {
                 loadingXibView.alpha = 0
-                loadingXibView.transform = CGAffineTransformMakeScale(3, 3)
+//                loadingXibView.transform = CGAffineTransformMakeScale(3, 3)
                 }, completion: { (completed) -> Void in
                     loadingXibView.removeFromSuperview()
             })
