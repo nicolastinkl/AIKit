@@ -29,19 +29,17 @@ public class CardAlertView: UIView {
     
     @IBOutlet weak var backgroundView: UIView!
     
-    @IBOutlet weak var line: UIView!
+    @IBOutlet weak var controlView: UIView!
     
     @IBOutlet weak var title: UILabel!
     
     @IBOutlet weak var openButton: UIButton!
     
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var serverIcon: UIImageView!
     
-    @IBAction func cancelAction(sender: AnyObject) {
-        
-        self.dismissView(sender)
-        
-    }
+    @IBOutlet weak var serverRightArrow: UIImageView!
+    
+    @IBOutlet weak var serverName: UILabel!
     
     @IBAction func openAction(sender: AnyObject) {
         
@@ -58,9 +56,7 @@ public class CardAlertView: UIView {
             UIApplication.sharedApplication().openURL(NSURL(string: "hospital://asiainfo.com/open/123123")!)
         }
         
-        
     }
-    
     
     public static func createInstance() -> CardAlertView {
         
@@ -72,9 +68,10 @@ public class CardAlertView: UIView {
         let img = UIImageView(image: "bg".namedImage())
         cardview.backgroundView.insertSubview(img, atIndex: 0)
         
-        cardview.line.backgroundColor = UIColor.groupTableViewBackgroundColor()
-        cardview.line.alpha = 0.3
+        cardview.serverIcon.image = "dp_hospital".namedImage()
+        cardview.serverRightArrow.image = "dp_right_arrow".namedImage()
         
+        cardview.hiddeButtons()
         
         return cardview
     }
@@ -90,32 +87,24 @@ public class CardAlertView: UIView {
         
         if sId == "1" {
             title.text = "Uber"
-            CDVender().request { (modelArray) -> Void in
+            CDVender().requestUber { (modelArray) -> Void in
                 self.hideAlertLoading()
                 self.updateUIConstraints(modelArray)
                 
             }
         }else if sId == "2" {
-            self.hideAlertLoading()
-            title.text = "Hospital Appointment Booking"
-            var modelArray = Array<CDModel>()
-            var model = CDModel()
-            model.image = "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
-            model.display_name = "Clinic"
-            model.description = "Beijing Maternity & Child Care Institution"
-            
-            
-            var model1 = CDModel()
-            model1.image = "http://7xq9bx.com1.z0.glb.clouddn.com/chare.png"
-            model1.display_name = "Item"
-            model1.description = "Pregnancy Test"
-                        
-            modelArray.append(model)
-            modelArray.append(model1)
-            
-            updateUIConstraints(modelArray)
+            title.text = "Hospital Appointment Booking"            
+            CDVender().requestCardServer { (modelArray) -> Void in
+                self.hideAlertLoading()
+                self.updateUIConstraints(modelArray)
+                
+            }
         }
         
+    }    
+    
+    private func hiddeButtons(hidde: Bool = true){
+        controlView.hidden = hidde        
     }
     
     func updateUIConstraints(modelArray: [CDModel]) {
@@ -129,6 +118,7 @@ public class CardAlertView: UIView {
                 cardCell.providerData(model)
                 heightOffset += 44
             }
+            hiddeButtons(false)
         }else{
             //Error
             let alert = UILabel(frame: CGRectMake(0,heightOffset,self.backgroundView.width,heightOffset))

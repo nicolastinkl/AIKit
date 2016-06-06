@@ -24,9 +24,8 @@
 
 import Foundation
 
-
 public class CardViewCell: UIView{
-
+    
     var bgImage: UILabel = UILabel()
     var iconImage: UIImageView = UIImageView()
     var content: UILabel = UILabel()
@@ -68,6 +67,7 @@ public class CardViewCell: UIView{
     }
     
     func selectGesRecognizer(){
+        
         if isSelect {
             isSelect = false
         }else{
@@ -78,14 +78,17 @@ public class CardViewCell: UIView{
             bgImage.backgroundColor = UIColor(hexColor: "#A3A0BE")
         }else{
             bgImage.backgroundColor = UIColor.clearColor()
-        }        
-                
+        }
+               
     }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /**
+     downloading imageView
+     */
     public func providerData(model: CDModel){
         content.text = "\(model.display_name): \(model.description)" //
         price.text = "\(model.currency_code):\(model.price)"

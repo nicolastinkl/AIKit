@@ -40,7 +40,7 @@ public extension CardView{
     public func setRequestServiceID(sid: String,response: (JSON) -> Void){
         serviceID = sid
         
-        CDVender().request { (modelArray) -> Void in
+        CDVender().requestUber { (modelArray) -> Void in
             //Array & Dictionary
             let json: JSON =  ["name": "Jack", "age": 25]
             response(json)

@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         
     
         view.addSubview(dyView)
-        dyView.backgroundColor  = UIColor(hex: "#322E6F")
+        //dyView.backgroundColor  = UIColor(hex: "#322E6F")
         dyView.setRequestServiceID("123") { (json) in
             if json != nil {
                 self.dyView.label.text = json["name"].string ?? ""
