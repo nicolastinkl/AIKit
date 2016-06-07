@@ -150,11 +150,13 @@ public class CDDeepLink : NSObject {
         get{
             var url:String? = ""
             if let queryParameters = queryParameters {
-                url = queryParameters[CDApplication.Config.CDCallbackURLKey] as? String
+                url = queryParameters[CDApplication.AppLinks.CDCallbackURLKey] as? String
             }
             
             if let appLinkData = appLinkData {
-                url = appLinkData[CDApplication.AppLinks.CDAppLinksReferrerURLKey] as? String
+                if  url?.length <= 0 {
+                    url = appLinkData[CDApplication.AppLinks.CDAppLinksReferrerURLKey] as? String
+                }
             }
             
             return NSURL(string: url!)!
@@ -198,8 +200,25 @@ public class CDDeepLink : NSObject {
     public init(url: NSURL) {
         super.init()
         
+        // Init URL
         URL = url        
         queryParameters = NSMutableDictionary(dictionary: URL?.query?.cd_parametersFromQueryString() ?? NSMutableDictionary())
+        
+        // Init Some queryParameters's Properties
+        NSBundle.mainBundle().infoDictionary?.count
+        let callback = "\(CDApplication.AppLinks.CDAppLinksSchemes)://\(CDApplication.Config.CDRealDomain)/"
+        let appData = NSMutableDictionary()
+        appData.setValue("", forKey: CDApplication.AppLinks.CDAppLinksTargetURLKey)
+        appData.setValue(CDApplication.AppLinks.CDAppLinksSchemes, forKey: CDApplication.AppLinks.CDAppLinksSchemes)
+        appData.setValue("1.0.1", forKey: CDApplication.AppLinks.CDAppLinksVersionKey)
+        appData.setValue("iOS", forKey: CDApplication.AppLinks.CDAppLinksUserAgentKey)
+        appData.setValue("\(url.absoluteString)", forKey: CDApplication.AppLinks.CDAppLinksReferrerURLKey)
+        appData.setValue("AIVeris", forKey: CDApplication.AppLinks.CDAppLinksReferrerAppNameKey)
+        appData.setValue(CDApplication.AppLinks.CDAppLinksSchemes, forKey: CDApplication.AppLinks.CDAppLinksReferrerAppLinkKey)
+        appData.setValue("\(url.absoluteString)", forKey: CDApplication.AppLinks.CDAppLinksReferrerTargetURLKey)
+        appData.setValue(callback, forKey: CDApplication.AppLinks.CDCallbackURLKey)
+        let appDataDic = "".cd_queryStringWithParameters(appData as! [String:String])
+        queryParameters?.setValue(appDataDic, forKey: CDApplication.AppLinks.CDAppLinksDataKey)
         
     }
     

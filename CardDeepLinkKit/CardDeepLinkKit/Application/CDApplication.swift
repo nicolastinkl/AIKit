@@ -27,8 +27,8 @@ public struct CDApplication{
      */
     struct Config {
         static let frameworkName = "Frameworks/CardDeepLinkKit.framework/CardDeepLinkKit.bundle"
-        static let CDCallbackURLKey = "cd_callback_url"
         static let CDErrorDomain = "com.asiainfo.error"
+        static let CDRealDomain = "asiainfo.com"
         static let CDJSONEncodedFieldNamesKey = "cd_json_encoding_key"
         static let CDExtensionFieldNamesKey = "cd_extension_key"
         
@@ -46,9 +46,10 @@ public struct CDApplication{
          static let CDAppLinksVersionKey           = "version"
          static let CDAppLinksUserAgentKey         = "user_agent"
          static let CDAppLinksReferrerAppLinkKey   = "referer_app_link"
-         static let CDAppLinksReferrerTargetURLKey = "target_url"
-         static let CDAppLinksReferrerURLKey       = "url"
-         static let CDAppLinksReferrerAppNameKey   = "app_name"
+         static let CDAppLinksReferrerTargetURLKey = "referrer_target_url"
+         static let CDAppLinksReferrerURLKey       = "referrer_url"
+         static let CDAppLinksReferrerAppNameKey   = "referrer_app_name"
+         static let CDCallbackURLKey               = "cd_callback_url"
         
     }
     

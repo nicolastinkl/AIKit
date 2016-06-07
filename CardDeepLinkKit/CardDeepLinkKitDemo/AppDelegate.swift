@@ -43,6 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             debugPrint("deeplink2 \(deeplink)")
             }, route: "/say2/:desc")
         
+        router.registerBlock({ (deeplink) in
+            debugPrint("deeplink1 \(deeplink.queryParameters)")
+            }, route: "cddpl://.*")
+        
         return true
     }
     

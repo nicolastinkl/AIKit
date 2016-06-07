@@ -104,12 +104,12 @@ struct CDVender {
                     var model = CDModel()
                     model.mid = product["id"].string ?? ""
                     model.image = product["image"].string ?? "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
-                    model.description = product["description"].string ?? ""
+                    model.display_name = product["description"].string ?? ""
                     if let s = product["children"].first?.1["description"].string {
                         
                         let cid = product["children"].first?.1["id"].string ?? "0"
                         
-                        model.display_name = s
+                        model.description = s
                         
                         model.extensionDic[CDApplication.Config.CDExtensionFieldNamesKey] = cid
                         
