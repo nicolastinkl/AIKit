@@ -194,8 +194,8 @@ public class CDDeepLink : NSObject {
     public init(url: NSURL) {
         super.init()
         
-        URL = url
-        queryParameters = URL?.query?.cd_parametersFromQueryString() ?? NSMutableDictionary()
+        URL = url        
+        queryParameters = NSMutableDictionary(dictionary: URL?.query?.cd_parametersFromQueryString() ?? NSMutableDictionary())
         
     }
     
@@ -212,7 +212,7 @@ public class CDDeepLink : NSObject {
             }
             
             if JSONEncodedFieldNames.count > 0 {               
-                mutableParameters.setValue(JSON(JSONEncodedFieldNames).string ?? "", forKey: CDApplication.Config.CDJSONEncodedFieldNamesKey)
+                //mutableParameters.setValue(JSON(JSONEncodedFieldNames).string ?? "", forKey: CDApplication.Config.CDJSONEncodedFieldNamesKey)
             }
             
             let queryString = "".cd_queryStringWithParameters(mutableParameters as! [String:String])

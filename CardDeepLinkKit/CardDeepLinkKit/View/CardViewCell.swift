@@ -99,18 +99,15 @@ public class CardViewCell: UIView{
                 UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app/uber/id368677368?mt=8")!)
             }
         }else if CDApplication.AuthCache.CDApplicationServiceID == "2"{
-            
-            let deeplink = CDDeepLink(url: NSURL(string: "hospital://asiainfo.com/action=hospital")!)
+            let deeplink = CDDeepLink(url: NSURL(string: "hospital://asiainfo.com/hospital?action=hospital")!)
             deeplink.setObject("serviceId", value: "\(CDApplication.AuthCache.CDApplicationServiceID)")
-            deeplink.setObject("departmentId", value: "1")
-            deeplink.setObject("departmentGroupId", value: "1")
+            deeplink.setObject("departmentGroupId", value: currentModel?.mid ?? "")
+            deeplink.setObject("departmentId", value: currentModel?.extensionDic[CDApplication.Config.CDExtensionFieldNamesKey] ?? "")
             if let url = deeplink.getURL() {
                 debugPrint(url)
                 UIApplication.sharedApplication().openURL(url)
             }
-            
         }
-        
     }
 
     required public init?(coder aDecoder: NSCoder) {

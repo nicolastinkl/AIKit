@@ -34,4 +34,6 @@ public struct CDModel {
     var price:Double = 0
     var currency_code:String = ""
     
+    var extensionDic:Dictionary = Dictionary<String,AnyObject>()
+    
 }

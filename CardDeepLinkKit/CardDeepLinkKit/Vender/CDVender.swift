@@ -103,7 +103,13 @@ struct CDVender {
                     model.image = product["image"].string ?? "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
                     model.description = product["description"].string ?? ""
                     if let s = product["children"].first?.1["description"].string {
+                        
+                        let cid = product["children"].first?.1["id"].string ?? "0"
+                        
                         model.display_name = s
+                        
+                        model.extensionDic[CDApplication.Config.CDExtensionFieldNamesKey] = cid
+                        
                     } 
                     //model.price = product["price_details"]["base"].double ?? 0
                     //model.currency_code = product["price_details"]["currency_code"].string ?? ""

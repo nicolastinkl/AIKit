@@ -30,6 +30,7 @@ public struct CDApplication{
         static let CDCallbackURLKey = "cd_callback_url"
         static let CDErrorDomain = "com.asiainfo.error"
         static let CDJSONEncodedFieldNamesKey = "cd_json_encoding_key"
+        static let CDExtensionFieldNamesKey = "cd_extension_key"
         
     }
 
