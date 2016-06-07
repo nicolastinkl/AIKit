@@ -8,6 +8,9 @@
 
 import Foundation
 
+/*!
+ *  parameter keys.
+ */
 public struct CDParameterKeys{
     
     static let key = "key"

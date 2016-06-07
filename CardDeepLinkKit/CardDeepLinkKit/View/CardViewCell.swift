@@ -24,7 +24,8 @@
 
 import Foundation
 
-public class CardViewCell: UIView{
+/// Cell with UIView.
+internal class CardViewCell: UIView {
     
     var bgImage: UILabel = UILabel()
     
@@ -40,8 +41,7 @@ public class CardViewCell: UIView{
     
     var isSelect:Bool = false
     
-    
-    public override init(frame: CGRect) {
+    internal override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.addSubview(bgImage)
@@ -81,9 +81,9 @@ public class CardViewCell: UIView{
         }
         
         if isSelect {
-            bgImage.backgroundColor = UIColor(hexColor: "#A3A0BE")
+//            bgImage.backgroundColor = UIColor(hexColor: "#A3A0BE")
         }else{
-            bgImage.backgroundColor = UIColor.clearColor()
+//            bgImage.backgroundColor = UIColor.clearColor()
         }
         
         openURL()
@@ -103,6 +103,7 @@ public class CardViewCell: UIView{
             deeplink.setObject("serviceId", value: "\(CDApplication.AuthCache.CDApplicationServiceID)")
             deeplink.setObject("departmentGroupId", value: currentModel?.mid ?? "")
             deeplink.setObject("departmentId", value: currentModel?.extensionDic[CDApplication.Config.CDExtensionFieldNamesKey] ?? "")
+            
             if let url = deeplink.getURL() {
                 debugPrint(url)
                 UIApplication.sharedApplication().openURL(url)
@@ -110,14 +111,14 @@ public class CardViewCell: UIView{
         }
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    required internal init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     /**
      downloading imageView
      */
-    public func providerData(model: CDModel){
+    internal func providerData(model: CDModel){
         currentModel = model
         content.text = "\(model.display_name): \(model.description)" //
         price.text = "\(model.currency_code):\(model.price)"

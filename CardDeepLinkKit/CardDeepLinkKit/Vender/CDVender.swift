@@ -24,6 +24,9 @@
 
 import Foundation
 
+/**
+ * Netwrok Engine for this Framework.
+ */
 struct CDVender {
     
     /**

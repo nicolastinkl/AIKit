@@ -24,16 +24,44 @@
 
 import Foundation
 
+/**
+ * General Service Json Model.
+ */
 public struct CDModel {
 
+    /**
+     * model id.
+     */
     var mid:String = ""
+    
+    /**
+     * model display image url.
+     */
     var image:String = ""
+    
+    /**
+     * display name to label title.
+     */
     var display_name:String = ""
+    
+    /**
+     * display des's info in label.
+     */
     var description:String = ""
 
+    /**
+     * price label.
+     */
     var price:Double = 0
+    
+    /**
+     * code.
+     */
     var currency_code:String = ""
     
+    /**
+     * extension info in dictionary to some property
+     */
     var extensionDic:Dictionary = Dictionary<String,AnyObject>()
     
 }

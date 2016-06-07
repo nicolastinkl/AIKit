@@ -60,7 +60,7 @@ public class CardAlertView: UIView {
         cardview.backgroundView.layer.cornerRadius = 8
         cardview.backgroundView.layer.masksToBounds = true
         
-        let img = UIImageView(image: "bg".namedImage())
+        let img = UIImageView(image: "dp_bg".namedImage())
         cardview.backgroundView.insertSubview(img, atIndex: 0)
         
         cardview.serverIcon.image = "dp_hospital".namedImage()
@@ -80,7 +80,7 @@ public class CardAlertView: UIView {
             request(serviceId)
             
             if serviceId == "1"{
-                serverIcon.image = "uber".namedImage()
+                serverIcon.image = "dp_uber".namedImage()
                 serverName.text = "Uber"
                 
             }else if serviceId == "2" {

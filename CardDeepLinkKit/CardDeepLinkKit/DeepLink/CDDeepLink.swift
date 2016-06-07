@@ -45,8 +45,9 @@ public class CDDeepLink : NSObject {
      */
     public var routeParameters: NSDictionary? = NSMutableDictionary()
     
-    // MARK: -> public properties with AppLinks.
-    
+    /**
+     Public properties with AppLinks.
+     */
     public var appLinkData: NSDictionary? {
         get{
             if let query = queryParameters {
@@ -57,6 +58,9 @@ public class CDDeepLink : NSObject {
     
     }
     
+    /**
+     AppLinkData's Dictionary's value.
+     */
     public var targetURL: NSURL? {
         get{
             if let data = appLinkData {
@@ -199,7 +203,9 @@ public class CDDeepLink : NSObject {
         
     }
     
-    
+    /**
+     Get Deeplink's URL from queryParameters.
+     */
     public func getURL() -> NSURL? {
         if let queryParameters = queryParameters {
             
@@ -224,6 +230,9 @@ public class CDDeepLink : NSObject {
         return nil
     }
     
+    /**
+     Hash Value.
+     */
     public func hashValue() -> Int{
         return self.URL?.hash ?? 0
     }
