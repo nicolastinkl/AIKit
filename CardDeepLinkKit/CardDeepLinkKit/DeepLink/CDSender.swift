@@ -21,8 +21,9 @@ public class CDSender: NSObject {
     //MARK: Private
     private var defaultSenderID : String?
     private var callbackScheme: String?
-
-    
+    private var cardParameters: [String : AnyObject]?
+    private let constSenderID = "YOUR_SENDER_ID"
+    private var card: Card?
     
     //MARK: 单例方法
     
@@ -90,7 +91,7 @@ public class CDSender: NSObject {
      *
      */
     public func hasSenderID() -> Bool {
-        return defaultSenderID != nil && defaultSenderID != "YOUR_SENDER_ID"
+        return defaultSenderID != nil && defaultSenderID != constSenderID
     }
     
     
@@ -102,6 +103,34 @@ public class CDSender: NSObject {
     public func hasCallbackScheme() -> Bool {
         return callbackScheme != nil && callbackScheme != ""
     }
-    
+
+
+
+    /**
+     * 处理DeepLink事件
+     *
+     *
+     */
+    public func setupCardService(serviceID: String) {
+
+    }
+
+    /**
+     * 显示卡片
+     * @view 显示卡片的容器
+     * @parameters 服务参数，至少包含serviceID
+     */
+
+    public func showCardInView(view: UIView, parameters: [String : AnyObject], completion: (NSError) -> Void) {
+        cardParameters = parameters
+
+        card = Card.sharedInstance
+        card!.showInView(view)
+    }
+
+
+    public func removeCard() {
+
+    }
 
 }
