@@ -33,7 +33,7 @@ public class TestTargetViewContrller : CDViewController {
         
         let v = UIView(frame: self.view.frame)
         view.addSubview(v)
-        v.backgroundColor = UIColor(hex: "#170F48")
+        //v.backgroundColor = UIColor(hex: "#170F48")
     }
     
     

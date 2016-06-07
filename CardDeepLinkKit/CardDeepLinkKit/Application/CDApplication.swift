@@ -17,12 +17,12 @@
 
 import Foundation
 
+/**
+ * The Application's public properties in internal module.
+ */
 public struct CDApplication{
     
-    
     /**
-     *  @author AsiaInfo, 16-04-20 15:04:28
-     *
      *  config of some settings Info.
      */
     struct Config {
@@ -30,9 +30,13 @@ public struct CDApplication{
         static let CDCallbackURLKey = "cd_callback_url"
         static let CDErrorDomain = "com.asiainfo.error"
         static let CDJSONEncodedFieldNamesKey = "cd_json_encoding_key"
+        static let CDExtensionFieldNamesKey = "cd_extension_key"
         
     }
 
+    /**
+     * app link in appData.
+     */
     struct AppLinks {
         
          static let CDAppLinksSchemes              = "cddpl"
@@ -48,11 +52,20 @@ public struct CDApplication{
         
     }
     
-    
+    /**
+     * Settings.
+     */
     struct Settings {
         static var CDApplicationServiceToken = ""
         static var CDApplicationServiceMode = ""
         static var CDApplicationSecretKey = "KXCJVHJLKHDJKSLFIUYPDSF"
+    }
+    
+    /**
+     * Public's auth.
+     */
+    struct AuthCache {
+        static var CDApplicationServiceID = ""
     }
     
 }

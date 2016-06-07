@@ -24,24 +24,30 @@
 
 import Foundation
 
+/**
+ * Netwrok Engine for this Framework.
+ */
 struct CDVender {
-         
-    func request(completion: ([CDModel]) -> Void){
+    
+    /**
+     Uber
+     */
+    func requestUber(completion: ([CDModel]) -> Void){
         /**
          Uber products?
          GET https://api.uber.com.cn/v1/products
          */
-         
-         // Add Headers
+        
+        // Add Headers
         let headers = [
             "Authorization":"token Vh7giFfqA1JnJ3BYQLhWxXW1D63H5CcvkaIZa_B7",
-        ]
+            ]
         
         // Add URL parameters
         let urlParams = [
             "latitude":"30.6622990000",
             "longitude":"104.0588140000",
-        ]
+            ]
         
         // Fetch Request
         AlamofireCD().request(.GET, "https://api.uber.com.cn/v1/products", headers: headers, parameters: urlParams)
@@ -79,8 +85,87 @@ struct CDVender {
                 modelArray.append(model)
             }
         }
-        
-        
         return modelArray
     }
+    
+    /**
+     挂号服务
+     */
+    func requestCardServer(completion: ([CDModel]) -> Void){
+        
+        // Model:
+        
+        func parseCDJSON(json:JSON) -> [CDModel]{
+            
+            var modelArray = Array<CDModel>()
+            if let products = json["data"].array?.first?["departOfHospitals"].array {
+                
+                for product in products {
+                    var model = CDModel()
+                    model.mid = product["id"].string ?? ""
+                    model.image = product["image"].string ?? "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
+                    model.description = product["description"].string ?? ""
+                    if let s = product["children"].first?.1["description"].string {
+                        
+                        let cid = product["children"].first?.1["id"].string ?? "0"
+                        
+                        model.display_name = s
+                        
+                        model.extensionDic[CDApplication.Config.CDExtensionFieldNamesKey] = cid
+                        
+                    } 
+                    //model.price = product["price_details"]["base"].double ?? 0
+                    //model.currency_code = product["price_details"]["currency_code"].string ?? ""
+                    
+                    if  arc4random() % 5 == 2 {
+                        modelArray.append(model)
+                    }
+                    
+                }
+            }
+            return modelArray
+        }
+        
+        /**
+         POST http://171.221.254.231:3004/queryDepartmentsByHospitalId
+         */
+        // JSON Body
+        let body = [
+            "desc": [
+                "desc": [
+                    "data_mode": "0",
+                    "digest": ""
+                ]
+            ],
+            "data": [
+                "hospitalId": "8a8581115515810e0155158148d30000"
+            ]
+        ]
+        
+        // Fetch Request
+        AlamofireCD().request(.POST, "http://171.221.254.231:3004/queryDepartmentsByHospitalId", parameters: body, encoding: .JSON)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                if (response.result.error == nil) {
+                    
+                    if let data = response.data {
+                        let json = JSON(data: data)
+                        completion(parseCDJSON(json))
+                    }
+                    
+                }
+                else {
+                    completion(Array<CDModel>())
+                    debugPrint("HTTP Request failed: \(response.result.error)")
+                }
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    
 }

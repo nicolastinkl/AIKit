@@ -36,17 +36,18 @@ public class CDDeepLink : NSObject {
      The query parameters parsed from the incoming URL.
      @note If the URL conforms to the App Link standard, this will be the query parameters found on `target_url'.
      */
-    public var queryParameters: NSDictionary?
+    public var queryParameters: NSDictionary? = NSMutableDictionary()
     
     /**
      A dictionary of values keyed by their parameterized route component matched in the deep link URL path.
      @note Given a route `alert/:title/:message' and a path `xxxx://alert/hello/world',
      the route parameters dictionary would be `@{ @"title": @"hello", @"message": @"world" }'.
      */
-    public var routeParameters: NSDictionary?
+    public var routeParameters: NSDictionary? = NSMutableDictionary()
     
-    // MARK: -> public properties with AppLinks.
-    
+    /**
+     Public properties with AppLinks.
+     */
     public var appLinkData: NSDictionary? {
         get{
             if let query = queryParameters {
@@ -57,6 +58,9 @@ public class CDDeepLink : NSObject {
     
     }
     
+    /**
+     AppLinkData's Dictionary's value.
+     */
     public var targetURL: NSURL? {
         get{
             if let data = appLinkData {
@@ -170,19 +174,65 @@ public class CDDeepLink : NSObject {
             if let routeParameters = routeParameters {
                 return routeParameters[key]
             }
+            
+            if let queryParameters = queryParameters {
+                return queryParameters[key]
+            }
+            
             return nil
         }
+       
     }
+    
+    func setObject(key: String, value: AnyObject) {
+        if !key.isEmpty {
+            if let queryParameters = queryParameters {
+                queryParameters.setValue(value, forKey: key)
+            }
+        }
+    }
+    
     
     // MARK: -> public  init
     
     public init(url: NSURL) {
+        super.init()
         
-        URL = url
-        queryParameters = URL?.query?.cd_parametersFromQueryString()
+        URL = url        
+        queryParameters = NSMutableDictionary(dictionary: URL?.query?.cd_parametersFromQueryString() ?? NSMutableDictionary())
         
     }
     
+    /**
+     Get Deeplink's URL from queryParameters.
+     */
+    public func getURL() -> NSURL? {
+        if let queryParameters = queryParameters {
+            
+            let JSONEncodedFieldNames = NSMutableArray()
+            let mutableParameters = NSMutableDictionary()
+            
+            for (key,value) in queryParameters {
+                mutableParameters.setValue(JSON(value).string ?? "", forKey: key as! String)
+                JSONEncodedFieldNames.addObject(key)
+            }
+            
+            if JSONEncodedFieldNames.count > 0 {               
+                //mutableParameters.setValue(JSON(JSONEncodedFieldNames).string ?? "", forKey: CDApplication.Config.CDJSONEncodedFieldNamesKey)
+            }
+            
+            let queryString = "".cd_queryStringWithParameters(mutableParameters as! [String:String])
+            if let u = self.URL?.URLString {
+                let url = "\(u)\(queryString)"
+                return NSURL(string: url)
+            }            
+        }
+        return nil
+    }
+    
+    /**
+     Hash Value.
+     */
     public func hashValue() -> Int{
         return self.URL?.hash ?? 0
     }

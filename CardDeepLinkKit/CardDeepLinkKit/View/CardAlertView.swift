@@ -29,38 +29,29 @@ public class CardAlertView: UIView {
     
     @IBOutlet weak var backgroundView: UIView!
     
-    @IBOutlet weak var line: UIView!
+    @IBOutlet weak var controlView: UIView!
     
     @IBOutlet weak var title: UILabel!
     
     @IBOutlet weak var openButton: UIButton!
     
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var serverIcon: UIImageView!
     
-    @IBAction func cancelAction(sender: AnyObject) {
-        
-        self.dismissView(sender)
-        
-    }
+    @IBOutlet weak var serverRightArrow: UIImageView!
+    
+    @IBOutlet weak var serverName: UILabel!
     
     @IBAction func openAction(sender: AnyObject) {
         
         self.dismissView(sender)
+        
         if serviceId == "1" {
-            let url = "uber://?client_id=Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw&action=setPickup&pickup[latitude]=30.6475740000&pickup[longitude]=104.0555800000&pickup[nickname]=UberX&pickup[formatted_address]=XX&dropoff[latitude]=30.6416763503&dropoff[longitude]=104.0805369599&dropoff[nickname]=YY&dropoff[formatted_address]=YY&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383"
+            UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app/uber/id368677368?mt=8")!)
+        }else if serviceId == "2" {            
+            UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app/wei-yi-gua-hao-wang-zhuan/id595277934?mt=8")!)
             
-            if UIApplication.sharedApplication().canOpenURL(NSURL(string: url)!) {
-                UIApplication.sharedApplication().openURL(NSURL(string: url)!)
-            }else{
-                UIApplication.sharedApplication().openURL(NSURL(string: "http://www.uber.com.cn")!)
-            }
-        }else if serviceId == "2"{
-            UIApplication.sharedApplication().openURL(NSURL(string: "hospital://asiainfo.com/open/123123")!)
-        }
-        
-        
+        }        
     }
-    
     
     public static func createInstance() -> CardAlertView {
         
@@ -69,19 +60,33 @@ public class CardAlertView: UIView {
         cardview.backgroundView.layer.cornerRadius = 8
         cardview.backgroundView.layer.masksToBounds = true
         
-        let img = UIImageView(image: "bg".namedImage())
+        let img = UIImageView(image: "dp_bg".namedImage())
         cardview.backgroundView.insertSubview(img, atIndex: 0)
         
-        cardview.line.backgroundColor = UIColor.groupTableViewBackgroundColor()
-        cardview.line.alpha = 0.3
+        cardview.serverIcon.image = "dp_hospital".namedImage()
+        cardview.serverRightArrow.image = "dp_right_arrow".namedImage()
         
+        cardview.hiddeButtons()
         
         return cardview
     }
     
     public var serviceId:String = ""{
         didSet{
+            
+            // Cache ID
+            CDApplication.AuthCache.CDApplicationServiceID = serviceId
+            
             request(serviceId)
+            
+            if serviceId == "1"{
+                serverIcon.image = "dp_uber".namedImage()
+                serverName.text = "Uber"
+                
+            }else if serviceId == "2" {
+                serverIcon.image = "dp_hospital".namedImage()
+                serverName.text = "Hospital"
+            }
         }
     }
     
@@ -90,32 +95,24 @@ public class CardAlertView: UIView {
         
         if sId == "1" {
             title.text = "Uber"
-            CDVender().request { (modelArray) -> Void in
+            CDVender().requestUber { (modelArray) -> Void in
                 self.hideAlertLoading()
                 self.updateUIConstraints(modelArray)
                 
             }
         }else if sId == "2" {
-            self.hideAlertLoading()
-            title.text = "Hospital Appointment Booking"
-            var modelArray = Array<CDModel>()
-            var model = CDModel()
-            model.image = "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
-            model.display_name = "Clinic"
-            model.description = "Beijing Maternity & Child Care Institution"
-            
-            
-            var model1 = CDModel()
-            model1.image = "http://7xq9bx.com1.z0.glb.clouddn.com/chare.png"
-            model1.display_name = "Item"
-            model1.description = "Pregnancy Test"
-                        
-            modelArray.append(model)
-            modelArray.append(model1)
-            
-            updateUIConstraints(modelArray)
+            title.text = "Hospital Appointment Booking"            
+            CDVender().requestCardServer { (modelArray) -> Void in
+                self.hideAlertLoading()
+                self.updateUIConstraints(modelArray)
+                
+            }
         }
         
+    }    
+    
+    private func hiddeButtons(hidde: Bool = true){
+        controlView.hidden = hidde        
     }
     
     func updateUIConstraints(modelArray: [CDModel]) {
@@ -129,6 +126,7 @@ public class CardAlertView: UIView {
                 cardCell.providerData(model)
                 heightOffset += 44
             }
+            hiddeButtons(false)
         }else{
             //Error
             let alert = UILabel(frame: CGRectMake(0,heightOffset,self.backgroundView.width,heightOffset))
