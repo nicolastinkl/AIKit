@@ -29,7 +29,7 @@ If you don't use CocoaPods, you can include all of the source files from the [Ca
 ## Usage
 Add deep link support to your app in 5 minutes or less following these simple steps.
  
-[http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg](http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg)
+![http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg](http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg)
 
 
 <br /><br />
