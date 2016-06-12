@@ -59,8 +59,8 @@ class ViewController: UIViewController {
     }
     
     func selectGesRecognizer(){
-        
-         Card.sharedInstance.showInView(self.view, serviceId: "1")
+        CDSender.sharedInstance.openURL(NSURL(string: "cddpl://asiainfo.com/cddpl?")!, parmeters: ["userId": "100000002610", "hospitalId": "1", "doctorId": "1", "departmentId": "1"])
+//         Card.sharedInstance.showInView(self.view, serviceId: "1")
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showPreView(sender: AnyObject) {
-        
+                
         Card.sharedInstance.showInView(self.view, serviceId: "1")
     }
 
