@@ -25,7 +25,7 @@
 import Foundation
 
 /// Alert View Card.
-public class CardAlertView: UIView {
+public class CardAlertView: UIView ,CardViewCellDelegate {
     
     @IBOutlet weak var backgroundView: UIView!
     
@@ -69,6 +69,10 @@ public class CardAlertView: UIView {
         cardview.hiddeButtons()
         
         return cardview
+    }
+    
+    func dismissSuperView() {
+        self.disMiss()
     }
     
     public var serviceId:String = ""{
@@ -124,6 +128,7 @@ public class CardAlertView: UIView {
                 let cardCell = CardViewCell(frame: CGRectMake(0,heightOffset,self.width,44))
                 self.backgroundView.addSubview(cardCell)
                 cardCell.providerData(model)
+                cardCell.delegate = self
                 heightOffset += 44
             }
             hiddeButtons(false)
@@ -149,11 +154,14 @@ public class CardAlertView: UIView {
     }
     
     @IBAction func dismissView(sender: AnyObject) {
-        
+        disMiss()
+    }
+    
+    func disMiss(){
         self.dynamicType.springEaseOut(0.5, animations: { () -> Void in
             self.alpha = 0
-            }) { () -> Void in
-                self.removeFromSuperview()
+        }) { () -> Void in
+            self.removeFromSuperview()
         }
     }
     
