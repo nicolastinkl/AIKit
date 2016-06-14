@@ -24,27 +24,21 @@
 
 import Foundation
 
-/// CardView
-public class CardView :UIView{
-    
-    public var serviceID: String = "" {
-        didSet{
-            //....
-        }
-    }
-    
-}
+/// Diy your self's CardView with this Object.
 
-public extension CardView{
+public class CardView: UIView {          
     
-    public func setRequestServiceID(sid: String,response: (AnyObject) -> Void){
-        serviceID = sid
-        
-        CDVender().requestUber { (modelArray) -> Void in
-            //Array & Dictionary
-//            let json: JSON =  ["name": "Jack", "age": 25]
-//            response(json)
+    public func initWithModels(array: [CDModel]){
+    
+        var heightOffset: CGFloat = 0
+        for model in array {
+            let cardCell = CardViewCell(frame: CGRectMake(0,heightOffset,self.width,CDApplication.Frame.heightServiceOffsetCell))
+            self.addSubview(cardCell)
+            cardCell.providerData(model)
+            cardCell.line.hidden = true
+            heightOffset += CDApplication.Frame.heightServiceOffsetCell
         }
-    }
+        
+    } 
     
 }

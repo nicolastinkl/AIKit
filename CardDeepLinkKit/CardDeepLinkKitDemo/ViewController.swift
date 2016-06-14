@@ -11,7 +11,7 @@ import UIKit
 import CardDeepLinkKit
 
 
-class Diyview : CardView{
+class Diyview : CardView {
     
     private let label: UILabel = UILabel()
     
@@ -44,18 +44,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-    
         view.addSubview(dyView)
         //dyView.backgroundColor  = UIColor(hex: "#322E6F")
-        dyView.setRequestServiceID("123") { (json) in
-//            if json != nil {
-//                self.dyView.label.text = json["name"].string ?? ""
-//            }
-        }
+        
+//        dyView.setServiceIDBlock("900001003201") { (data, error) in
+//            debugPrint(data)
+//            debugPrint(error)
+//        }
         
         dyView.userInteractionEnabled = true
         let ges = UITapGestureRecognizer(target: self, action: #selector(ViewController.selectGesRecognizer))
         dyView.addGestureRecognizer(ges)
+        
+        
+        CDSender.sharedInstance.configureSenderID("900001003401")
+        CDSender.sharedInstance.setServiceIDBlock(self.view) { (serviceView, error) in
+            if let s = serviceView {
+                self.view.addSubview(s)
+            }
+        }
     }
     
     func selectGesRecognizer(){
@@ -75,14 +82,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showPreView(sender: AnyObject) {
-                
-        Card.sharedInstance.showInView(self.view, serviceId: "1")
+        
+        Card.sharedInstance.showInView(self.view, serviceId: "1", userInfo: ["title":"Hospital Appointment Booking","name":"Uber","url":"http://7xq9bx.com1.z0.glb.clouddn.com/dp_uber.png"])
+        
     }
 
     
     @IBAction func showView(sender: AnyObject) {
-        
-        Card.sharedInstance.showInView(self.view, serviceId: "2")
+
+        Card.sharedInstance.showInView(self.view, serviceId: "2", userInfo: ["title":"Hospital Appointment Booking","name":"Hospital","url":"http://7xq9bx.com1.z0.glb.clouddn.com/dp_hospital.png"])
     }
 
 }

@@ -75,6 +75,20 @@ public class CardAlertView: UIView ,CardViewCellDelegate {
         self.disMiss()
     }
     
+    public var extensionDictionary:[String:String] = ["":""]{
+        didSet{
+            
+            let titleLabel = extensionDictionary["title"]
+            let name = extensionDictionary["name"]
+            let url = extensionDictionary["url"]
+            if let name = name, let  titleLabel = titleLabel,let url = url {
+                serverName.text = name
+                title.text = titleLabel
+                serverIcon.setURL(NSURL(string: url), placeholderImage: "dp_hospital".namedImage())
+            }
+        }
+    }
+    
     public var serviceId:String = ""{
         didSet{
             
@@ -83,14 +97,6 @@ public class CardAlertView: UIView ,CardViewCellDelegate {
             
             request(serviceId)
             
-            if serviceId == "1"{
-                serverIcon.image = "dp_uber".namedImage()
-                serverName.text = "Uber"
-                
-            }else if serviceId == "2" {
-                serverIcon.image = "dp_hospital".namedImage()
-                serverName.text = "Hospital"
-            }
         }
     }
     
@@ -98,14 +104,14 @@ public class CardAlertView: UIView ,CardViewCellDelegate {
         showAlertLoading()
         
         if sId == "1" {
-            title.text = "Uber"
+            
             CDVender().requestUber { (modelArray) -> Void in
                 self.hideAlertLoading()
                 self.updateUIConstraints(modelArray)
                 
             }
         }else if sId == "2" {
-            title.text = "Hospital Appointment Booking"            
+            
             CDVender().requestCardServer { (modelArray) -> Void in
                 self.hideAlertLoading()
                 self.updateUIConstraints(modelArray)

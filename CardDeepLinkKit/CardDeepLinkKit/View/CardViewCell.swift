@@ -67,8 +67,8 @@ internal class CardViewCell: UIView {
         content.textColor = UIColor.whiteColor()
         price.textColor = UIColor.whiteColor()
         
-        content.font  = UIFont.systemFontOfSize(13)
-        price.font  = UIFont.systemFontOfSize(13)
+        content.font = UIFont.boldSystemFontOfSize(13)
+        price.font = UIFont.systemFontOfSize(13)
         
         line.backgroundColor = UIColor.groupTableViewBackgroundColor()
         line.alpha = 0.3
@@ -128,19 +128,13 @@ internal class CardViewCell: UIView {
         currentModel = model
         content.text = "\(model.display_name): \(model.description)" //
         price.text = "\(model.currency_code):\(model.price)"
-        AlamofireCD().request(.GET, model.image , parameters: nil)
-            .responseData { [weak self] data in
-                if let da = data.data {
-                    if let strongSelf = self {
-                        if let imageData = UIImage(data: da) {
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                strongSelf.iconImage.image = imageData
-                            })
-                        }
-                    }
-                   
-                }
+        
+        if model.image.length > 5 {
+            iconImage.setURL(NSURL(string: model.image), placeholderImage: nil)
+        }else{
+            iconImage.setURL(NSURL(string: "http://7xq9bx.com1.z0.glb.clouddn.com/location.png"), placeholderImage: nil)
         }
+        
         
     }
     

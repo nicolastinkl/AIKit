@@ -49,7 +49,7 @@
 		9386946C1CC6581800CCF864 /* CDRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386946A1CC6581800CCF864 /* CDRegularExpression.swift */; };
 		938C37EB1CEEF4BC00545B69 /* CardDeepLinkKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 938C37EA1CEEF4BC00545B69 /* CardDeepLinkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		938C37EC1CEEF5BB00545B69 /* CardDeepLinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938C37EA1CEEF4BC00545B69 /* CardDeepLinkKit.framework */; };
-		938C8B921CC87B4100E80887 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B911CC87B4100E80887 /* UIImage.swift */; };
+		938C8B921CC87B4100E80887 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B911CC87B4100E80887 /* UIImageView.swift */; };
 		938C8B941CC87C9D00E80887 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B931CC87C9D00E80887 /* CardViewCell.swift */; };
 		938C8B961CC87F9900E80887 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C8B951CC87F9900E80887 /* UIView.swift */; };
 		93BA897B1CC6254800195C67 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BA897A1CC6254800195C67 /* String.swift */; };
@@ -132,7 +132,7 @@
 		938694691CC6581800CCF864 /* CDMatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMatchResult.swift; sourceTree = "<group>"; };
 		9386946A1CC6581800CCF864 /* CDRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRegularExpression.swift; sourceTree = "<group>"; };
 		938C37EA1CEEF4BC00545B69 /* CardDeepLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardDeepLinkKit.framework; path = Products/CardDeepLinkKit.framework; sourceTree = "<group>"; };
-		938C8B911CC87B4100E80887 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		938C8B911CC87B4100E80887 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		938C8B931CC87C9D00E80887 /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		938C8B951CC87F9900E80887 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		93BA897A1CC6254800195C67 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -318,7 +318,7 @@
 			children = (
 				93BA897A1CC6254800195C67 /* String.swift */,
 				93374DC21CC7D943004F8F79 /* UIColor.swift */,
-				938C8B911CC87B4100E80887 /* UIImage.swift */,
+				938C8B911CC87B4100E80887 /* UIImageView.swift */,
 				938C8B951CC87F9900E80887 /* UIView.swift */,
 				9354D2261CC8973900814324 /* UILoadingView.swift */,
 				9354D2281CC8977800814324 /* LoadingView.xib */,
@@ -562,7 +562,7 @@
 				937811F11CC61EE3001BF260 /* CDDeepLink.swift in Sources */,
 				934B965C1CCDFFF800A2D815 /* Upload.swift in Sources */,
 				934B965D1CCDFFF800A2D815 /* Validation.swift in Sources */,
-				938C8B921CC87B4100E80887 /* UIImage.swift in Sources */,
+				938C8B921CC87B4100E80887 /* UIImageView.swift in Sources */,
 				93BA89821CC630A500195C67 /* CDDeepLinkRouter.swift in Sources */,
 				934B96571CCDFFF800A2D815 /* Response.swift in Sources */,
 				93BA89801CC6308600195C67 /* CDRouteHandler.swift in Sources */,

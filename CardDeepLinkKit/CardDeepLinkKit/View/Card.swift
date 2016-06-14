@@ -75,6 +75,10 @@ public class Card: NSObject {
             cardView.backgroundView.alpha = 1
         }
         cardView.serviceId = serviceId
+        if let userInfo = userInfo {
+            cardView.extensionDictionary = userInfo
+        }
+        
     }
 
 

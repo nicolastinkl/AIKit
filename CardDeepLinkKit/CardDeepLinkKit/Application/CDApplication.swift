@@ -33,6 +33,11 @@ public struct CDApplication{
         static let CDExtensionFieldNamesKey = "cd_extension_key"
         
     }
+    
+    struct Frame {
+        static let heightOffsetCell: CGFloat = 44.0
+        static let heightServiceOffsetCell: CGFloat = 24.0
+    }
 
     /**
      * app link in appData.

@@ -24,6 +24,7 @@ public class CDSender: NSObject {
     private let constSenderID = "YOUR_SENDER_ID"
     private var card: Card?
     
+    
     //MARK: 单例方法
     
     /**
@@ -117,15 +118,36 @@ public class CDSender: NSObject {
      * @view 显示卡片的容器
      * @parameters 服务参数，至少包含serviceID
      */
-
     public func showCardInView(view: UIView, parameters: [String : AnyObject], completion: (NSError) -> Void) {
         cardParameters = parameters
 
         card = Card.sharedInstance
         card!.showInView(view)
     }
+    
+    public func setServiceIDBlock(view:UIView, reponse:(serviceView: UIView?,error: String?) -> Void) {
+        // Requet's network from BDK's Interface.
+        
+        CDVender().getServiceCardInfo(defaultSenderID ?? "", success: { (responseObject) in
+            //[String : JSON]
+            //reponse(data: responseObject as? AnyObject, error: nil)
+            
+            if responseObject.count > 0 {
+                let cardView = CardView(frame: CGRectMake(0, 0, view.width, CGFloat(responseObject.count) * CDApplication.Frame.heightServiceOffsetCell))
+                cardView.initWithModels(responseObject)
+                reponse(serviceView: cardView, error: nil)
+            }else{
+                reponse(serviceView: nil, error: "no data.")
+            }
+        }) { (errDes) in
+            reponse(serviceView: nil, error: errDes)
+        }
+    }
+    
 
-
+    /**
+     Remove Card.
+     */
     public func removeCard() {
 
     }

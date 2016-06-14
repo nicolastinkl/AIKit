@@ -166,6 +166,73 @@ struct CDVender {
     
     
     
+    /**
+     获取服务卡片信息
+     */
+    func getServiceCardInfo(serviceInstId : String, success : ([CDModel])-> Void, fail : (errDes: String) -> Void) {
+        /**
+         My API (5)
+         POST http://10.5.1.84:8888/service/getServiceCardInfo
+         */
+        
+        // Add Headers
+        let headers = [
+            "HttpQuery":"0&0&200000002501&0",
+            ]
+        
+        // JSON Body
+        let body = [
+            "desc": [
+                "data_mode": "0",
+                "digest": ""
+            ],
+            "data": [
+                "service_id": "\(serviceInstId)"
+            ]
+        ]
+        
+        // Fetch Request
+        AlamofireCD().request(.POST, "http://171.221.254.231:2999/serviceMgt/service/getServiceCardInfo", headers: headers, parameters: body, encoding: .JSON)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                if (response.result.error == nil) {
+                    if let data = response.data {
+                        let json = JSON(data: data)
+                        if let dic = json["data"].dictionary {
+                            if let service_info = dic["service_info"]?.dictionary {
+                                var responseArray: [CDModel] = Array<CDModel>()
+                                for parlist in service_info["service_param_list"]?.array ?? [] {
+                                    
+                                    let param_name = parlist["param_name"].string ?? ""
+                                    let param_source = parlist["param_source"].string ?? ""
+                                    let value = parlist["value"].string ?? ""
+                                    let param_key = parlist["param_key"].string ?? ""
+                                    
+                                    var model = CDModel()
+                                    model.mid = param_key
+                                    model.display_name = param_name
+                                    model.description = value
+                                    model.image = ""
+                                    if responseArray.count < 5 {
+                                        responseArray.append(model)
+                                    }
+                                }
+                                success(responseArray)
+                            }
+                            
+                        }else{
+                            fail(errDes: "No Data!")
+                        }
+                    }
+                }
+                else {
+                    fail(errDes: "HTTP Request failed")
+                }
+        }
+    }
+    
+    
+    
     
     
 }
