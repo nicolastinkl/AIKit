@@ -32,6 +32,42 @@ Add deep link support to your app in 5 minutes or less following these simple st
 ![http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg](http://7xq9bx.com1.z0.glb.clouddn.com/1.pic.jpg)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br /><br />
 **1. Make sure you have a URL scheme registered for your app in your Info.plist**
 <img src="https://cloud.githubusercontent.com/assets/1057077/5710380/8d913f3e-9a6f-11e4-83a2-49f6564d7a8f.png" width="410" />
@@ -143,7 +179,7 @@ You can use regex in your route patterns as well to give you maximum flexibility
 
 _The following will match all incoming urls_
 ```objc
-router[@".*"] ^(DPLDeepLink *link){
+router[@".*"] ^(CDDeepLink *link){
   // This will match all incoming links
 }
 ```
@@ -153,7 +189,7 @@ _**Note:** Routes are matched in the order they're registered so registering thi
 
 _The following will match all incoming links with the scheme, `myscheme://`_
 ```objc
-router[@"myscheme://.*"] ^(DPLDeepLink *link){
+router[@"myscheme://.*"] ^(CDDeepLink *link){
   // matches all urls with a scheme of `myscheme://`
 }
 ```
@@ -163,7 +199,7 @@ router[@"myscheme://.*"] ^(DPLDeepLink *link){
 _The following will match any url with a `host` of `trycaviar.com` and hand you `:path` in the route params._
 ```objc
 // Given the url ‘https://trycaviar.com/manhattan/nicoletta-297`
-router[@"trycaviar.com/:path(.*)"] ^(DPLDeepLink *link){
+router[@"trycaviar.com/:path(.*)"] ^(CDDeepLink *link){
   // `link[@"path"]` => @"manhattan/nicoletta-297"
 }
 ```
@@ -202,7 +238,7 @@ _The above would match ‘https://trycaviar.com/manhattan/pizza/nicoletta-297’
 Does your app support AppLinks? You can easily handle incoming AppLinks by importing the AppLinks category `DPLDeepLink+AppLinks`. The AppLinks category provides convenience accessors to all AppLinks 1.0 properties.
 
 ```objc
-router[@"/timeline"] = ^(DPLDeepLink *link) {
+router[@"/timeline"] = ^(CDDeepLink *link) {
   NSURL *referrerURL  = link.referralURL;
   NSString *someValue = link.extras[@"some-key"];
 }
@@ -216,46 +252,6 @@ There are two demo apps, `SenderDemo`, and `ReceiverDemo`. `ReceiverDemo` has so
 
 Run the`SenderDemo` build scheme first, then stop the simulator and switch the build scheme to `ReceiverDemo` and run again. Now you can switch back to the `SenderDemo` app in the simulator and tap on one of the actions.
 
-
-## Creating Deep Links
-
-You can also create deep links with `DPLMutableDeepLink`. Between two `DeepLinkKit` integrated apps, you can pass complex objects via deep link from one app to another app and easily get that object back on the other end.
-
-In the first app:
-
-```objc
-
-DPLMutableDeepLink *link = [[DPLMutableDeepLink alloc] initWithString:@"app-two://categories"];
-link[@"brew-types"] = @[@"Ale", @"Lager", @"Stout", @"Wheat"]
-link[@"beers"] = @{
-  @"ales": @[
-    @{
-        @"name": @"Southern Tier Pumking Ale",
-        @"price": @799
-    },
-    @{
-        @"name": @"Sierra Nevada Celebration Ale",
-        @"price": @799
-    }
-  ],
-  @"lagers": @[
-     ...
-  ],
-  ...
-}
-
-[[UIApplication sharedApplication] openURL:link.URL];
-
-```
-
-In the second app:
-
-```objc
-router[@"categories"] = ^(DPLDeepLink *link) {
-  NSArray *brewTypes  = link[@"brew-types"];
-  NSDictionary *beers = link[@"beers"];
-}
-```
 
 
 ## Authors
