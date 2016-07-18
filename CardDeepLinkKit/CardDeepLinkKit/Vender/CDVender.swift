@@ -45,8 +45,8 @@ struct CDVender {
         
         // Add URL parameters
         let urlParams = [
-            "latitude":"30.6622990000",
-            "longitude":"104.0588140000",
+            "latitude":"39.981717",
+            "longitude":"116.309215",
             ]
         
         // Fetch Request
