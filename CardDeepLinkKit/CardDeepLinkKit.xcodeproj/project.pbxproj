@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FBDB3CCC1D49F46F002E0FBE /* CardDeepLinkKit-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FBDB3CCF1D49F46F002E0FBE /* Build configuration list for PBXAggregateTarget "CardDeepLinkKit-Universal" */;
+			buildPhases = (
+				FBDB3CD01D49F47B002E0FBE /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "CardDeepLinkKit-Universal";
+			productName = "CardDeepLinkKit-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8132B3771CCA162400153AF4 /* CDSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B3761CCA162400153AF4 /* CDSender.swift */; };
 		8132B3791CCA211000153AF4 /* CDReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132B3781CCA211000153AF4 /* CDReceiver.swift */; };
@@ -451,6 +465,10 @@
 					937811F51CC61F38001BF260 = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					FBDB3CCC1D49F46F002E0FBE = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 388D56L7YB;
+					};
 				};
 			};
 			buildConfigurationList = 81EB2ABB1CC5053100F4459F /* Build configuration list for PBXProject "CardDeepLinkKit" */;
@@ -468,6 +486,7 @@
 			targets = (
 				81EB2AC01CC5053100F4459F /* CardDeepLinkKit */,
 				937811F51CC61F38001BF260 /* CardDeepLinkKitDemo */,
+				FBDB3CCC1D49F46F002E0FBE /* CardDeepLinkKit-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -538,6 +557,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\necho \"${EFFECTIVE_PLATFORM_NAME}\"\n\nRELEASE_DIR=${BUILD_DIR}\n\n#DEBUG_IMULLATOR_DIR_FRAME=${RELEASE_DIR}/Debug-iphonesimulator/${PROJECT_NAME}.framework\nDEBUG_DIR_FRAME=${RELEASE_DIR}/Debug\"${EFFECTIVE_PLATFORM_NAME}\"/${PROJECT_NAME}.framework\n\n#RELEASE_DIR_FRAME=${RELEASE_DIR}/Debug-iphoneos/${PROJECT_NAME}.framework\n\nPRO_BUNDLE_DIR=${PROJECT_DIR}/${PROJECT_NAME}/Resoures/${PROJECT_NAME}.bundle\n\necho \"================ start ==================\"\necho \"${PRO_BUNDLE_DIR}\"\nBUNDLE_DIR=${DEBUG_DIR_FRAME}/${PROJECT_NAME}.bundle\n\necho \"${BUNDLE_DIR}\"\n\nINSTALL_DIR=${SRCROOT}/Products/\necho \"================ clear cache ==================\"\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\necho \"================ mkdir path ==================\"\nmkdir -p \"${INSTALL_DIR}\"\n\necho \"================ do *.nib files ==================\"\n\nif [ -d \"${BUNDLE_DIR}\" ];then\nif ls ${DEBUG_DIR_FRAME}/*.nib >/dev/null 2>&1;then\n                         \n                         rm -rf ${BUNDLE_DIR}/*.nib\n                         \n                         rm -rf ${PRO_BUNDLE_DIR}/*.nib\n                         \n                         cp -rf ${DEBUG_DIR_FRAME}/*.nib ${BUNDLE_DIR}\n                         \n                         cp -rf ${DEBUG_DIR_FRAME}/*.nib ${PRO_BUNDLE_DIR}\n                         \n                         rm -rf ${DEBUG_DIR_FRAME}/*.nib\n                         \n                         \n                         # copy to bundle\n                         \n                         cp -rf ${DEBUG_DIR_FRAME} ${INSTALL_DIR}\n                         \n                         fi\n                         \n                         fi\n                         \n                         # copy framework to local path.\n                         \n                         echo \"================ finish shell. ==================\"\n                         #open \"${INSTALL_DIR}\"\n\n";
+		};
+		FBDB3CD01D49F47B002E0FBE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}/Universal\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -796,6 +828,20 @@
 			};
 			name = Release;
 		};
+		FBDB3CCD1D49F46F002E0FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FBDB3CCE1D49F46F002E0FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -822,6 +868,15 @@
 			buildConfigurations = (
 				937812061CC61F38001BF260 /* Debug */,
 				937812071CC61F38001BF260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBDB3CCF1D49F46F002E0FBE /* Build configuration list for PBXAggregateTarget "CardDeepLinkKit-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBDB3CCD1D49F46F002E0FBE /* Debug */,
+				FBDB3CCE1D49F46F002E0FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
