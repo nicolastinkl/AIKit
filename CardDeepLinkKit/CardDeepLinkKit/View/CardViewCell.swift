@@ -98,7 +98,7 @@ internal class CardViewCell: UIView {
     func openURL(){
         delegate?.dismissSuperView()
         if CDApplication.AuthCache.CDApplicationServiceID == "1" {
-            let url = "uber://?client_id=Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw&action=setPickup&pickup[latitude]=30.6475740000&pickup[longitude]=104.0555800000&pickup[nickname]=UberX&pickup[formatted_address]=XX&dropoff[latitude]=30.6416763503&dropoff[longitude]=104.0805369599&dropoff[nickname]=YY&dropoff[formatted_address]=YY&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383"
+            let url = "uber://?client_id=Gq0IGY5Wh2aKLKJyEjmvL2PwNJfzzAhw&action=setPickup&pickup[latitude]=30.633297&pickup[longitude]=104.047687&pickup[nickname]=East%20Hope&pickup[formatted_address]=East%20Hope&dropoff[latitude]=30.645287&dropoff[longitude]=104.072606&dropoff[nickname]=Huaxi%20Hosiptal&dropoff[formatted_address]=Huaxi%20Hosiptal&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383"
             if UIApplication.sharedApplication().canOpenURL(NSURL(string: url)!) {
                 UIApplication.sharedApplication().openURL(NSURL(string: url)!)
             }else{
