@@ -48,7 +48,7 @@ public class CardAlertView: UIView ,CardViewCellDelegate {
         if serviceId == "1" {
             UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app/uber/id368677368?mt=8")!)
         }else if serviceId == "2" {            
-            UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app/wei-yi-gua-hao-wang-zhuan/id595277934?mt=8")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app")!)
             
         }        
     }
