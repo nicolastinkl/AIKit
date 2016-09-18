@@ -41,6 +41,7 @@ struct CDVender {
         // Add Headers
         let headers = [
             "Authorization":"token Vh7giFfqA1JnJ3BYQLhWxXW1D63H5CcvkaIZa_B7",
+            "Accept-Language":"zh-CN",
             ]
         
         // Add URL parameters
@@ -79,7 +80,7 @@ struct CDVender {
                 model.mid = product["product_id"].string ?? ""
                 model.image = product["image"].string ?? ""
                 model.description = product["description"].string ?? ""
-                model.display_name = product["display_name"].string ?? ""
+                model.display_name = product["short_description"].string ?? ""
                 model.price = product["price_details"]["base"].double ?? 0
                 model.currency_code = product["price_details"]["currency_code"].string ?? ""
                 modelArray.append(model)
@@ -101,22 +102,26 @@ struct CDVender {
             if let products = json["data"].array?.first?["departOfHospitals"].array {
                 
                 for product in products {
-                    var model = CDModel()
-                    model.mid = product["id"].string ?? ""
-                    model.image = product["image"].string ?? "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
-                    model.display_name = product["description"].string ?? ""
-                    if let s = product["children"].first?.1["description"].string {
+                    let proName = product["description"].string ?? ""
+                    if proName == "妇科" {
+                        if let  jsonArray =  product["children"].array  {
+                            for jsonItem in jsonArray {
+                                var model = CDModel()
+                                
+                                let desC = jsonItem["description"].string ?? ""
+                                let cid = jsonItem["id"].string ?? ""
+                                
+                                model.mid = cid
+                                model.image = product["image"].string ?? "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
+                                model.display_name = proName
+                                model.description = desC
+                                model.extensionDic[CDApplication.Config.CDExtensionFieldNamesKey] = cid
+                                modelArray.append(model)
+                            }
+                            
+                        }
                         
-                        let cid = product["children"].first?.1["id"].string ?? "0"
-                        
-                        model.description = s
-                        
-                        model.extensionDic[CDApplication.Config.CDExtensionFieldNamesKey] = cid
-                        
-                    } 
-                    //model.price = product["price_details"]["base"].double ?? 0
-                    //model.currency_code = product["price_details"]["currency_code"].string ?? ""
-                    modelArray.append(model)
+                    }
                     
                 }
             }
