@@ -6,11 +6,11 @@
 	<dict>
 		<key>CardDeepLinkKit.bundle/CardAlertView.nib</key>
 		<data>
-		tCbR4YsrECzdF6uUeEYUJVzH8aY=
+		m7hrX0DiqPIpDhe4ZvbtGlAmg5M=
 		</data>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<data>
-		1AuM3mM4vZIvkvZpU6/forBC7IE=
+		jJ4AlkuTvFYLLxWNPmWKcr180aY=
 		</data>
 		<key>CardDeepLinkKit.bundle/dp_bg.png</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xGaPg7joEdFQm11EaWUAv/1YspM=
+		CXQbtPH0niwo+bfwaS8rMiyV6uk=
 		</data>
 		<key>Modules/CardDeepLinkKit.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -75,22 +75,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tCbR4YsrECzdF6uUeEYUJVzH8aY=
+			m7hrX0DiqPIpDhe4ZvbtGlAmg5M=
 			</data>
 			<key>hash2</key>
 			<data>
-			LdK27yiygXCEh1Q8b4enqB09OoDDR3Xb7vZZidIq/Io=
+			kv6ymEr8lpZZOqZIgfM17j6BRFU/rXPFpaV53MMH/68=
 			</data>
 		</dict>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1AuM3mM4vZIvkvZpU6/forBC7IE=
+			jJ4AlkuTvFYLLxWNPmWKcr180aY=
 			</data>
 			<key>hash2</key>
 			<data>
-			fktOuGEnOlqs8LnYEjIvrVFSWKYykJigaqyXqlZY1jw=
+			f5jlqFbvyu6quLwdYFIXl7kOOj1DSxkaE0sz0dffqT8=
 			</data>
 		</dict>
 		<key>CardDeepLinkKit.bundle/dp_bg.png</key>

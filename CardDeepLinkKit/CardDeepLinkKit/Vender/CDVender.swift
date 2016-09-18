@@ -116,10 +116,7 @@ struct CDVender {
                     } 
                     //model.price = product["price_details"]["base"].double ?? 0
                     //model.currency_code = product["price_details"]["currency_code"].string ?? ""
-                    
-                    if  arc4random() % 5 == 2 {
-                        modelArray.append(model)
-                    }
+                    modelArray.append(model)
                     
                 }
             }
