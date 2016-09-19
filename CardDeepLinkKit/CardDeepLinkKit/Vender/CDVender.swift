@@ -103,6 +103,7 @@ struct CDVender {
                 
                 for product in products {
                     let proName = product["description"].string ?? ""
+                    let pid = product["id"].string ?? ""
                     if proName == "妇科" {
                         if let  jsonArray =  product["children"].array  {
                             for jsonItem in jsonArray {
@@ -111,7 +112,7 @@ struct CDVender {
                                 let desC = jsonItem["description"].string ?? ""
                                 let cid = jsonItem["id"].string ?? ""
                                 
-                                model.mid = cid
+                                model.mid = pid
                                 model.image = product["image"].string ?? "http://7xq9bx.com1.z0.glb.clouddn.com/item.png"
                                 model.display_name = proName
                                 model.description = desC
