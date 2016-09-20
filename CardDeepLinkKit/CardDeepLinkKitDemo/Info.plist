@@ -18,6 +18,10 @@
 	<string>1.1.34</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>uber</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
