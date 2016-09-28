@@ -51,7 +51,7 @@ struct CDVender {
             ]
         
         // Fetch Request
-        AlamofireCD().request(.GET, "https://api.uber.com.cn/v1/products", headers: headers, parameters: urlParams)
+        request(.GET, "https://api.uber.com.cn/v1/products", headers: headers, parameters: urlParams)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                 debugPrint("HTTP Request:  \(response)")
@@ -146,7 +146,7 @@ struct CDVender {
         ]
         
         // Fetch Request
-        AlamofireCD().request(.POST, "http://171.221.254.231:3004/queryDepartmentsByHospitalId", parameters: body, encoding: .JSON)
+        request(.POST, "http://171.221.254.231:3004/queryDepartmentsByHospitalId", parameters: body, encoding: .JSON)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                 if (response.result.error == nil) {
@@ -195,7 +195,7 @@ struct CDVender {
         ]
         
         // Fetch Request
-        AlamofireCD().request(.POST, "http://171.221.254.231:2999/serviceMgt/service/getServiceCardInfo", headers: headers, parameters: body, encoding: .JSON)
+        request(.POST, "http://171.221.254.231:2999/serviceMgt/service/getServiceCardInfo", headers: headers, parameters: body, encoding: .JSON)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                 if (response.result.error == nil) {
@@ -207,7 +207,7 @@ struct CDVender {
                                 for parlist in service_info["service_param_list"]?.array ?? [] {
                                     
                                     let param_name = parlist["param_name"].string ?? ""
-                                    let param_source = parlist["param_source"].string ?? ""
+                                    _ = parlist["param_source"].string ?? ""
                                     let value = parlist["value"].string ?? ""
                                     let param_key = parlist["param_key"].string ?? ""
                                     

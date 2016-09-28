@@ -96,7 +96,7 @@ public class CDDeepLinkRouter: NSObject {
      */
     public func handleURL(url: NSURL, completionHandler: CDRouteCompletionBlock) -> Bool{
         routeCompletionHandler = completionHandler
-        if url.scheme.length <= 0{
+        if url.scheme!.length <= 0{
             return false
         }
         

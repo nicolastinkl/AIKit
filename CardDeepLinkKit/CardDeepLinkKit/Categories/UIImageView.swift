@@ -39,7 +39,7 @@ extension UIImageView {
         
         if url?.URLString.length > 10 {
             if let urlNew = url {
-                AlamofireCD().request(.GET, urlNew , parameters: nil)
+                request(.GET, urlNew , parameters: nil)
                     .responseData { [weak self] data in
                         if let da = data.data {
                             if let strongSelf = self {

@@ -1,26 +1,28 @@
-// Download.swift
 //
-// Copyright (c) 2014–2016 Alamofire Software Foundation (http://alamofire.org/)
+//  Download.swift
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
 //
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
 
-import Foundation 
+import Foundation
 
 extension Manager {
     private enum Downloadable {
@@ -76,7 +78,7 @@ extension Manager {
 
         - returns: The created download request.
     */
-    func download(
+    public func download(
         method: Method,
         _ URLString: URLStringConvertible,
         parameters: [String: AnyObject]? = nil,
@@ -101,7 +103,7 @@ extension Manager {
 
         - returns: The created download request.
     */
-    func download(URLRequest: URLRequestConvertible, destination: Request.DownloadFileDestination) -> Request {
+    public func download(URLRequest: URLRequestConvertible, destination: Request.DownloadFileDestination) -> Request {
         return download(.Request(URLRequest.URLRequest), destination: destination)
     }
 
@@ -112,14 +114,14 @@ extension Manager {
 
         If `startRequestsImmediately` is `true`, the request will have `resume()` called before being returned.
 
-        - parameter resumeData:  The resume data. This is an opaque data blob produced by `NSURLSessionDownloadTask` 
-                                 when a task is cancelled. See `NSURLSession -downloadTaskWithResumeData:` for 
+        - parameter resumeData:  The resume data. This is an opaque data blob produced by `NSURLSessionDownloadTask`
+                                 when a task is cancelled. See `NSURLSession -downloadTaskWithResumeData:` for
                                  additional information.
         - parameter destination: The closure used to determine the destination of the downloaded file.
 
         - returns: The created download request.
     */
-    func download(resumeData: NSData, destination: Request.DownloadFileDestination) -> Request {
+    public func download(resumeData: NSData, destination: Request.DownloadFileDestination) -> Request {
         return download(.ResumeData(resumeData), destination: destination)
     }
 }
@@ -128,14 +130,14 @@ extension Manager {
 
 extension Request {
     /**
-        A closure executed once a request has successfully completed in order to determine where to move the temporary 
-        file written to during the download process. The closure takes two arguments: the temporary file URL and the URL 
+        A closure executed once a request has successfully completed in order to determine where to move the temporary
+        file written to during the download process. The closure takes two arguments: the temporary file URL and the URL
         response, and returns a single argument: the file URL where the temporary file should be moved.
     */
-    internal typealias DownloadFileDestination = (NSURL, NSHTTPURLResponse) -> NSURL
+    public typealias DownloadFileDestination = (NSURL, NSHTTPURLResponse) -> NSURL
 
     /**
-        Creates a download file destination closure which uses the default file manager to move the temporary file to a 
+        Creates a download file destination closure which uses the default file manager to move the temporary file to a
         file URL in the first available directory with the specified search path directory and search path domain mask.
 
         - parameter directory: The search path directory. `.DocumentDirectory` by default.
@@ -143,7 +145,7 @@ extension Request {
 
         - returns: A download file destination closure.
     */
-    internal class func suggestedDownloadDestination(
+    public class func suggestedDownloadDestination(
         directory directory: NSSearchPathDirectory = .DocumentDirectory,
         domain: NSSearchPathDomainMask = .UserDomainMask)
         -> DownloadFileDestination
@@ -152,7 +154,11 @@ extension Request {
             let directoryURLs = NSFileManager.defaultManager().URLsForDirectory(directory, inDomains: domain)
 
             if !directoryURLs.isEmpty {
+                #if swift(>=2.3)
+                return directoryURLs[0].URLByAppendingPathComponent(response.suggestedFilename!)!
+                #else
                 return directoryURLs[0].URLByAppendingPathComponent(response.suggestedFilename!)
+                #endif
             }
 
             return temporaryURL
@@ -160,7 +166,7 @@ extension Request {
     }
 
     /// The resume data of the underlying download task if available after a failure.
-    internal var resumeData: NSData? {
+    public var resumeData: NSData? {
         var data: NSData?
 
         if let delegate = delegate as? DownloadTaskDelegate {
@@ -211,12 +217,14 @@ extension Request {
             totalBytesWritten: Int64,
             totalBytesExpectedToWrite: Int64)
         {
+            if initialResponseTime == nil { initialResponseTime = CFAbsoluteTimeGetCurrent() }
+
             if let downloadTaskDidWriteData = downloadTaskDidWriteData {
                 downloadTaskDidWriteData(
                     session,
                     downloadTask,
                     bytesWritten,
-                    totalBytesWritten, 
+                    totalBytesWritten,
                     totalBytesExpectedToWrite
                 )
             } else {
