@@ -55,7 +55,7 @@ public class CardAlertView: UIView ,CardViewCellDelegate {
     
     public static func createInstance() -> CardAlertView {
         
-        let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/CardAlertView", owner: self, options: nil).first as! CardAlertView
+        let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/CardAlertView", owner: self, options: nil)!.first as! CardAlertView
                 
         cardview.backgroundView.layer.cornerRadius = 8
         cardview.backgroundView.layer.masksToBounds = true

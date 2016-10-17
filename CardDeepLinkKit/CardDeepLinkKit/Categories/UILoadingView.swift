@@ -45,7 +45,7 @@ internal class UILoadingView: UIView {
     
     class func designCodeLoadingView() -> UIView {
         
-        let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/LoadingView", owner: self, options: nil).first as! UILoadingView
+        let cardview = NSBundle.mainBundle().loadNibNamed("\(CDApplication.Config.frameworkName)/LoadingView", owner: self, options: nil)!.first as! UILoadingView
         cardview.imageView.image = "dp_round_red".namedImage()
         return cardview
         // NSBundle(forClass: self).loadNibNamed("LoadingView", owner: self, options: nil)[0] as! UIView

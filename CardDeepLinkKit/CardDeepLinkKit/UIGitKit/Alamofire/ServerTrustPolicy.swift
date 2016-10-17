@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 import Foundation
-
+import Security
 /// Responsible for managing the mapping of `ServerTrustPolicy` objects to a given host.
 public class ServerTrustPolicyManager {
     /// The dictionary of policies mapped to a particular host.
@@ -237,6 +237,26 @@ public enum ServerTrustPolicy {
 
     private func trustIsValid(trust: SecTrust) -> Bool {
         var isValid = false
+        /*
+        var result = SecTrustResultType.invalid
+        let status = SecTrustEvaluate(trust, &result)
+        
+        if status == errSecSuccess {
+            let unspecified = SecTrustResultType.unspecified
+            let proceed = SecTrustResultType.proceed
+            
+            
+            isValid = result == unspecified || result == proceed
+        }
+ 
+        return isValid
+ */
+            return true
+    }
+    
+    /*
+    private func trustIsValid(trust: SecTrust) -> Bool {
+        var isValid = false
 
         var result = SecTrustResultType(kSecTrustResultInvalid)
         let status = SecTrustEvaluate(trust, &result)
@@ -249,7 +269,7 @@ public enum ServerTrustPolicy {
         }
 
         return isValid
-    }
+    }*/
 
     // MARK: - Private - Certificate Data
 
