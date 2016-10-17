@@ -236,8 +236,9 @@ public enum ServerTrustPolicy {
     // MARK: - Private - Trust Validation
 
     private func trustIsValid(trust: SecTrust) -> Bool {
-        var isValid = false
+        
         /*
+         var isValid = false
         var result = SecTrustResultType.invalid
         let status = SecTrustEvaluate(trust, &result)
         
@@ -250,8 +251,8 @@ public enum ServerTrustPolicy {
         }
  
         return isValid
- */
-            return true
+        */
+        return true
     }
     
     /*
