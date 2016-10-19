@@ -420,6 +420,22 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		C93C3BAD1DB75193003E1D89 /* CardAllPlatom */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = C93C3BAE1DB75193003E1D89 /* Build configuration list for PBXLegacyTarget "CardAllPlatom" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = CardAllPlatom;
+			passBuildSettingsInEnvironment = 1;
+			productName = CardAllPlatom;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		81EB2AC01CC5053100F4459F /* CardDeepLinkKit */ = {
 			isa = PBXNativeTarget;
@@ -481,6 +497,11 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = T2362RFKT6;
 					};
+					C93C3BAD1DB75193003E1D89 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = T2362RFKT6;
+						ProvisioningStyle = Automatic;
+					};
 					FBDB3CCC1D49F46F002E0FBE = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 388D56L7YB;
@@ -503,6 +524,7 @@
 				81EB2AC01CC5053100F4459F /* CardDeepLinkKit */,
 				937811F51CC61F38001BF260 /* CardDeepLinkKitDemo */,
 				FBDB3CCC1D49F46F002E0FBE /* CardDeepLinkKit-Universal */,
+				C93C3BAD1DB75193003E1D89 /* CardAllPlatom */,
 			);
 		};
 /* End PBXProject section */
@@ -798,6 +820,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -824,6 +847,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Release;
 		};
@@ -844,7 +868,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -865,13 +889,43 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiainfo.CardDeepLinkKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		C93C3BAF1DB75193003E1D89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = T2362RFKT6;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C93C3BB01DB75193003E1D89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T2362RFKT6;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		FBDB3CCD1D49F46F002E0FBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -879,6 +933,7 @@
 		FBDB3CCE1D49F46F002E0FBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -912,6 +967,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C93C3BAE1DB75193003E1D89 /* Build configuration list for PBXLegacyTarget "CardAllPlatom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93C3BAF1DB75193003E1D89 /* Debug */,
+				C93C3BB01DB75193003E1D89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		FBDB3CCF1D49F46F002E0FBE /* Build configuration list for PBXAggregateTarget "CardDeepLinkKit-Universal" */ = {
 			isa = XCConfigurationList;
