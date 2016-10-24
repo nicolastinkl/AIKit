@@ -28,7 +28,7 @@ import Foundation
  * General Service Json Model.
  */
 public struct CDModel {
-
+    
     /**
      * model id.
      */

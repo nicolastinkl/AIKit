@@ -6,11 +6,11 @@
 	<dict>
 		<key>CardDeepLinkKit.bundle/CardAlertView.nib</key>
 		<data>
-		Is90VhALNwag2Danz5xglUOOcm4=
+		InOVceubhh47oB5b9Y0QhPFvCD8=
 		</data>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<data>
-		MiodbGa6AVsX2f511a09VtOBzP4=
+		ZB1KxTS6F9QNwBTWf4cVZGbVtfg=
 		</data>
 		<key>CardDeepLinkKit.bundle/dp_bg.png</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/CardDeepLinkKit.h</key>
 		<data>
-		ETHJYj/IJxdZiWMJ+CA1CkMLnTA=
+		lzp6g4OHM3YmWBnI8/5buPKzQpY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,22 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Is90VhALNwag2Danz5xglUOOcm4=
+			InOVceubhh47oB5b9Y0QhPFvCD8=
 			</data>
 			<key>hash2</key>
 			<data>
-			LIMyaH3Ozl20PkLG2zgWwP0fIzMjWD9XBP5u18zKBfQ=
+			F4v3EEt7i+3fhHdX4YwOop5b1zSMJBe/Zasn2I/kU/M=
 			</data>
 		</dict>
 		<key>CardDeepLinkKit.bundle/LoadingView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MiodbGa6AVsX2f511a09VtOBzP4=
+			ZB1KxTS6F9QNwBTWf4cVZGbVtfg=
 			</data>
 			<key>hash2</key>
 			<data>
-			DH+7oP8eIX+uPKW3EZmmCDQ1PJRQN8mpdaJLGge3KO4=
+			pojHz6M6lk6SrG47A6J2WGQEaSqsBvbC4x2nvtnsqEU=
 			</data>
 		</dict>
 		<key>CardDeepLinkKit.bundle/dp_bg.png</key>
@@ -139,11 +139,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ETHJYj/IJxdZiWMJ+CA1CkMLnTA=
+			lzp6g4OHM3YmWBnI8/5buPKzQpY=
 			</data>
 			<key>hash2</key>
 			<data>
-			LELzNSRSKvuuIKC4uT9ekwUi2fsHqdxQJi/N+s2KZXo=
+			uhggkQDk/5FG5/N+J2q6CnnWlMFPhBWbOYcuJ3sxHS4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
